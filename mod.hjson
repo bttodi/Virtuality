@@ -1,0 +1,11 @@
+name: virtuality
+displayName: Virtuality
+author: bttodi
+description: '''
+heyjason mode feat. world procs
+touch controls are not supported
+'''
+minGameVersion: 146
+dependencies: [ ]
+hidden: false
+hideBrowser: true
