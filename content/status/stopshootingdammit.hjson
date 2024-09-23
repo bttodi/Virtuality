@@ -1,0 +1,6 @@
+name: disarmed but actually
+type: StatusEffect
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+reloadMultiplier: 0

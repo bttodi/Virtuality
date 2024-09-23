@@ -1,0 +1,10 @@
+type: CoreBlock
+buildVisibility: sandboxOnly
+health: 500000
+size: 2
+category: effect
+itemCapacity: 1500
+isFirstTier: true
+incinerateNonBuildable: true
+unitType: unitstatic
+solid: false

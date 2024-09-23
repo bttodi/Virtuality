@@ -1,0 +1,47 @@
+type: hover
+health: 500
+speed: 2
+rotateSpeed: 999
+faceTarget: true
+drag: 0.1
+groundLayer: 210
+outlineColor: 383D34
+weapons: [
+	{
+		type: Weapon
+		reload: 12
+		x: 0
+		mirror: false
+		rotate: false
+		rotateSpeed: 0
+		shootCone: 2
+		shootSound: noammo
+		recoil: 0
+		bullet: {
+			type: BasicBulletType
+			collidesTiles: false
+			damage: 10
+			keepVelocity: false
+			speed: 8
+			lifetime: 40
+			trailLength: 4
+			trailWidth: 1
+			layer: 214
+		}
+	}
+]
+parts: [
+	{
+		type: ShapePart
+		layer: 29
+		circle: true
+		radius: 480
+		color: 000000
+	}
+]
+alwaysUnlocked: true
+research: {
+	name: Virtuality
+	planet: simulacrum
+	root: true
+}

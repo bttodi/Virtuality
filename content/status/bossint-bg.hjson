@@ -1,0 +1,23 @@
+name: Boss Intro Background
+type: StatusEffect
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+applyColor: e1e1e1
+color: e1e1e1
+applyEffect: {
+	type: ParticleEffect
+	particles: 1
+	region: virtuality-effectmisalignmentisthecauseofthis
+	cone: 0
+	lifetime: 180
+	randLength: false
+	colorFrom: FFFFFF
+	colorTo: FFFFFF00
+	layer: 217
+	sizeFrom: 128
+	sizeTo: 128
+	length: 0
+	interp: pow10In
+	clip: 128
+}

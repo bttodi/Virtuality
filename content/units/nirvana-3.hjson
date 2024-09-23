@@ -1,0 +1,139 @@
+health: 500
+clipSize: 4096
+speed: 16
+rotateSpeed: 0
+flying: true
+engineSize: 0
+faceTarget: false
+drag: 0.05
+weapons: [
+	{
+		type: Weapon
+		name: nirvana-cannon-s
+		rotate: true
+		rotateSpeed: 1
+		x: 0
+		mirror: false
+		shootSound: beam
+		alwaysContinuous: true
+		controllable: false
+		aiControllable: false
+		autoTarget: true
+		alwaysShooting: true
+		minWarmup: 0.9
+		shootWarmupSpeed: 0.01
+		linearWarmup: true
+		bullet: {
+			type: ContinuousLaserBulletType
+			length: 2048
+			collidesAir: false
+			width: 16
+			damage: 10
+			colors: [ff00003f, ff3f3f7f, ff7f7fbf, ff9f9fbf, ff9f9f]
+			oscMag: 0
+			layer: 99
+		}
+	}
+	{
+		type: Weapon
+		rotate: true
+		rotateSpeed: 1
+		x: 0
+		mirror: false
+		shootSound: none
+		reload: 9
+		parentizeEffects: true
+		controllable: false
+		aiControllable: false
+		autoTarget: true
+		alwaysShooting: true
+		minWarmup: 0.9
+		shootWarmupSpeed: 0.01
+		linearWarmup: true
+		bullet: {
+			type: RailBulletType
+			damage: 0
+			collidesAir: false
+			length: 1024
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			pointEffectSpace: 12
+			pointEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 15
+				cone: 45
+				colorFrom: ffffff
+				colorTo: f54646
+				sizeFrom: 6
+				sizeTo: 0
+				layer: 100
+			}
+		}
+	}
+	{
+		type: Weapon
+		rotate: false
+		rotateSpeed: 0.5
+		x: 0
+		mirror: false
+		shootSound: none
+		reload: 90
+		controllable: false
+		aiControllable: false
+		autoTarget: true
+		alwaysShooting: true
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			lifetime: 30
+			damage: 0
+			speed: 0
+			collides: false
+			inaccuracy: 10
+			shootEffect: {
+				type: ParticleEffect
+				clip: 1024
+				rotWithParent: true
+				particles: 1
+				lifetime: 30
+				length: 1
+				cone: 0
+				line: true
+				lenFrom: 1024
+				lenTo: 1024
+				strokeFrom: 1
+				strokeTo: 1
+				colorFrom: ffbfbf
+				colorTo: ffbfbf00
+				interp: pow5In
+			}
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragBullet: {
+				type: BasicBulletType
+				damage: 100
+				lifetime: 30
+				speed: 32
+				pierce: true
+				collidesAir: false
+				keepVelocity: false
+				height: 32
+				frontColor: E5BEBE
+				backColor: D98084
+				trailLength: 3
+				trailWidth: 0.75
+				trailColor: D98084
+			}
+		}
+		shoot: {
+			type: ShootSpread
+			spread: 11.25
+			shots: 16
+		}
+	}
+]

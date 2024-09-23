@@ -1,0 +1,20 @@
+health: 500000
+speed: 0
+rotateSpeed: 0
+hittable: false
+targetable: false
+killable: false
+physics: false
+bounded: false
+drawBody: false
+drawCell: false
+drawMinimap: false
+parts: [
+	{
+		type: ShapePart
+		radius: 512
+		color: 000000ff
+		layer: 29
+		circle: true
+	}
+]

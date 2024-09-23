@@ -1,0 +1,26 @@
+health: 5000
+clipSize: 4096
+speed: 8
+rotateSpeed: 0
+faceTarget: false
+bounded: false
+targetable: false
+hittable: false
+playerControllable: false
+physics: false
+weapons: [
+	{
+		type: Weapon
+		minWarmup: 1
+		x: 0
+		parts: [
+			{
+				name: virtuality-healthbar-player
+				type: RegionPart
+				yScl: 60
+				mirror: false
+				layer: 215.1
+			}
+		]
+	}
+]

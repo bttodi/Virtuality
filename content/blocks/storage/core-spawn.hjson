@@ -1,0 +1,10 @@
+type: CoreBlock
+health: 500000
+size: 2
+category: effect
+itemCapacity: 1500
+isFirstTier: true
+incinerateNonBuildable: true
+unitType: virtuality-player
+solid: false
+alwaysUnlocked: true

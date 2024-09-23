@@ -1,0 +1,113 @@
+health: 1500
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+groundLayer: 150
+hitSize: 32
+outlineColor: 000000
+drawCell: false
+weapons: [
+	{
+		type: Weapon
+		mirror: false
+		x: 0
+		aiControllable: false
+		shootOnDeath: true
+		shootSound: largeCannon
+		soundPitchMin: 1.8
+		soundPitchMax: 1.8
+		shootCone: 360
+		bullet: {
+			type: BulletType
+			collides: false
+			lifetime: 0
+			speed: 0
+		}
+	}
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		shootY: 4
+		inaccuracy: 360
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collides: false
+			damage: 0
+			lifetime: 0
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: MultiEffect
+				effects: [
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 45
+						layer: 150.1
+						sizeFrom: 8
+						cone: 0
+						randLength: false
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 45
+						layer: 150.2
+						sizeFrom: 6
+						cone: 0
+						randLength: false
+						colorFrom: 000000
+						colorTo: 000000
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 45
+						layer: 150.1
+						sizeFrom: 8
+						cone: 0
+						randLength: false
+						baseRotation: 137.5
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 45
+						layer: 150.2
+						sizeFrom: 6
+						cone: 0
+						randLength: false
+						colorFrom: 000000
+						colorTo: 000000
+						baseRotation: 137.5
+					}
+				]
+			}
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		name: "virtuality-candor"
+		layer: 150
+	}
+]
+abilities: [
+	{
+		type: SpawnDeathAbility
+		spread: 0
+		faceOutwards: false
+		unit: candor-2
+	}
+]

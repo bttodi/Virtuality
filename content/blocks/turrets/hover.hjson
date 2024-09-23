@@ -1,0 +1,33 @@
+type: ContinuousTurret
+size: 4
+health: 500000
+buildVisibility: sandboxOnly
+rotateSpeed: 0
+category: turret
+recoil: 0
+shootWarmupSpeed: 999
+outlineRadius: 0
+autoResetEnabled: false
+warmupMaintainTime: 5
+range: 0
+shootType: {
+	type: ContinuousBulletType
+	damage: 0
+	lightRadius: 0
+	length: 0
+	collides: false
+}
+drawer: {
+	type: DrawTurret
+	parts: [
+		{
+			type: RegionPart
+			suffix: "-on"
+			progress: warmup
+			x: 32
+			y: 500
+			moveY: -500
+			layer: 51
+		}
+	]
+}

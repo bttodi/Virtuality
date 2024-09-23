@@ -1,0 +1,237 @@
+type: missile
+lifetime: 600
+health: 750
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		y: 4
+		shootY: 0
+		shootCone: 360
+		rotate: true
+		rotateSpeed: 999999
+		alwaysShooting: true
+		predictTarget: false
+		recoil: 0
+		shootStatus: virtuality-stopshootingdammit
+		shootStatusDuration: 5000
+		inaccuracy: 180
+		shootSound: none
+		soundPitchMin: 1.2
+		soundPitchMax: 1.2
+		shoot: {
+			shots: 6
+			firstShotDelay: 5
+			shotDelay: 60
+		}
+		bullet: {
+			type: BulletType
+			speed: 0
+			damage: 0
+			collides: false
+			lifetime: 45
+			bulletInterval: 1
+			hitEffect: none
+			despawnEffect: none
+			intervalBullets: 1
+			intervalBullet: {
+				type: BulletType
+				keepVelocity: false
+				collides: false
+				damage: 0
+				lifetime: 0
+				speed: 0
+				despawnEffect: {
+					type: MultiEffect
+					effects: [
+						{
+							type: ParticleEffect
+							particles: 1
+							lifetime: 45
+							layer: 150.1
+							sizeFrom: 8
+							cone: 0
+							randLength: false
+						}
+						{
+							type: ParticleEffect
+							particles: 1
+							lifetime: 45
+							layer: 150.2
+							sizeFrom: 6
+							cone: 0
+							randLength: false
+							colorFrom: 000000
+							colorTo: 000000
+						}
+						{
+							type: ParticleEffect
+							particles: 1
+							lifetime: 45
+							layer: 150.1
+							sizeFrom: 8
+							cone: 0
+							randLength: false
+							baseRotation: 137.5
+						}
+						{
+							type: ParticleEffect
+							particles: 1
+							lifetime: 45
+							layer: 150.2
+							sizeFrom: 6
+							cone: 0
+							randLength: false
+							colorFrom: 000000
+							colorTo: 000000
+							baseRotation: 137.5
+						}
+					]
+				}
+			}
+			spawnBullets: [
+				{
+					type: BulletType
+					keepVelocity: false
+					collides: false
+					speed: 0
+					damage: 0
+					lifetime: 1
+					fragBullets: 12
+					fragRandomSpread: 0
+					fragSpread: 30
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					despawnEffect: none
+					hitEffect: none
+					fragBullet: {
+						type: BulletType
+						collides: false
+						speed: 0
+						lifetime: 1
+						fragBullets: 1
+						fragRandomSpread: 0
+						fragVelocityMin: 1
+						hitEffect: none
+						despawnEffect: {
+							type: ParticleEffect
+							clip: 1024
+							rotWithParent: true
+							particles: 1
+							lifetime: 45
+							length: 1
+							cone: 0
+							line: true
+							lenFrom: 1024
+							lenTo: 1024
+							strokeFrom: 1
+							strokeTo: 1
+							colorFrom: ffffff7f
+							colorTo: ffffff00
+							interp: pow5In
+						}
+						fragBullet: {
+							type: BulletType
+							collides: false
+							speed: 0
+							lifetime: 45
+							hitEffect: none
+							despawnEffect: none
+							despawnSound: shockBlast
+							fragBullets: 1
+							fragRandomSpread: 0
+							fragVelocityMin: 1
+							fragBullet: {
+								type: BulletType
+								collidesTiles: false
+								keepVelocity: false
+								pierce: true
+								damage: 50
+								speed: 8
+								lifetime: 60
+								despawnEffect: none
+								hitEffect: none
+								smokeEffect: none
+								homingPower: 0.1
+								homingRange: 999
+								homingDelay: 6
+								bulletInterval: 1
+								intervalBullets: 1
+								intervalBullet: {
+									type: BulletType
+									keepVelocity: false
+									collides: false
+									damage: 0
+									lifetime: 0
+									speed: 0
+									despawnEffect: {
+										type: MultiEffect
+										effects: [
+											{
+												type: ParticleEffect
+												particles: 1
+												lifetime: 30
+												layer: 150.1
+												sizeFrom: 6
+												cone: 0
+												randLength: false
+											}
+											{
+												type: ParticleEffect
+												particles: 1
+												lifetime: 30
+												layer: 150.2
+												sizeFrom: 4
+												cone: 0
+												randLength: false
+												colorFrom: 000000
+												colorTo: 000000
+											}
+											{
+												type: ParticleEffect
+												particles: 1
+												lifetime: 30
+												layer: 150.1
+												sizeFrom: 6
+												cone: 0
+												randLength: false
+												baseRotation: 137.5
+											}
+											{
+												type: ParticleEffect
+												particles: 1
+												lifetime: 30
+												layer: 150.2
+												sizeFrom: 4
+												cone: 0
+												randLength: false
+												colorFrom: 000000
+												colorTo: 000000
+												baseRotation: 137.5
+											}
+										]
+									}
+								}
+							}
+						}
+					}
+				}
+			]
+		}
+	}
+]
