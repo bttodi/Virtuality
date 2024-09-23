@@ -8,3 +8,4 @@ touch controls are not supported
 minGameVersion: 146
 dependencies: [ ]
 hidden: false
+hideBrowser: false
