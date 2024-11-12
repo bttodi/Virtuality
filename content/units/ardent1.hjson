@@ -1,9 +1,12 @@
-health: 1500
-speed: 8
+health: 1200
+hitSize: 32
+speed: 6
 rotateSpeed: 999
 physics: false
 bounded: false
 faceTarget: false
+rotateSpeed: 0
+groundLayer: 0
 weapons: [
 	{
 		type: Weapon
@@ -27,24 +30,135 @@ weapons: [
 			shootEffect: none
 		}
 	}
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collidesTiles: false
+			damage: 50
+			status: invincible
+			statusDuration: 5
+			hitSize: 32
+			lifetime: 1
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+	}
 ]
 parts: [
 	{
 		type: RegionPart
-		moveRot: -720
+		moveRot: -2160
 		name: virtuality-halo
-		color: 1FB3E77F
-		colorTo: 1FB3E77F
+		color: FF3A7D
+		colorTo: FF3A7D
 		layer: 215
 		progress: reload
 		outline: false
 	}
 	{
 		type: RegionPart
-		moveRot: -4320
+		moveRot: -2160
+		name: virtuality-spinner-accent
+		layer: 215.1
+		progress: reload
+		outline: false
+	}
+	{
+		type: RegionPart
+		moveRot: -2160
 		name: virtuality-ardent-head
 		layer: 214
 		progress: reload
 		outline: false
+	}
+]
+abilities: [
+	{
+		type: MoveEffectAbility
+		minVelocity: 0
+		interval: 2
+		effect: {
+			type: ParticleEffect
+			particles: 1
+			lifetime: 30
+			region: virtuality-halo
+			length: 8
+			sizeFrom: 32
+			sizeTo: 32
+			colorFrom: ff9cc2
+			colorTo: ff479000
+			layer: 213
+			interp: circleOut
+		}
+	}
+	{
+		type: MoveEffectAbility
+		minVelocity: 8
+		interval: 1
+		effect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: ParticleEffect
+					particles: 1
+					lifetime: 90
+					region: virtuality-offdot
+					baseLength: 32
+					length: 8
+					sizeFrom: 4
+					sizeTo: 4
+					colorFrom: ff9cc2
+					colorTo: ff479000
+					layer: 213.5
+					spin: 4
+				}
+				{
+					type: ParticleEffect
+					particles: 1
+					lifetime: 90
+					region: virtuality-offdot
+					baseLength: 32
+					length: 8
+					sizeFrom: 4
+					sizeTo: 4
+					colorFrom: ff9cc2
+					colorTo: ff479000
+					layer: 213.5
+					spin: -4
+				}
+				{
+					type: ParticleEffect
+					particles: 1
+					lifetime: 60
+					region: virtuality-offdot
+					baseLength: 32
+					length: 8
+					sizeFrom: 4
+					sizeTo: 4
+					colorFrom: ffffff
+					colorTo: ff479000
+					layer: 213.5
+					spin: -4
+				}
+			]
+		}
+	}
+	{
+		type: SpawnDeathAbility
+		spread: 0
+		faceOutwards: false
+		unit: ardent2
 	}
 ]

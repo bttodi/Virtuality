@@ -1,0 +1,39 @@
+name: Ardent Argent Background
+type: StatusEffect
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+applyEffect: {
+	type: MultiEffect
+	effects: [
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-bubble
+			lifetime: 60
+			length: 0
+			baseLength: 300
+			colorFrom: 3F6B7F7F
+			colorTo: 3F6B7F00
+			layer: 87
+			sizeFrom: 4
+			sizeTo: 4
+			followParent: false
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-offdot
+			lifetime: 200
+			length: -100
+			baseLength: 300
+			colorFrom: 7FD4FF7F
+			colorTo: 7FD4FF00
+			layer: 87
+			sizeFrom: 2
+			sizeTo: 2
+			spin: 3
+			followParent: false
+		}
+	]
+}

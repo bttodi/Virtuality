@@ -1,0 +1,129 @@
+name: grrrrr
+type: StatusEffect
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+applyColor: e1e1e1
+color: e1e1e1
+applyEffect: {
+	type: MultiEffect
+	effects: [
+		{
+			type: WaveEffect
+			lifetime: 60
+			colorFrom: ff9cc2
+			colorTo: ff479000
+			layer: 211
+			sizeFrom: 32
+			sizeTo: 512
+			length: 0
+			interp: circleOut
+			clip: 128
+			strokeFrom: 64
+		}
+		{
+			type: WaveEffect
+			startDelay: 20
+			lifetime: 60
+			colorFrom: ff9cc2
+			colorTo: ff479000
+			layer: 211
+			sizeFrom: 32
+			sizeTo: 512
+			length: 0
+			interp: circleOut
+			clip: 128
+			strokeFrom: 64
+		}
+		{
+			type: WaveEffect
+			startDelay: 40
+			lifetime: 60
+			colorFrom: ff9cc2
+			colorTo: ff479000
+			layer: 211
+			sizeFrom: 32
+			sizeTo: 512
+			length: 0
+			interp: circleOut
+			clip: 128
+			strokeFrom: 64
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-hazard
+			cone: 0
+			lifetime: 120
+			randLength: false
+			colorFrom: ff9cc2
+			colorTo: ff479000
+			layer: 217
+			sizeFrom: 8
+			sizeTo: 8
+			length: 0
+			interp: pow10In
+			clip: 128
+			offsetX: 8
+			offsetY: 16
+			offset: 15
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-hazard
+			cone: 0
+			lifetime: 120
+			randLength: false
+			colorFrom: ff9cc2
+			colorTo: ff479000
+			layer: 217
+			sizeFrom: 8
+			sizeTo: 8
+			length: 0
+			interp: pow10In
+			clip: 128
+			offsetX: 16
+			offsetY: 8
+			offset: 105
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-hazard
+			cone: 0
+			lifetime: 120
+			randLength: false
+			colorFrom: ff9cc2
+			colorTo: ff479000
+			layer: 217
+			sizeFrom: 8
+			sizeTo: 8
+			length: 0
+			interp: pow10In
+			clip: 128
+			offsetX: 24
+			offsetY: 16
+			offset: 195
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-hazard
+			cone: 0
+			lifetime: 120
+			randLength: false
+			colorFrom: ff9cc2
+			colorTo: ff479000
+			layer: 217
+			sizeFrom: 8
+			sizeTo: 8
+			length: 0
+			interp: pow10In
+			clip: 128
+			offsetX: 16
+			offsetY: 24
+			offset: 285
+		}
+	]
+}

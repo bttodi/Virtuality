@@ -1,0 +1,317 @@
+name: Ardent Argent Intro
+type: StatusEffect
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+applyColor: e1e1e1
+color: e1e1e1
+applyEffect: {
+	type: MultiEffect
+	effects: [
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 10
+			randLength: false
+			colorFrom: FFFFFF
+			colorTo: FFFFFF
+			layer: 217
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 10
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 10
+			randLength: false
+			colorFrom: FF3A7D
+			colorTo: FF3A7D
+			baseLength: 8
+			baseRotation: 30
+			offset: -30
+			layer: 217
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 20
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 10
+			randLength: false
+			colorFrom: 3180FF
+			colorTo: 3180FF
+			baseLength: 8
+			baseRotation: 210
+			offset: -210
+			layer: 217
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 90
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 5
+			randLength: false
+			colorFrom: FFFFFF
+			colorTo: FFFFFF
+			layer: 217.21
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 120
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 5
+			randLength: false
+			colorFrom: FFFFFF
+			colorTo: FFFFFF
+			layer: 217.21
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 30
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 150
+			randLength: false
+			colorFrom: 000000
+			colorTo: 000000
+			layer: 217.2
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 30
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 61
+			randLength: false
+			colorFrom: FF3A7D
+			colorTo: FF3A7D
+			layer: 217
+			sizeFrom: 128
+			sizeTo: 128
+			length: 1.5
+			baseRotation: 30
+			offset: -30
+			interp: circleOut
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 30
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 61
+			randLength: false
+			colorFrom: 3180FF
+			colorTo: 3180FF
+			layer: 217
+			sizeFrom: 128
+			sizeTo: 128
+			length: 1.5
+			baseRotation: 210
+			offset: -210
+			interp: circleOut
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 90
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 31
+			randLength: false
+			colorFrom: FF3A7D
+			colorTo: FF3A7D
+			layer: 217.1
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			baseLength: 1.5
+			baseRotation: 210
+			offset: -210
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 90
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 31
+			randLength: false
+			colorFrom: 3180FF
+			colorTo: 3180FF
+			layer: 217.1
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			baseLength: 1.5
+			baseRotation: 30
+			offset: -30
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 120
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 60
+			randLength: false
+			colorFrom: FF3A7D
+			colorTo: FF3A7D
+			layer: 217.1
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			baseLength: 1.5
+			baseRotation: 30
+			offset: -30
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 120
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 60
+			randLength: false
+			colorFrom: 3180FF
+			colorTo: 3180FF
+			layer: 217.1
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			baseLength: 1.5
+			baseRotation: 210
+			offset: -210
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 180
+			particles: 1
+			region: virtuality-splash-arent
+			cone: 0
+			lifetime: 30
+			randLength: false
+			colorFrom: FFFFFF
+			colorTo: FFFFFF00
+			layer: 217.21
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			clip: 128
+		}
+		{
+			type: ParticleEffect
+			startDelay: 120
+			particles: 1
+			region: virtuality-splash-ardent
+			cone: 0
+			lifetime: 30
+			randLength: false
+			colorFrom: FFFFFF
+			colorTo: FFFFFF00
+			layer: 217.21
+			sizeFrom: 32
+			sizeTo: 32
+			length: 0
+			clip: 128
+			offsetX: -128
+			offsetY: 84
+		}
+		{
+			type: ParticleEffect
+			startDelay: 120
+			particles: 1
+			region: virtuality-splash-ardent
+			cone: 0
+			lifetime: 90
+			randLength: false
+			colorFrom: FF3A7D
+			colorTo: FF3A7D00
+			layer: 217.2
+			sizeFrom: 32
+			sizeTo: 32
+			length: 0
+			clip: 128
+			offsetX: -128
+			offsetY: 84
+			interp: pow10In
+		}
+		{
+			type: ParticleEffect
+			startDelay: 120
+			particles: 1
+			region: virtuality-splash-argent
+			cone: 0
+			lifetime: 30
+			randLength: false
+			colorFrom: FFFFFF
+			colorTo: FFFFFF00
+			layer: 217.21
+			sizeFrom: 32
+			sizeTo: 32
+			length: 0
+			clip: 128
+			offsetX: 128
+			offsetY: -84
+		}
+		{
+			type: ParticleEffect
+			startDelay: 120
+			particles: 1
+			region: virtuality-splash-argent
+			cone: 0
+			lifetime: 90
+			randLength: false
+			colorFrom: 3180FF
+			colorTo: 3180FF00
+			layer: 217.2
+			sizeFrom: 32
+			sizeTo: 32
+			length: 0
+			clip: 128
+			offsetX: 128
+			offsetY: -84
+			interp: pow10In
+		}
+	]
+}

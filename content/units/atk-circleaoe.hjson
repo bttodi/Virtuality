@@ -1,0 +1,93 @@
+type: missile
+lifetime: 60
+health: 750
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+maxRange: 4096
+weapons: [
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		y: 0
+		shootY: 32
+		shootCone: 360
+		rotate: true
+		rotateSpeed: 999999
+		alwaysShooting: true
+		recoil: 0
+		shootStatus: virtuality-stopshootingdammit
+		shootStatusDuration: 5000
+		shootSound: none
+		predictTarget: false
+		shoot: {
+			firstShotDelay: 30
+		}
+		bullet: {
+			type: BulletType
+			collidesTiles: false
+			collides: false
+			keepVelocity: false
+			damage: 0
+			speed: 16
+			lifetime: 120
+			scaleLife: true
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			fragBullets: 1
+			fragRandomAngle: 0
+			fragBullet: {
+				type: BulletType
+				collidesTiles: false
+				keepVelocity: false
+				damage: 0
+				speed: 0
+				lifetime: 90
+				splashDamage: 0
+				splashDamageRadius: 64
+				despawnEffect: none
+				hitEffect: none
+				smokeEffect: none
+				status: virtuality-5dpf
+				statusDuration: 10
+				parts: [
+					{
+						type: ShapePart
+						hollow: true
+						circle: true
+						radius: 64
+						radius: 64
+						color: 2D81FF00
+						colorTo: 2D81FF
+						stroke: 3
+						progress: life
+					}
+					{
+						type: ShapePart
+						hollow: true
+						circle: true
+						radius: 64
+						radiusTo: 64
+						color: 7FD4FF00
+						colorTo: 7FD4FF
+						stroke: 1
+						progress: life
+					}
+				]
+			}
+		}
+	}
+]

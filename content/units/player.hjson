@@ -1,22 +1,24 @@
 type: hover
 health: 500
 speed: 2
-rotateSpeed: 999
-faceTarget: true
+rotateSpeed: 0
+faceTarget: false
 drag: 0.1
-groundLayer: 210
 outlineColor: 383D34
+groundLayer: -1
 weapons: [
 	{
 		type: Weapon
+		name: player
 		reload: 12
 		x: 0
 		mirror: false
-		rotate: false
-		rotateSpeed: 0
+		rotate: true
+		rotateSpeed: 999999
 		shootCone: 2
 		shootSound: noammo
 		recoil: 0
+		layerOffset: 210
 		bullet: {
 			type: BasicBulletType
 			collidesTiles: false
@@ -37,6 +39,40 @@ parts: [
 		circle: true
 		radius: 480
 		color: 000000
+	}
+	{
+		type: RegionPart
+		suffix: "-square"
+		layer: 218
+		radius: 480
+		color: 000000
+		y: 128
+		x: -300
+		xScl: 10
+	}
+	{
+		type: RegionPart
+		suffix: "-square"
+		layer: 218
+		radius: 480
+		color: 000000
+		y: -128
+		x: -300
+		xScl: 10
+	}
+	{
+		type: RegionPart
+		suffix: "-bossbar"
+		layer: 218
+		outline: false
+		y: -128
+	}
+	{
+		type: RegionPart
+		suffix: "-bossbar"
+		layer: 218
+		outline: false
+		y: 128
 	}
 ]
 alwaysUnlocked: true

@@ -1,0 +1,822 @@
+type: missile
+lifetime: 900
+health: 750
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+maxRange: 4096
+weapons: [
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 256
+		y: 0
+		shootY: 0
+		shootCone: 360
+		rotate: false
+		baseRotation: 90
+		alwaysShooting: true
+		recoil: 0
+		shootStatus: virtuality-stopshootingdammit
+		shootStatusDuration: 5000
+		shootSound: none
+		predictTarget: false
+		xRand: 32
+		shoot: {
+			type: ShootAlternate
+			spread: 48
+			firstShotDelay: 30
+			shots: 7
+			barrels: 7
+		}
+		bullet: {
+			type: BulletType
+			collidesTiles: false
+			collides: false
+			keepVelocity: false
+			damage: 0
+			speed: 0
+			lifetime: 60
+			ignoreSpawnAngle: true
+			spawnBullets: [
+				{
+					type: BulletType
+					collidesTiles: false
+					collides: false
+					keepVelocity: false
+					damage: 0
+					speed: 0
+					lifetime: 0
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragAngle: 180
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					hitEffect: none
+					despawnEffect: none
+					fragBullet: {
+						type: BulletType
+						collidesTiles: false
+						collides: false
+						keepVelocity: false
+						damage: 0
+						speed: 0
+						lifetime: 0
+						hitEffect: none
+						despawnEffect: {
+							type: ParticleEffect
+							particles: 1
+							randLength: false
+							length: 1
+							baseLength: 8
+							cone: 0
+							lifetime: 60
+							line: true
+							lenFrom: 1024
+							lenTo: 1024
+							strokeFrom: 16
+							strokeTo: 16
+							colorFrom: FF3A7D00
+							colorTo: FF3A7D7f
+							followParent: false
+							layer: 106
+							clip: 512
+						}
+					}
+				}
+				{
+					type: BulletType
+					collidesTiles: false
+					collides: false
+					keepVelocity: false
+					damage: 0
+					speed: 0
+					lifetime: 0
+					despawnEffect: {
+						type: MultiEffect
+						effects: [
+							{
+								type: ParticleEffect
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 0
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								interp: pow10Out
+								offset: 90
+								offsetX: -4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 28
+								particles: 1
+								length: 0
+								lifetime: 62
+								sizeFrom: 24
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								offset: 90
+								offsetX: -4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 90
+								particles: 1
+								length: 0
+								lifetime: 15
+								sizeFrom: 24
+								sizeTo: 40
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								interp: pow10Out
+								offset: 90
+								offsetX: -4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 8
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 0
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								interp: pow10Out
+								offset: 90
+								offsetX: -4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 36
+								particles: 1
+								length: 0
+								lifetime: 62
+								sizeFrom: 16
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								offset: 90
+								offsetX: -4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 90
+								particles: 1
+								length: 0
+								lifetime: 24
+								sizeFrom: 24
+								sizeTo: 48
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								interp: pow5Out
+								offset: 90
+								offsetX: -4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: WaveEffect
+								lifetime: 15
+								sizeTo: 64
+								strokeFrom: 8
+								colorFrom: ff9cc2
+								colorTo: FF3A7D
+								followParent: false
+								offsetX: -4
+							}
+						]
+					}
+				}
+			]
+			drawSize: 1024
+			hitSound: largeExplosion
+			hitSoundPitch: 1.2
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragAngle: 180
+			fragVelocityMin: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			despawnEffect: none
+			fragBullet: {
+				type: RailBulletType
+				length: 1024
+				lengthInterp: pow10Out
+				collidesTiles: false
+				damage: 50
+				largeHit: true
+				spawnBullets: [
+					{
+						type: BulletType
+						collidesTiles: false
+						collides: false
+						keepVelocity: false
+						damage: 0
+						speed: 0
+						lifetime: 30
+						drawSize: 1024
+						despawnEffect: none
+						hitEffect: none
+						parts: [
+							{
+								type: RegionPart
+								name: virtuality-lasernoise
+								color: FF3A7D
+								colorTo: FF3A7D
+								progress: life
+								growY: 32
+								moveY: 2048
+								growX: -0.5
+								outline: false
+								layer: 109.5
+								xScl: 0.5
+								y: 64
+							}
+							{
+								type: RegionPart
+								name: virtuality-lasernoise
+								color: FFFFFF
+								colorTo: FFFFFF
+								progress: life
+								growY: 32
+								moveY: 2048
+								growX: -0.3
+								outline: false
+								layer: 110
+								xScl: 0.3
+								y: 64
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		y: 256
+		shootY: 0
+		shootCone: 360
+		rotate: false
+		alwaysShooting: true
+		recoil: 0
+		shootStatus: virtuality-stopshootingdammit
+		shootStatusDuration: 5000
+		shootSound: none
+		predictTarget: false
+		xRand: 32
+		shoot: {
+			type: ShootAlternate
+			spread: 48
+			firstShotDelay: 150
+			shots: 9
+			barrels: 9
+		}
+		bullet: {
+			type: BulletType
+			collidesTiles: false
+			collides: false
+			keepVelocity: false
+			damage: 0
+			speed: 0
+			lifetime: 60
+			ignoreSpawnAngle: true
+			spawnBullets: [
+				{
+					type: BulletType
+					collidesTiles: false
+					collides: false
+					keepVelocity: false
+					damage: 0
+					speed: 0
+					lifetime: 0
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragAngle: 270
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					hitEffect: none
+					despawnEffect: none
+					fragBullet: {
+						type: BulletType
+						collidesTiles: false
+						collides: false
+						keepVelocity: false
+						damage: 0
+						speed: 0
+						lifetime: 0
+						hitEffect: none
+						despawnEffect: {
+							type: ParticleEffect
+							particles: 1
+							randLength: false
+							length: 1
+							baseLength: 8
+							cone: 0
+							lifetime: 60
+							line: true
+							lenFrom: 1024
+							lenTo: 1024
+							strokeFrom: 16
+							strokeTo: 16
+							colorFrom: FF3A7D00
+							colorTo: FF3A7D7f
+							followParent: false
+							layer: 106
+							clip: 512
+						}
+					}
+				}
+				{
+					type: BulletType
+					collidesTiles: false
+					collides: false
+					keepVelocity: false
+					damage: 0
+					speed: 0
+					lifetime: 0
+					despawnEffect: {
+						type: MultiEffect
+						effects: [
+							{
+								type: ParticleEffect
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 0
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								interp: pow10Out
+								offsetY: -4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 28
+								particles: 1
+								length: 0
+								lifetime: 62
+								sizeFrom: 24
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								offsetY: -4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 90
+								particles: 1
+								length: 0
+								lifetime: 15
+								sizeFrom: 24
+								sizeTo: 40
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								interp: pow10Out
+								offsetY: -4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 8
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 0
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								interp: pow10Out
+								offsetY: -4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 36
+								particles: 1
+								length: 0
+								lifetime: 62
+								sizeFrom: 16
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								offsetY: -4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 90
+								particles: 1
+								length: 0
+								lifetime: 24
+								sizeFrom: 24
+								sizeTo: 48
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								interp: pow5Out
+								offsetY: -4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: WaveEffect
+								lifetime: 15
+								sizeTo: 64
+								strokeFrom: 8
+								colorFrom: ff9cc2
+								colorTo: FF3A7D
+								followParent: false
+								offsetX: -4
+							}
+						]
+					}
+				}
+			]
+			drawSize: 1024
+			despawnEffect: none
+			hitSound: largeExplosion
+			hitSoundPitch: 1.2
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragAngle: 270
+			fragVelocityMin: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragBullet: {
+				type: RailBulletType
+				length: 1024
+				lengthInterp: pow10Out
+				collidesTiles: false
+				damage: 50
+				largeHit: true
+				spawnBullets: [
+					{
+						type: BulletType
+						collidesTiles: false
+						collides: false
+						keepVelocity: false
+						damage: 0
+						speed: 0
+						lifetime: 30
+						drawSize: 1024
+						despawnEffect: none
+						hitEffect: none
+						parts: [
+							{
+								type: RegionPart
+								name: virtuality-lasernoise
+								color: FF3A7D
+								colorTo: FF3A7D
+								progress: life
+								growY: 32
+								moveY: 2048
+								growX: -0.5
+								outline: false
+								layer: 109.5
+								xScl: 0.5
+								y: 64
+							}
+							{
+								type: RegionPart
+								name: virtuality-lasernoise
+								color: FFFFFF
+								colorTo: FFFFFF
+								progress: life
+								growY: 32
+								moveY: 2048
+								growX: -0.3
+								outline: false
+								layer: 110
+								xScl: 0.3
+								y: 64
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: -256
+		y: 0
+		shootY: 0
+		shootCone: 360
+		rotate: false
+		baseRotation: 270
+		alwaysShooting: true
+		recoil: 0
+		shootStatus: virtuality-stopshootingdammit
+		shootStatusDuration: 5000
+		shootSound: none
+		predictTarget: false
+		xRand: 32
+		shoot: {
+			type: ShootAlternate
+			spread: 48
+			firstShotDelay: 270
+			shots: 7
+			barrels: 7
+		}
+		bullet: {
+			type: BulletType
+			collidesTiles: false
+			collides: false
+			keepVelocity: false
+			damage: 0
+			speed: 0
+			lifetime: 60
+			ignoreSpawnAngle: true
+			spawnBullets: [
+				{
+					type: BulletType
+					collidesTiles: false
+					collides: false
+					keepVelocity: false
+					damage: 0
+					speed: 0
+					lifetime: 0
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					hitEffect: none
+					despawnEffect: none
+					fragBullet: {
+						type: BulletType
+						collidesTiles: false
+						collides: false
+						keepVelocity: false
+						damage: 0
+						speed: 0
+						lifetime: 0
+						hitEffect: none
+						despawnEffect: {
+							type: ParticleEffect
+							particles: 1
+							randLength: false
+							length: 1
+							baseLength: 8
+							cone: 0
+							lifetime: 60
+							line: true
+							lenFrom: 1024
+							lenTo: 1024
+							strokeFrom: 16
+							strokeTo: 16
+							colorFrom: FF3A7D00
+							colorTo: FF3A7D7f
+							followParent: false
+							layer: 106
+							clip: 512
+						}
+					}
+				}
+				{
+					type: BulletType
+					collidesTiles: false
+					collides: false
+					keepVelocity: false
+					damage: 0
+					speed: 0
+					lifetime: 0
+					despawnEffect: {
+						type: MultiEffect
+						effects: [
+							{
+								type: ParticleEffect
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 0
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								interp: pow10Out
+								offset: 90
+								offsetX: 4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 28
+								particles: 1
+								length: 0
+								lifetime: 62
+								sizeFrom: 24
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								offset: 90
+								offsetX: 4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 90
+								particles: 1
+								length: 0
+								lifetime: 15
+								sizeFrom: 24
+								sizeTo: 40
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D
+								interp: pow10Out
+								offset: 90
+								offsetX: 4
+								layer: 107
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 8
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 0
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								interp: pow10Out
+								offset: 90
+								offsetX: 4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 36
+								particles: 1
+								length: 0
+								lifetime: 62
+								sizeFrom: 16
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								offset: 90
+								offsetX: 4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 90
+								particles: 1
+								length: 0
+								lifetime: 24
+								sizeFrom: 24
+								sizeTo: 48
+								region: virtuality-ellipse
+								colorFrom: 000000
+								colorTo: 000000
+								interp: pow5Out
+								offset: 90
+								offsetX: 4
+								layer: 108
+								clip: 1024
+							}
+							{
+								type: WaveEffect
+								lifetime: 15
+								sizeTo: 64
+								strokeFrom: 8
+								colorFrom: ff9cc2
+								colorTo: FF3A7D
+								followParent: false
+								offsetX: 4
+							}
+						]
+					}
+				}
+			]
+			drawSize: 1024
+			despawnEffect: none
+			hitSound: largeExplosion
+			hitSoundPitch: 1.2
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragBullet: {
+				type: RailBulletType
+				length: 1024
+				lengthInterp: pow10Out
+				collidesTiles: false
+				damage: 50
+				largeHit: true
+				spawnBullets: [
+					{
+						type: BulletType
+						collidesTiles: false
+						collides: false
+						keepVelocity: false
+						damage: 0
+						speed: 0
+						lifetime: 30
+						drawSize: 1024
+						despawnEffect: none
+						hitEffect: none
+						parts: [
+							{
+								type: RegionPart
+								name: virtuality-lasernoise
+								color: FF3A7D
+								colorTo: FF3A7D
+								progress: life
+								growY: 32
+								moveY: 2048
+								growX: -0.5
+								outline: false
+								layer: 109.5
+								xScl: 0.5
+								y: 64
+							}
+							{
+								type: RegionPart
+								name: virtuality-lasernoise
+								color: FFFFFF
+								colorTo: FFFFFF
+								progress: life
+								growY: 32
+								moveY: 2048
+								growX: -0.3
+								outline: false
+								layer: 110
+								xScl: 0.3
+								y: 64
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+]

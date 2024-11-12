@@ -1,0 +1,31 @@
+name: blackout
+type: StatusEffect
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+applyEffect: {
+	type: MultiEffect
+	effects: [
+		{
+			type: ParticleEffect
+			lifetime: 15
+			colorFrom: 000000
+			colorTo: 000000
+			layer: 217.5
+			sizeFrom: 512
+			sizeTo: 512
+			length: 0
+		}
+		{
+			type: ParticleEffect
+			startDelay: 12
+			lifetime: 48
+			colorFrom: 000000
+			colorTo: 00000000
+			layer: 217.5
+			sizeFrom: 512
+			sizeTo: 512
+			length: 0
+		}
+	]
+}

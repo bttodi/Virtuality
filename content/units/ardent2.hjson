@@ -1,6 +1,6 @@
 health: 1200
 hitSize: 32
-speed: 6
+speed: 15
 rotateSpeed: 999
 physics: false
 bounded: false
@@ -34,27 +34,26 @@ weapons: [
 parts: [
 	{
 		type: RegionPart
-		moveRot: 2160
+		moveRot: -1080
 		name: virtuality-halo
-		color: 3180FF
-		colorTo: 3180FF
+		color: FF3A7D
+		colorTo: FF3A7D
 		layer: 215
 		progress: reload
 		outline: false
 	}
 	{
 		type: RegionPart
-		moveRot: 2160
+		moveRot: -1080
 		name: virtuality-spinner-accent
 		layer: 215.1
 		progress: reload
 		outline: false
-		xScl: -1
 	}
 	{
 		type: RegionPart
-		moveRot: 2160
-		name: virtuality-argent-head
+		moveRot: -1080
+		name: virtuality-ardent-head
 		layer: 214
 		progress: reload
 		outline: false
@@ -73,16 +72,68 @@ abilities: [
 			length: 8
 			sizeFrom: 32
 			sizeTo: 32
-			colorFrom: 82bbd8
-			colorTo: 2993d100
+			colorFrom: ff9cc2
+			colorTo: ff479000
 			layer: 213
 			interp: circleOut
+		}
+	}
+	{
+		type: MoveEffectAbility
+		minVelocity: 8
+		interval: 1
+		effect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: ParticleEffect
+					particles: 1
+					lifetime: 90
+					region: virtuality-offdot
+					baseLength: 32
+					length: 8
+					sizeFrom: 4
+					sizeTo: 4
+					colorFrom: ff9cc2
+					colorTo: ff479000
+					layer: 213.5
+					spin: 4
+				}
+				{
+					type: ParticleEffect
+					particles: 1
+					lifetime: 90
+					region: virtuality-offdot
+					baseLength: 32
+					length: 8
+					sizeFrom: 4
+					sizeTo: 4
+					colorFrom: ff9cc2
+					colorTo: ff479000
+					layer: 213.5
+					spin: -4
+				}
+				{
+					type: ParticleEffect
+					particles: 1
+					lifetime: 60
+					region: virtuality-offdot
+					baseLength: 32
+					length: 8
+					sizeFrom: 4
+					sizeTo: 4
+					colorFrom: ffffff
+					colorTo: ff479000
+					layer: 213.5
+					spin: -4
+				}
+			]
 		}
 	}
 	{
 		type: SpawnDeathAbility
 		spread: 0
 		faceOutwards: false
-		unit: argent2
+		unit: ardent3
 	}
 ]

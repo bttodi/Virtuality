@@ -1,0 +1,6 @@
+name: because fast doesnt show up in wprocs
+type: StatusEffect
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+speedMultiplier: 2

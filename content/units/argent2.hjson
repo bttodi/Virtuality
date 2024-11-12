@@ -1,6 +1,6 @@
 health: 1200
 hitSize: 32
-speed: 6
+speed: 15
 rotateSpeed: 999
 physics: false
 bounded: false
@@ -34,7 +34,7 @@ weapons: [
 parts: [
 	{
 		type: RegionPart
-		moveRot: 2160
+		moveRot: 1080
 		name: virtuality-halo
 		color: 3180FF
 		colorTo: 3180FF
@@ -44,7 +44,7 @@ parts: [
 	}
 	{
 		type: RegionPart
-		moveRot: 2160
+		moveRot: 1080
 		name: virtuality-spinner-accent
 		layer: 215.1
 		progress: reload
@@ -53,7 +53,7 @@ parts: [
 	}
 	{
 		type: RegionPart
-		moveRot: 2160
+		moveRot: 1080
 		name: virtuality-argent-head
 		layer: 214
 		progress: reload
@@ -83,6 +83,6 @@ abilities: [
 		type: SpawnDeathAbility
 		spread: 0
 		faceOutwards: false
-		unit: argent2
+		unit: argent3
 	}
 ]
