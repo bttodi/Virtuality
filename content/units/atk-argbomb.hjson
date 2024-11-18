@@ -29,7 +29,7 @@ weapons: [
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
-		shootSound: none
+		shootSound: shootAlt
 		predictTarget: false
 		inaccuracy: 180
 		shoot: {
@@ -53,8 +53,9 @@ weapons: [
 				type: BasicBulletType
 				collidesTiles: false
 				keepVelocity: false
-				damage: 10
-				speed: 4
+				damage: 25
+				speed: 1
+				drag: -0.04
 				lifetime: 180
 				despawnEffect: none
 				hitEffect: none

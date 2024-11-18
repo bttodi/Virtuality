@@ -215,6 +215,39 @@ weapons: [
 								followParent: false
 								offsetX: -4
 							}
+							{
+								type: ParticleEffect
+								startDelay: 60
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 24
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FFFFFF
+								colorTo: FF3A7D00
+								offset: 90
+								offsetX: -4
+								layer: 107.1
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 60
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 16
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D00
+								interp: pow10In
+								offset: 90
+								offsetX: -4
+								layer: 108.1
+								clip: 1024
+							}
 						]
 					}
 				}
@@ -237,7 +270,7 @@ weapons: [
 				length: 1024
 				lengthInterp: pow10Out
 				collidesTiles: false
-				damage: 50
+				damage: 75
 				largeHit: true
 				spawnBullets: [
 					{
@@ -477,7 +510,38 @@ weapons: [
 								colorFrom: ff9cc2
 								colorTo: FF3A7D
 								followParent: false
-								offsetX: -4
+								offsetY: -4
+							}
+							{
+								type: ParticleEffect
+								startDelay: 60
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 24
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FFFFFF
+								colorTo: FF3A7D00
+								offsetY: -4
+								layer: 107.1
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 60
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 16
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D00
+								interp: pow10In
+								offsetY: -4
+								layer: 108.1
+								clip: 1024
 							}
 						]
 					}
@@ -501,7 +565,7 @@ weapons: [
 				length: 1024
 				lengthInterp: pow10Out
 				collidesTiles: false
-				damage: 50
+				damage: 75
 				largeHit: true
 				spawnBullets: [
 					{
@@ -749,6 +813,39 @@ weapons: [
 								followParent: false
 								offsetX: 4
 							}
+							{
+								type: ParticleEffect
+								startDelay: 60
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 24
+								sizeTo: 24
+								region: virtuality-ellipse
+								colorFrom: FFFFFF
+								colorTo: FF3A7D00
+								offset: 90
+								offsetX: 4
+								layer: 107.1
+								clip: 1024
+							}
+							{
+								type: ParticleEffect
+								startDelay: 60
+								particles: 1
+								length: 0
+								lifetime: 30
+								sizeFrom: 16
+								sizeTo: 16
+								region: virtuality-ellipse
+								colorFrom: FF3A7D
+								colorTo: FF3A7D00
+								interp: pow10In
+								offset: 90
+								offsetX: 4
+								layer: 108.1
+								clip: 1024
+							}
 						]
 					}
 				}
@@ -770,7 +867,7 @@ weapons: [
 				length: 1024
 				lengthInterp: pow10Out
 				collidesTiles: false
-				damage: 50
+				damage: 75
 				largeHit: true
 				spawnBullets: [
 					{

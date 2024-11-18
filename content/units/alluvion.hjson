@@ -1,0 +1,272 @@
+health: 1200
+hitSize: 32
+speed: 15
+rotateSpeed: 0.5
+physics: false
+bounded: false
+groundLayer: 98
+outlineColor: 323A3A
+drawCell: false
+targetAir: false
+targetGround: false
+weapons: [
+	{
+		type: Weapon
+		reload: 120
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collides: false
+			damage: 0
+			lifetime: 0
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+	}
+	{
+		type: Weapon
+		reload: 50
+		x: 8
+		alternate: false
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		controllable: false
+		parentizeEffects: true
+		shoot: {
+			type: ShootSine
+			mag: 1
+			scl: 16
+			shots: 100
+			shotDelay: 1
+		}
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collidesTiles: false
+			collides: false
+			damage: 0
+			lifetime: 1
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 120
+				length: -128
+				randLength: false
+				colorFrom: 686870
+				colorTo: 9EDDE200
+				sizeTo: 2
+				cone: 0
+				followParent: true
+				rotWithParent: true
+				layer: 97.5
+			}
+		}
+	}
+	{
+		type: Weapon
+		reload: 50
+		x: 20
+		alternate: false
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		controllable: false
+		parentizeEffects: true
+		shoot: {
+			type: ShootSine
+			mag: 1
+			scl: -16
+			shots: 100
+			shotDelay: 1
+		}
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collidesTiles: false
+			collides: false
+			damage: 0
+			lifetime: 1
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 120
+				length: -100
+				randLength: false
+				colorFrom: 686870
+				colorTo: 9EDDE200
+				sizeTo: 2
+				cone: 0
+				followParent: true
+				rotWithParent: true
+				layer: 97.5
+			}
+		}
+	}
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		shootY: 0
+		x: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		parentizeEffects: true
+		controllable: false
+		bullet: {
+			type: RailBulletType
+			keepVelocity: false
+			collidesTiles: false
+			damage: 0.0001
+			length: 1024
+			despawnEffect: none
+			smokeEffect: none
+			hitEffect: none
+			shootEffect: none
+			status: virtuality-5dpf
+			statusDuration: 5
+			endEffect: none
+			hitEffect: none
+			pointEffect: none
+			pierceEffect: {
+				type: ParticleEffect
+				region: virtuality-bloomcircle-back
+				particles: 15
+				lifetime: 10
+				length: 256
+				colorFrom: 000000
+				colorTo: 000000
+				sizeFrom: 24
+				sizeTo: 0
+				cone: 3
+				followParent: true
+				rotWithParent: true
+				layer: 109.9
+			}
+		}
+		shoot: {
+			type: ShootAlternate
+			barrels: 3
+			shots: 3
+			spread: 6
+		}
+	}
+	{
+		type: Weapon
+		reload: 60
+		mirror: false
+		x: 0
+		y: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		recoil: 0
+		shootSound: none
+		bullet: {
+			type: BulletType
+			collides: false
+			collidesTiles: false
+			inaccuracy: 1
+			keepVelocity: false
+			damage: 0
+			speed: 0
+			lifetime: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+		parts: [
+			{
+				type: RegionPart
+				name: virtuality-contlaser
+				color: FFFFFF
+				colorTo: FFFFFF
+				progress: reload
+				yScl: 10
+				xScl: 0.3
+				moveY: -1280
+				outline: false
+				layer: 109
+			}
+			{
+				type: RegionPart
+				name: virtuality-contlaser
+				color: FFFFFF
+				colorTo: FFFFFF
+				progress: reload
+				yScl: 10
+				xScl: 0.3
+				y: 1280
+				moveY: -1280
+				outline: false
+				layer: 109
+			}
+			{
+				type: RegionPart
+				name: virtuality-contlaser
+				color: 4ca5ff
+				colorTo: 4ca5ff
+				progress: reload
+				yScl: 10
+				xScl: 0.5
+				y: 1280
+				moveY: -1280
+				outline: false
+				layer: 107
+			}
+			{
+				type: RegionPart
+				name: virtuality-contlaser
+				color: 4ca5ff
+				colorTo: 4ca5ff
+				progress: reload
+				yScl: 10
+				xScl: 0.5
+				moveY: -1280
+				outline: false
+				layer: 107
+			}
+			{
+				type: RegionPart
+				name: virtuality-lasermask
+				color: 000000
+				colorTo: 000000
+				yScl: 4
+				outline: false
+				layer: 109.5
+			}
+			{
+				type: RegionPart
+				name: virtuality-square
+				color: 000000
+				colorTo: 000000
+				yScl: 320
+				xScl: 16
+				y: -672
+				outline: false
+				layer: 109.5
+			}
+		]
+	}
+]

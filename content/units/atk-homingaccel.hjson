@@ -29,7 +29,7 @@ weapons: [
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
-		shootSound: none
+		shootSound: missile
 		predictTarget: false
 		inaccuracy: 16
 		shoot: {
@@ -46,7 +46,7 @@ weapons: [
 			damage: 0
 			speed: 4
 			drag: 0.025
-			lifetime: 60
+			lifetime: 45
 			despawnEffect: {
 				type: ParticleEffect
 				lifetime: 30
@@ -64,7 +64,7 @@ weapons: [
 			smokeEffect: none
 			shootEffect: none
 			homingPower: 0.1
-			homingDelay: 15
+			homingDelay: 0
 			homingRange: 9999
 			shrinkY: 0
 			backColor: 2D81FF

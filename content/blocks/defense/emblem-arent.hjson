@@ -1,0 +1,12 @@
+type: Wall
+health: 3600
+size: 2
+research: {
+	parent: sector-arent
+	objectives: [
+		{
+			type: SectorComplete
+			preset: sector-arent
+		}
+	]
+}

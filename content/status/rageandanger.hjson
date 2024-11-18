@@ -9,45 +9,38 @@ applyEffect: {
 	type: MultiEffect
 	effects: [
 		{
-			type: WaveEffect
-			lifetime: 60
-			colorFrom: ff9cc2
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-burst
+			cone: 0
+			lifetime: 90
+			randLength: false
+			colorFrom: ff9cc27f
 			colorTo: ff479000
-			layer: 211
-			sizeFrom: 32
+			sizeFrom: 8
 			sizeTo: 512
 			length: 0
-			interp: circleOut
-			clip: 128
-			strokeFrom: 64
+			sizeInterp: circleIn
+			interp: pow10In
+			clip: 512
+			spin: 1
 		}
 		{
-			type: WaveEffect
-			startDelay: 20
-			lifetime: 60
-			colorFrom: ff9cc2
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-burst
+			cone: 0
+			lifetime: 90
+			randLength: false
+			colorFrom: ff9cc27f
 			colorTo: ff479000
-			layer: 211
-			sizeFrom: 32
+			sizeFrom: 8
 			sizeTo: 512
 			length: 0
-			interp: circleOut
-			clip: 128
-			strokeFrom: 64
-		}
-		{
-			type: WaveEffect
-			startDelay: 40
-			lifetime: 60
-			colorFrom: ff9cc2
-			colorTo: ff479000
-			layer: 211
-			sizeFrom: 32
-			sizeTo: 512
-			length: 0
-			interp: circleOut
-			clip: 128
-			strokeFrom: 64
+			sizeInterp: circleIn
+			interp: pow10In
+			clip: 512
+			spin: -1
 		}
 		{
 			type: ParticleEffect

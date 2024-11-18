@@ -29,7 +29,7 @@ weapons: [
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
-		shootSound: none
+		shootSound: mineDeploy
 		predictTarget: false
 		shoot: {
 			firstShotDelay: 5

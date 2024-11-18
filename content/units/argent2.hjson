@@ -1,4 +1,4 @@
-health: 1200
+health: 1500
 hitSize: 32
 speed: 15
 rotateSpeed: 999
@@ -7,6 +7,7 @@ bounded: false
 faceTarget: false
 rotateSpeed: 0
 groundLayer: 0
+deathSound: titanExplosion
 weapons: [
 	{
 		type: Weapon
