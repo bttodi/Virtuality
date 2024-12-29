@@ -1,0 +1,566 @@
+type: missile
+lifetime: 420
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+weapons: [
+	{
+		type: Weapon
+		x: -384
+		y: 384
+		mirror: false
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		reload: 6
+		rotation: 45
+		xRand: 512
+		shoot: {
+			firstShotDelay: 90
+		}
+		bullet: {
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			damage: 0
+			lifetime: 0
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
+			fragBullets: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragVelocityMin: 1
+			fragRandomSpread: 0
+			fragAngle: 315
+			fragBullet: {
+				type: BasicBulletType
+				keepVelocity: false
+				collidesTiles: false
+				shrinkY: 0
+				damage: 20
+				lifetime: 300
+				speed: 4
+				weaveMag: 1
+				weaveScale: 10
+				despawnEffect: none
+				hitEffect: none
+				smokeEffect: none
+				shootEffect: none
+				frontColor: FFFFFF
+				backColor: 00a5ff
+				trailLength: 4
+				trailColor: 00a5ff
+				width: 8
+				height: 12
+				layer: 111
+				trailInterval: 1
+				trailEffect: {
+					type: MultiEffect
+					effects: [
+						{
+							type: ParticleEffect
+							particles: 8
+							lifetime: 8
+							colorFrom: ffffff
+							colorTo: ffffff00
+							length: 0
+							baseLength: 4
+							layer: 111.2
+						}
+						{
+							type: ParticleEffect
+							particles: 8
+							lifetime: 16
+							colorFrom: 56add8
+							colorTo: 4c5fbf00
+							length: 0
+							baseLength: 4
+							layer: 111.1
+						}
+					]
+				}
+			}
+		}
+	}
+	{
+		type: Weapon
+		x: 384
+		y: 384
+		mirror: false
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		reload: 6
+		rotation: 45
+		xRand: 512
+		shoot: {
+			firstShotDelay: 90
+		}
+		bullet: {
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			damage: 0
+			lifetime: 0
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
+			fragBullets: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragVelocityMin: 1
+			fragRandomSpread: 0
+			fragAngle: 225
+			fragBullet: {
+				type: BasicBulletType
+				keepVelocity: false
+				collidesTiles: false
+				shrinkY: 0
+				damage: 20
+				lifetime: 300
+				speed: 4
+				weaveMag: 1
+				weaveScale: 10
+				despawnEffect: none
+				hitEffect: none
+				smokeEffect: none
+				shootEffect: none
+				frontColor: FFFFFF
+				backColor: 00a5ff
+				trailLength: 4
+				trailColor: 00a5ff
+				width: 8
+				height: 12
+				layer: 109.615
+				trailInterval: 1
+				trailEffect: {
+					type: MultiEffect
+					effects: [
+						{
+							type: ParticleEffect
+							particles: 8
+							lifetime: 8
+							colorFrom: ffffff
+							colorTo: ffffff00
+							length: 0
+							baseLength: 4
+							layer: 109.63
+						}
+						{
+							type: ParticleEffect
+							particles: 8
+							lifetime: 16
+							colorFrom: 56add8
+							colorTo: 4c5fbf00
+							length: 0
+							baseLength: 4
+							layer: 109.62
+						}
+					]
+				}
+			}
+		}
+	}
+	{
+		type: Weapon
+		reload: 5
+		mirror: false
+		x: 0
+		y: 16
+		shootY: 0
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		parentizeEffects: true
+		predictTarget: false
+		shootWarmupSpeed: 0.03
+		minWarmup: 0.6
+		shoot: {
+			type: ShootAlternate
+			spread: 2
+			shots: 5
+			barrels: 5
+		}
+		bullet: {
+			type: BulletType
+			collides: false
+			lifetime: 180
+			speed: 2
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
+			spawnBullets: [
+				{
+					type: BulletType
+					ignoreSpawnAngle: true
+					collides: false
+					lifetime: 0
+					speed: 0
+					despawnEffect: none
+					hitEffect: none
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragAngle: 90
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: RailBulletType
+						length: 512
+						damage: 0.001
+						collidesTiles: false
+						status: virtuality-5dpf
+						statusDuration: 5
+						pierceEffect: none
+					}
+				}
+			]
+		}
+	}
+	{
+		type: Weapon
+		reload: 45
+		mirror: false
+		x: 0
+		y: 0
+		shootY: 0
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		parentizeEffects: true
+		predictTarget: false
+		shootWarmupSpeed: 0.03
+		shoot: {
+			shots: 9
+			shotDelay: 5
+		}
+		bullet: {
+			type: RailBulletType
+			keepVelocity: false
+			collides: false
+			damage: 0
+			length: 320
+			despawnEffect: none
+			smokeEffect: none
+			hitEffect: none
+			shootEffect: none
+			endEffect: none
+			hitEffect: none
+			pointEffectSpace: 8
+			pointEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 90
+				sizeFrom: 4
+				sizeTo: 0
+				spin: 6
+				colorFrom: ffffff
+				colorTo: a5ffff7f
+				region: virtuality-offdot
+				length: 32
+				interp: circleOut
+				sizeInterp: linear
+				followParent: true
+				rotWithParent: true
+			}
+		}
+		parts: [
+			{
+				type: RegionPart
+				name: virtuality-lensflare
+				color: 4c5fbf00
+				colorTo: 4c5fbf
+				outline: false
+				xScl: 4
+				yScl: 4
+				y: 16
+				layer: 111
+				blending: additive
+				progress: warmup
+			}
+			{
+				type: RegionPart
+				name: virtuality-lensflare
+				color: a5ffff00
+				colorTo: a5ffff
+				outline: false
+				y: 16
+				xScl: 1.5
+				yScl: 1.5
+				layer: 111.1
+				blending: additive
+				progress: warmup
+			}
+			{
+				type: RegionPart
+				name: virtuality-beam
+				xScl: 0
+				yScl: 64
+				y: 192
+				color: 4C5FBFBF
+				outline: false
+				layer: 108
+				moves: [
+					{
+						type: PartMove
+						gx: 6
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-firelaser
+				color: 66A8FF
+				colorTo: 66A8FF
+				progress: reload
+				yScl: 2
+				xScl: 0
+				moveY: -256
+				y: 128
+				outline: false
+				layer: 109
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-firelaser
+				color: 66A8FF
+				colorTo: 66A8FF
+				progress: reload
+				yScl: 2
+				xScl: 0
+				moveY: -256
+				y: 384
+				outline: false
+				layer: 109
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-firelaser
+				color: 66A8FF
+				colorTo: 66A8FF
+				progress: reload
+				yScl: 2
+				xScl: 0
+				moveY: -256
+				y: 640
+				outline: false
+				layer: 109
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-firelaser
+				color: 66A8FF
+				colorTo: 66A8FF
+				progress: reload
+				yScl: 2
+				xScl: 0
+				moveY: -256
+				y: 128
+				outline: false
+				layer: 109
+				rotation: 180
+				moves: [
+					{
+						type: PartMove
+						gx: 0.4
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-firelaser
+				color: 66A8FF
+				colorTo: 66A8FF
+				progress: reload
+				yScl: 2
+				xScl: 0
+				moveY: -256
+				y: 384
+				outline: false
+				layer: 109
+				rotation: 180
+				moves: [
+					{
+						type: PartMove
+						gx: 0.4
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-firelaser
+				color: 66A8FF
+				colorTo: 66A8FF
+				progress: reload
+				yScl: 2
+				xScl: 0
+				moveY: -256
+				y: 640
+				outline: false
+				layer: 109
+				rotation: 180
+				moves: [
+					{
+						type: PartMove
+						gx: 0.44
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-firelaser
+				color: FFFFFF
+				colorTo: FFFFFF
+				progress: reload
+				yScl: 4
+				xScl: 0
+				moveY: -512
+				y: 256
+				outline: false
+				layer: 109.3
+				moves: [
+					{
+						type: PartMove
+						gx: 0.25
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-firelaser
+				color: FFFFFF
+				colorTo: FFFFFF
+				progress: reload
+				yScl: 4
+				xScl: 0
+				moveY: -512
+				y: 768
+				outline: false
+				layer: 109.3
+				moves: [
+					{
+						type: PartMove
+						gx: 0.25
+						progress: warmup
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-lasermask
+				color: 000000
+				colorTo: 000000
+				outline: false
+				layer: 109.5
+				y: 16
+			}
+			{
+				type: RegionPart
+				name: virtuality-lasermask
+				color: 000000
+				colorTo: 000000
+				outline: false
+				layer: 109.5
+				rotation: 180
+				y: 352
+			}
+			{
+				type: RegionPart
+				name: virtuality-square
+				color: 000000
+				colorTo: 000000
+				yScl: 160
+				xScl: 16
+				y: -320
+				outline: false
+				layer: 109.5
+			}
+			{
+				type: RegionPart
+				name: virtuality-square
+				color: 000000
+				colorTo: 000000
+				yScl: 161
+				xScl: 16
+				y: 704
+				outline: false
+				layer: 109.5
+			}
+			{
+				type: RegionPart
+				name: virtuality-explosion
+				xScl: 0
+				yScl: 0
+				growX: 0.5
+				growY: 0.5
+				growProgress: warmup
+				progress: reload
+				color: BFFFFF
+				outline: false
+				moveRot: -360
+				layer: 109.61
+				y: 16
+			}
+			{
+				type: RegionPart
+				name: virtuality-explosion
+				xScl: 0
+				yScl: 0
+				growX: 0.66
+				growY: 0.66
+				growProgress: warmup
+				progress: reload
+				color: 7F7FFF
+				outline: false
+				moveRot: 360
+				layer: 109.6
+				y: 16
+			}
+		]
+	}
+]
