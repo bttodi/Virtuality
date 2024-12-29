@@ -1,0 +1,279 @@
+name: Alluvion Intro
+type: StatusEffect
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+applyColor: e1e1e1
+color: e1e1e1
+speedMultiplier: 0
+applyEffect: {
+	type: MultiEffect
+	effects: [
+			# BASE
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-splash-alluvion
+			cone: 0
+			lifetime: 30
+			randLength: false
+			colorFrom: ffffff
+			colorTo: ffffff00
+			layer: 109.55
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			interp: circleOut
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-splash-alluvion
+			cone: 0
+			lifetime: 180
+			randLength: false
+			colorFrom: 2D81FF
+			colorTo: 56add8
+			layer: 109.3
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			interp: circleIn
+		}
+			# PULSING
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			startDelay: 15
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			startDelay: 30
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			startDelay: 45
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			startDelay: 60
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			startDelay: 75
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			startDelay: 90
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			startDelay: 105
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-beam
+			cone: 0
+			startDelay: 120
+			lifetime: 60
+			randLength: false
+			colorFrom: a5ffff
+			colorTo: a5ffff7f
+			layer: 109.5
+			sizeFrom: 64
+			sizeTo: 64
+			length: 512
+			offsetX: -256
+		}
+			# MASKING
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-square
+			cone: 0
+			lifetime: 210
+			randLength: false
+			colorFrom: 000000
+			colorTo: 000000
+			layer: 109.9
+			sizeFrom: 96
+			sizeTo: 96
+			offsetX: 224
+			length: 0
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-square
+			cone: 0
+			lifetime: 210
+			randLength: false
+			colorFrom: 000000
+			colorTo: 000000
+			layer: 109.9
+			sizeFrom: 96
+			sizeTo: 96
+			offsetX: -224
+			length: 0
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-splash-alluvion-mask
+			cone: 0
+			lifetime: 180
+			randLength: false
+			colorFrom: ffffff
+			colorTo: ffffff
+			layer: 109.9
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-square
+			cone: 0
+			startDelay: 160
+			lifetime: 25
+			randLength: false
+			colorFrom: 00000000
+			colorTo: 000000
+			layer: 109.9
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-square
+			cone: 0
+			lifetime: 150
+			randLength: false
+			colorFrom: 000000
+			colorTo: 000000
+			layer: 109.9
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			layer: 98.1
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-square
+			cone: 0
+			startDelay: 145
+			lifetime: 65
+			randLength: false
+			colorFrom: 000000
+			colorTo: 00000000
+			layer: 109.9
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			layer: 98.1
+		}
+	]
+}
