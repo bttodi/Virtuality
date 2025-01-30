@@ -483,7 +483,7 @@ weapons: [
 				color: FFFFFF00
 				colorTo: 66FFF2
 				outline: false
-				layer: 122
+				layer: 125
 			}
 		]
 	}
