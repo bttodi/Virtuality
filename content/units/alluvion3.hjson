@@ -305,11 +305,3 @@ parts: [
 		progress: reload
 	}
 ]
-abilities: [
-	{
-		type: SpawnDeathAbility
-		spread: 0
-		faceOutwards: false
-		unit: alluvion3
-	}
-]

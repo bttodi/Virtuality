@@ -1,14 +1,19 @@
-health: 1500
-hitSize: 32
-speed: 1
+type: missile
+lifetime: 480
+health: 750
+speed: 4
 rotateSpeed: 0
 physics: false
 bounded: false
-groundLayer: -1
-outlineColor: 323A3A
+faceTarget: false
+targetable: false
+hittable: false
 drawCell: false
-targetAir: false
-targetGround: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
 deathExplosionEffect: {
 	type: MultiEffect
 	effects: [
@@ -113,7 +118,7 @@ deathExplosionEffect: {
 weapons: [
 	{
 		type: Weapon
-		reload: 500000
+		reload: 5000
 		mirror: false
 		x: 0
 		shootY: 0
@@ -183,133 +188,154 @@ weapons: [
 	}
 	{
 		type: Weapon
-		reload: 120
-		mirror: false
 		x: 0
-		shootY: 0
+		reload: 10
+		shootY: 32
 		shootCone: 360
-		alwaysShooting: true
+		recoil: 0
+		rotation: 180
 		shootSound: none
+		parentizeEffects: true
+		predictTarget: false
+		shootWarmupSpeed: 0.01
+		linearWarmup: true
+		minWarmup: 0.99
 		bullet: {
-			type: BulletType
+			type: BasicBulletType
+			collidesTiles: false
 			keepVelocity: false
-			collides: false
-			damage: 0
-			lifetime: 0
-			speed: 0
+			damage: 25
+			speed: 6
+			lifetime: 180
 			despawnEffect: none
 			hitEffect: none
 			smokeEffect: none
 			shootEffect: none
-		}
-	}
-	{
-		type: Weapon
-		reload: 50
-		x: 8
-		alternate: false
-		shootY: 0
-		shootCone: 360
-		alwaysShooting: true
-		shootSound: none
-		controllable: false
-		parentizeEffects: true
-		shoot: {
-			type: ShootSine
-			mag: 1
-			scl: 16
-			shots: 100
-			shotDelay: 1
-		}
-		bullet: {
-			type: BulletType
-			keepVelocity: false
-			collidesTiles: false
-			collides: false
-			damage: 0
-			lifetime: 1
-			speed: 0
-			despawnEffect: none
-			hitEffect: none
-			smokeEffect: none
-			shootEffect: {
-				type: ParticleEffect
-				particles: 1
-				lifetime: 120
-				length: -128
-				randLength: false
-				colorFrom: 686870
-				colorTo: 9EDDE200
-				sizeTo: 2
-				cone: 0
-				followParent: true
-				rotWithParent: true
-				layer: 97.5
-				clip: 512
+			shrinkY: 0
+			backColor: 00FFFF
+			frontColor: FFFFFF
+			trailColor: 00FFFF
+			trailLength: 4
+			trailWidth: 1
+			width: 8
+			height: 8
+			backMove: false
+			drawSize: 512
+			trailInterval: 1
+			trailEffect: {
+				type: MultiEffect
+				effects: [
+					{
+						type: ParticleEffect
+						particles: 4
+						lifetime: 10
+						colorFrom: ffffff
+						colorTo: ffffff00
+						length: 0
+						baseLength: 4
+					}
+					{
+						type: ParticleEffect
+						particles: 4
+						lifetime: 30
+						colorFrom: 56add8
+						colorTo: 4c5fbf00
+						length: 0
+						baseLength: 4
+					}
+				]
 			}
 		}
 	}
 	{
 		type: Weapon
-		reload: 50
-		x: 20
-		alternate: false
+		reload: 45
+		mirror: false
+		x: 0
 		shootY: 0
 		shootCone: 360
-		alwaysShooting: true
+		recoil: 0
 		shootSound: none
-		controllable: false
 		parentizeEffects: true
-		shoot: {
-			type: ShootSine
-			mag: 1
-			scl: -16
-			shots: 100
-			shotDelay: 1
-		}
+		predictTarget: false
+		shootWarmupSpeed: 0.01
+		linearWarmup: true
+		minWarmup: 0.75
 		bullet: {
-			type: BulletType
+			type: RailBulletType
 			keepVelocity: false
 			collidesTiles: false
-			collides: false
 			damage: 0
-			lifetime: 1
-			speed: 0
+			length: 1024
 			despawnEffect: none
-			hitEffect: none
 			smokeEffect: none
-			shootEffect: {
-				type: ParticleEffect
-				particles: 1
-				lifetime: 120
-				length: -100
-				randLength: false
-				colorFrom: 686870
-				colorTo: 9EDDE200
-				sizeTo: 2
-				cone: 0
-				followParent: true
-				rotWithParent: true
-				layer: 97.5
-				clip: 512
-			}
+			hitEffect: none
+			shootEffect: none
+			endEffect: none
+			hitEffect: none
 		}
-	}
-]
-parts: [
-	{
-		type: RegionPart
-		name: virtuality-alluvion
-		color: ffffff
-		layer: 98
-		progress: reload
-	}
-]
-abilities: [
-	{
-		type: SpawnDeathAbility
-		spread: 0
-		faceOutwards: false
-		unit: alluvion3
+		parts: [
+			{
+				type: RegionPart
+				name: virtuality-euthymy
+				progress: {
+					type: warmup
+					ops: [
+						{
+							op: mul
+							amount: 2
+						}
+					]
+				}
+				color: FFFFFF00
+				colorTo: FFFFFF
+				outline: false
+				layer: 116
+				rotation: 270
+			}
+			{
+				type: RegionPart
+				name: virtuality-ringblur
+				progress: {
+					type: warmup
+					ops: [
+						{
+							op: add
+							amount: -0.75
+						}
+						{
+							op: mul
+							amount: 6
+						}
+					]
+				}
+				xScl: 0
+				yScl: 0
+				moves: [
+					{
+						type: PartMove
+						gx: 4
+						gy: 4
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: add
+									amount: -0.75
+								}
+								{
+									op: mul
+									amount: 8
+								}
+							]
+						}
+					}
+				]
+				color: 56add8
+				colorTo: 4c5fbf00
+				outline: false
+				layer: 116
+			}
+		]
 	}
 ]
