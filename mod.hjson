@@ -1,10 +1,8 @@
 name: virtuality
 displayName: Virtuality
 author: bttodi
-description: '''
-heyjason mode feat. world procs
-touch controls are not supported
-'''
+description: A mod featuring boss fights, only using HJSON and world processors. Best experienced with a mouse and a keyboard.
+subtitle: v146-final
 minGameVersion: 146
 dependencies: [ ]
 hidden: false
