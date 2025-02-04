@@ -1,0 +1,12 @@
+type: Wall
+health: 4500
+size: 6
+research: {
+	parent: sector-6-alluvion
+	objectives: [
+		{
+			type: SectorComplete
+			preset: sector-6-alluvion
+		}
+	]
+}
