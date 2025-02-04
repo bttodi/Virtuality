@@ -1,4 +1,6 @@
-health: 1500
+type: missile
+lifetime: 2700
+health: 500000
 hitSize: 32
 speed: 1
 rotateSpeed: 0
@@ -9,6 +11,7 @@ outlineColor: 323A3A
 drawCell: false
 targetAir: false
 targetGround: false
+clipSize: 1024
 deathExplosionEffect: {
 	type: MultiEffect
 	effects: [
@@ -111,6 +114,90 @@ deathExplosionEffect: {
 	]
 }
 weapons: [
+	{
+		type: Weapon
+		reload: 500000
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		recoil: 0
+		shootSound: none
+		predictTarget: false
+		shoot: {
+			firstShotDelay: 2400
+		}
+		bullet: {
+			type: RailBulletType
+			collides: false
+			damage: 0
+			length: 1024
+			smokeEffect: none
+			shootEffect: none
+			hitEffect: none
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BulletType
+					speed: 0
+					lifetime: 300
+					collides: false
+					hitEffect: none
+					despawnEffect: none
+					intervalBullets: 1
+					bulletInterval: 30
+					intervalBullet: {
+						type: BulletType
+						speed: 0
+						lifetime: 30
+						collides: false
+						hitEffect: none
+						despawnEffect: none
+						parts: [
+							{
+								type: RegionPart
+								name: virtuality-ringblur
+								xScl: 0
+								yScl: 0
+								growX: 8
+								growY: 8
+								outline: false
+								color: 2D81FF3F
+								colorTo: A5FFFF7F
+								progress: life
+								layer: 109.8
+							}
+							{
+								type: RegionPart
+								name: virtuality-square
+								xScl: 512
+								yScl: 512
+								outline: false
+								color: 2D81FF3F
+								colorTo: A5FFFF00
+								progress: life
+								layer: 219.4
+							}
+						]
+					}
+					parts: [
+						{
+							type: RegionPart
+							name: virtuality-square
+							xScl: 512
+							yScl: 512
+							outline: false
+							color: FFFFFF00
+							colorTo: FFFFFF
+							progress: life
+							layer: 219.5
+						}
+					]
+				}
+			]
+		}
+	}
 	{
 		type: Weapon
 		reload: 500000
@@ -303,13 +390,5 @@ parts: [
 		color: ffffff
 		layer: 98
 		progress: reload
-	}
-]
-abilities: [
-	{
-		type: SpawnDeathAbility
-		spread: 0
-		faceOutwards: false
-		unit: alluvion4
 	}
 ]

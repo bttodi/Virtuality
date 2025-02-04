@@ -1,14 +1,18 @@
-health: 1500
-hitSize: 32
-speed: 1
+type: missile
+lifetime: 240
+health: 750
+drag: 0.15
+speed: 0
 rotateSpeed: 0
 physics: false
 bounded: false
-groundLayer: -1
-outlineColor: 323A3A
+faceTarget: false
+targetable: false
+hittable: false
 drawCell: false
-targetAir: false
-targetGround: false
+groundLayer: -1
+createScorch: false
+deathSound: none
 deathExplosionEffect: {
 	type: MultiEffect
 	effects: [
@@ -113,7 +117,7 @@ deathExplosionEffect: {
 weapons: [
 	{
 		type: Weapon
-		reload: 500000
+		reload: 240
 		mirror: false
 		x: 0
 		shootY: 0
@@ -183,133 +187,122 @@ weapons: [
 	}
 	{
 		type: Weapon
-		reload: 120
+		reload: 480
 		mirror: false
 		x: 0
 		shootY: 0
 		shootCone: 360
 		alwaysShooting: true
+		recoil: 0
 		shootSound: none
-		bullet: {
-			type: BulletType
-			keepVelocity: false
-			collides: false
-			damage: 0
-			lifetime: 0
-			speed: 0
-			despawnEffect: none
-			hitEffect: none
-			smokeEffect: none
-			shootEffect: none
-		}
-	}
-	{
-		type: Weapon
-		reload: 50
-		x: 8
-		alternate: false
-		shootY: 0
-		shootCone: 360
-		alwaysShooting: true
-		shootSound: none
-		controllable: false
-		parentizeEffects: true
+		predictTarget: false
+		shootWarmupSpeed: 0.05
 		shoot: {
 			type: ShootSine
-			mag: 1
-			scl: 16
-			shots: 100
-			shotDelay: 1
+			firstShotDelay: 60
+			shots: 50
+			shotDelay: 6
+			mag: 720
+			scl: 360
 		}
+		parts: [
+			{
+				type: RegionPart
+				name: virtuality-scyphozoa
+				outline: false
+				progress: warmup
+				color: ffffff00
+				colorTo: ffffff
+				layer: 115
+				moves: [
+					{
+						type: PartMove
+						rot: -2160
+						progress: {
+							type: reload
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 0.875
+								}
+								{
+									op: curve
+									interp: sine
+								}
+							]
+						}
+					}
+				]
+			}
+		]
 		bullet: {
-			type: BulletType
-			keepVelocity: false
-			collidesTiles: false
+			type: RailBulletType
 			collides: false
 			damage: 0
-			lifetime: 1
-			speed: 0
-			despawnEffect: none
-			hitEffect: none
-			smokeEffect: none
-			shootEffect: {
-				type: ParticleEffect
-				particles: 1
-				lifetime: 120
-				length: -128
-				randLength: false
-				colorFrom: 686870
-				colorTo: 9EDDE200
-				sizeTo: 2
-				cone: 0
-				followParent: true
-				rotWithParent: true
-				layer: 97.5
-				clip: 512
-			}
+			length: 1024
+			spawnBullets: [
+				{
+					type: RailBulletType
+					damage: 0
+					collides: false
+					fragOnHit: false
+					length: 512
+					fragBullets: 12
+					fragRandomSpread: 0
+					fragSpread: 30
+					fragVelocityMin: 1
+					fragOffsetMax: 0
+					fragOffsetMin: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						keepVelocity: false
+						damage: 10
+						speed: 2
+						drag: -0.01
+						lifetime: 120
+						despawnEffect: none
+						hitEffect: none
+						smokeEffect: none
+						shootEffect: none
+						shrinkY: 0
+						backColor: 00FFFF
+						frontColor: FFFFFF
+						trailColor: 00FFFF
+						trailLength: 4
+						trailWidth: 1
+						width: 8
+						height: 8
+						backMove: false
+						drawSize: 512
+						trailInterval: 1
+						trailEffect: {
+							type: MultiEffect
+							effects: [
+								{
+									type: ParticleEffect
+									particles: 4
+									lifetime: 5
+									colorFrom: ffffff
+									colorTo: ffffff00
+									length: 0
+									baseLength: 4
+								}
+								{
+									type: ParticleEffect
+									particles: 4
+									lifetime: 15
+									colorFrom: 56add8
+									colorTo: 56add800
+									length: 0
+									baseLength: 4
+								}
+							]
+						}
+					}
+				}
+			]
 		}
-	}
-	{
-		type: Weapon
-		reload: 50
-		x: 20
-		alternate: false
-		shootY: 0
-		shootCone: 360
-		alwaysShooting: true
-		shootSound: none
-		controllable: false
-		parentizeEffects: true
-		shoot: {
-			type: ShootSine
-			mag: 1
-			scl: -16
-			shots: 100
-			shotDelay: 1
-		}
-		bullet: {
-			type: BulletType
-			keepVelocity: false
-			collidesTiles: false
-			collides: false
-			damage: 0
-			lifetime: 1
-			speed: 0
-			despawnEffect: none
-			hitEffect: none
-			smokeEffect: none
-			shootEffect: {
-				type: ParticleEffect
-				particles: 1
-				lifetime: 120
-				length: -100
-				randLength: false
-				colorFrom: 686870
-				colorTo: 9EDDE200
-				sizeTo: 2
-				cone: 0
-				followParent: true
-				rotWithParent: true
-				layer: 97.5
-				clip: 512
-			}
-		}
-	}
-]
-parts: [
-	{
-		type: RegionPart
-		name: virtuality-alluvion
-		color: ffffff
-		layer: 98
-		progress: reload
-	}
-]
-abilities: [
-	{
-		type: SpawnDeathAbility
-		spread: 0
-		faceOutwards: false
-		unit: alluvion4
 	}
 ]
