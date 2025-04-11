@@ -1,0 +1,172 @@
+type: missile
+lifetime: 60
+health: 750
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+maxRange: 4096
+weapons: [
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		y: 0
+		shootY: 32
+		shootCone: 360
+		rotate: true
+		rotateSpeed: 999999
+		alwaysShooting: true
+		recoil: 0
+		shootStatus: virtuality-stopshootingdammit
+		shootStatusDuration: 5000
+		shootSound: none
+		predictTarget: false
+		shoot: {
+			firstShotDelay: 30
+		}
+		bullet: {
+			type: BulletType
+			collidesTiles: false
+			collides: false
+			keepVelocity: false
+			damage: 0
+			speed: 16
+			lifetime: 120
+			scaleLife: true
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			fragBullets: 1
+			fragRandomAngle: 0
+			fragBullet: {
+				type: BulletType
+				drawSize: 256
+				collides: false
+				collidesTiles: false
+				keepVelocity: false
+				damage: 0
+				speed: 0
+				lifetime: 90
+				splashDamage: 0
+				splashDamageRadius: 64
+				despawnSound: mediumCannon
+				trailInterval: 1
+				trailEffect: {
+					type: ParticleEffect
+					lifetime: 30
+					region: virtuality-square
+					baseLength: 64
+					randLength: false
+					length: -16
+					cone: 360
+					sizeFrom: 1
+					sizeTo: 1
+					colorFrom: FFFFFF
+					colorTo: 2D81FF00
+					clip: 256
+				}
+				despawnEffect: {
+					type: MultiEffect
+					effects: [
+						{
+							type: ParticleEffect
+							region: virtuality-explosion
+							lifetime: 30
+							particles: 1
+							spin: -0.5
+							length: 0
+							sizeFrom: 80
+							sizeTo: 96
+							colorFrom: 7FD4FF
+							colorTo: 7FD4FF00
+							interp: circleIn
+							sizeInterp: slope
+							layer: 110
+							clip: 512
+						}
+						{
+							type: ParticleEffect
+							region: virtuality-explosion
+							lifetime: 30
+							particles: 1
+							spin: 1
+							length: 0
+							sizeFrom: 80
+							sizeTo: 96
+							colorFrom: 2D81FF
+							colorTo: 2D81FF00
+							interp: circleIn
+							sizeInterp: slope
+							layer: 109
+							clip: 512
+						}
+						{
+							type: ParticleEffect
+							particles: 256
+							lifetime: 60
+							region: virtuality-square
+							baseLength: 64
+							length: 512
+							cone: 360
+							sizeFrom: 1
+							sizeTo: 1
+							colorFrom: FFFFFF
+							colorTo: 2D81FF00
+							interp: circleOut
+							clip: 512
+						}
+					]
+				}
+				hitEffect: none
+				smokeEffect: none
+				status: virtuality-5dpf
+				statusDuration: 10
+				parts: [
+					{
+						type: ShapePart
+						hollow: true
+						circle: true
+						radius: 64
+						color: 2D81FF00
+						colorTo: 2D81FF
+						stroke: 3
+						progress: life
+					}
+					{
+						type: ShapePart
+						hollow: true
+						sides: 32
+						radius: 0
+						radiusTo: 32
+						color: 2D81FF00
+						colorTo: 2D81FF3F
+						progress: life
+						stroke: 0
+						strokeTo: 64
+					}
+					{
+						type: ShapePart
+						hollow: true
+						circle: true
+						radius: 64
+						color: 7FD4FF00
+						colorTo: 7FD4FF
+						stroke: 1
+						progress: life
+					}
+				]
+			}
+		}
+	}
+]

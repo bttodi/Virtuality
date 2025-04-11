@@ -1,0 +1,108 @@
+type: missile
+lifetime: 570
+health: 750
+speed: 0
+rotateSpeed: 1
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+weapons: [
+	{
+		type: Weapon
+		reload: 120
+		mirror: false
+		x: 0
+		y: 0
+		shootY: 0
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		parentizeEffects: true
+		predictTarget: false
+		alwaysShooting: true
+		inaccuracy: 180
+		bullet: {
+			type: RailBulletType
+			length: 1024
+			damage: 0
+			collides: false
+			status: virtuality-5dpf
+			shootEffect: none
+			smokeEffect: none
+			statusDuration: 5
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BasicBulletType
+					collides: false
+					keepVelocity: false
+					speed: 0
+					lifetime: 120
+					despawnEffect: none
+					hitEffect: none
+					smokeEffect: none
+					shootEffect: none
+					shrinkY: 0
+					frontColor: FF56753F
+					backColor: EB1E463F
+					sprite: missile-large
+					width: 8
+					height: 12
+					drawSize: 256
+					layer: 114
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						pierce: true
+						removeAfterPierce: false
+						lifetime: 120
+						damage: 25
+						width: 8
+						height: 12
+						sprite: missile-large
+						backMove: false
+						frontColor: FF5675
+						backColor: EB1E46
+						layer: 114
+						speed: 1
+						hitEffect: none
+						despawnEffect: none
+						shrinkY: 0
+						trailInterval: 1
+						trailEffect: {
+							type: ParticleEffect
+							particles: 1
+							lifetime: 20
+							layer: 113
+							baseRotation: 270
+							length: 24
+							interp: circleIn
+							cone: 0
+							colorFrom: EB1E467F
+							colorTo: 000000
+							clip: 128
+						}
+					}
+				}
+			]
+		}
+		shoot: {
+			type: ShootSummon
+			spread: 192
+			radius: 192
+			shots: 32
+		}
+	}
+]

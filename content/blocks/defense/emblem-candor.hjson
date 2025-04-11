@@ -2,11 +2,11 @@ type: Wall
 health: 3750
 size: 1
 research: {
-	parent: sector-candor
+	parent: sector-1-candor
 	objectives: [
 		{
 			type: SectorComplete
-			preset: sector-candor
+			preset: sector-1-candor
 		}
 	]
 }

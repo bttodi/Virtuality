@@ -1,0 +1,394 @@
+type: missile
+lifetime: 2700
+health: 500000
+hitSize: 32
+speed: 1
+rotateSpeed: 0
+physics: false
+bounded: false
+groundLayer: -1
+outlineColor: 323A3A
+drawCell: false
+targetAir: false
+targetGround: false
+clipSize: 1024
+deathExplosionEffect: {
+	type: MultiEffect
+	effects: [
+		{
+			type: ParticleEffect
+			particles: 1
+			lifetime: 60
+			sizeTo: 64
+			colorFrom: 56add8
+			colorTo: 56add800
+			region: virtuality-burst
+			length: 0
+			interp: pow10In
+			sizeInterp: pow10Out
+			layer: 101
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			startDelay: 5
+			lifetime: 60
+			sizeTo: 128
+			colorFrom: 000000
+			colorTo: 000000
+			region: virtuality-explosion
+			length: 0
+			sizeInterp: circleOut
+			layer: 101.1
+		}
+		{
+			type: ParticleEffect
+			particles: 32
+			lifetime: 90
+			sizeFrom: 8
+			sizeTo: 0
+			spin: 6
+			colorFrom: ffffff
+			colorTo: 56add87f
+			region: virtuality-offdot
+			baseLength: 16
+			length: 64
+			interp: circleOut
+			sizeInterp: linear
+		}
+		{
+			type: ParticleEffect
+			particles: 32
+			lifetime: 90
+			sizeFrom: 8
+			sizeTo: 0
+			spin: -4
+			colorFrom: ffffff
+			colorTo: 56add800
+			region: virtuality-offdot
+			baseLength: 16
+			length: 64
+			interp: circleOut
+			sizeInterp: linear
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			lifetime: 60
+			sizeTo: 64
+			colorFrom: 56add8
+			colorTo: 56add800
+			region: virtuality-ripplethin
+			length: 0
+			sizeInterp: linear
+			interp: pow5In
+		}
+		{
+			type: ParticleEffect
+			startDelay: 15
+			particles: 1
+			lifetime: 60
+			sizeTo: 64
+			colorFrom: 56add8
+			colorTo: 56add800
+			region: virtuality-ripplethin
+			length: 0
+			offset: 137.5
+			sizeInterp: linear
+			interp: pow5In
+		}
+		{
+			type: ParticleEffect
+			startDelay: 30
+			particles: 1
+			lifetime: 60
+			sizeTo: 64
+			colorFrom: 56add8
+			colorTo: 56add800
+			region: virtuality-ripplethin
+			length: 0
+			offset: 275
+			sizeInterp: linear
+			interp: pow5In
+		}
+	]
+}
+weapons: [
+	{
+		type: Weapon
+		reload: 500000
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		recoil: 0
+		shootSound: none
+		predictTarget: false
+		shoot: {
+			firstShotDelay: 2400
+		}
+		bullet: {
+			type: RailBulletType
+			collides: false
+			damage: 0
+			length: 1024
+			smokeEffect: none
+			shootEffect: none
+			hitEffect: none
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BulletType
+					speed: 0
+					lifetime: 300
+					collides: false
+					hitEffect: none
+					despawnEffect: none
+					intervalBullets: 1
+					bulletInterval: 30
+					intervalBullet: {
+						type: BulletType
+						speed: 0
+						lifetime: 30
+						collides: false
+						hitEffect: none
+						despawnEffect: none
+						parts: [
+							{
+								type: RegionPart
+								name: virtuality-ringblur
+								xScl: 0
+								yScl: 0
+								growX: 8
+								growY: 8
+								outline: false
+								color: 2D81FF3F
+								colorTo: A5FFFF7F
+								progress: life
+								layer: 109.8
+							}
+							{
+								type: RegionPart
+								name: virtuality-square
+								xScl: 512
+								yScl: 512
+								outline: false
+								color: 2D81FF3F
+								colorTo: A5FFFF00
+								progress: life
+								layer: 219.4
+							}
+						]
+					}
+					parts: [
+						{
+							type: RegionPart
+							name: virtuality-square
+							xScl: 512
+							yScl: 512
+							outline: false
+							color: FFFFFF00
+							colorTo: FFFFFF
+							progress: life
+							layer: 219.5
+						}
+					]
+				}
+			]
+		}
+	}
+	{
+		type: Weapon
+		reload: 500000
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		recoil: 0
+		shootSound: none
+		predictTarget: false
+		shoot: {
+			shots: 20
+			shotDelay: 3
+		}
+		bullet: {
+			type: RailBulletType
+			collides: false
+			damage: 0
+			length: 1024
+			smokeEffect: none
+			shootEffect: {
+				type: MultiEffect
+				effects: [
+					{
+						type: ParticleEffect
+						particles: 4
+						lifetime: 120
+						colorFrom: ffffff7f
+						colorTo: 56add83f
+						sizeFrom: 2
+						baseLength: 32
+						length: 32
+						layer: 98
+						followParent: false
+						interp: circleOut
+						sizeInterp: linear
+					}
+					{
+						type: ParticleEffect
+						particles: 4
+						lifetime: 120
+						colorFrom: ffffff7f
+						colorTo: 56add83f
+						sizeFrom: 4
+						baseLength: 32
+						length: 32
+						layer: 98
+						followParent: false
+						interp: circleOut
+						sizeInterp: linear
+					}
+					{
+						type: ParticleEffect
+						particles: 4
+						lifetime: 120
+						colorFrom: ffffff7f
+						colorTo: 56add83f
+						sizeFrom: 6
+						layer: 98
+						baseLength: 32
+						length: 32
+						followParent: false
+						interp: circleOut
+						sizeInterp: linear
+					}
+				]
+			}
+		}
+	}
+	{
+		type: Weapon
+		reload: 120
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collides: false
+			damage: 0
+			lifetime: 0
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+	}
+	{
+		type: Weapon
+		reload: 50
+		x: 8
+		alternate: false
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		controllable: false
+		parentizeEffects: true
+		shoot: {
+			type: ShootSine
+			mag: 1
+			scl: 16
+			shots: 100
+			shotDelay: 1
+		}
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collidesTiles: false
+			collides: false
+			damage: 0
+			lifetime: 1
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 120
+				length: -128
+				randLength: false
+				colorFrom: 686870
+				colorTo: 9EDDE200
+				sizeTo: 2
+				cone: 0
+				followParent: true
+				rotWithParent: true
+				layer: 97.5
+				clip: 512
+			}
+		}
+	}
+	{
+		type: Weapon
+		reload: 50
+		x: 20
+		alternate: false
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		controllable: false
+		parentizeEffects: true
+		shoot: {
+			type: ShootSine
+			mag: 1
+			scl: -16
+			shots: 100
+			shotDelay: 1
+		}
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collidesTiles: false
+			collides: false
+			damage: 0
+			lifetime: 1
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 120
+				length: -100
+				randLength: false
+				colorFrom: 686870
+				colorTo: 9EDDE200
+				sizeTo: 2
+				cone: 0
+				followParent: true
+				rotWithParent: true
+				layer: 97.5
+				clip: 512
+			}
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		name: virtuality-alluvion
+		color: ffffff
+		layer: 98
+		progress: reload
+	}
+]

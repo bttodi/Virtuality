@@ -1,0 +1,261 @@
+type: missile
+lifetime: 120
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [
+	{
+		type: Weapon
+		reload: 120
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shootWarmupSpeed: 0.1
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+		}
+		parts: [
+			{
+				type: RegionPart
+				color: EB1E4600
+				colorTo: EB1E46
+				name: virtuality-ringblur
+				layer: 115
+				progress: {
+					type: reload
+					ops: [
+						{
+							op: compress
+							start: 0.85
+							end: 1
+						}
+					]
+				}
+				outline: false
+				xScl: 0
+				yScl: 0
+				growX: 2
+				growY: 2
+			}
+		]
+	}
+	{
+		type: Weapon
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		aiControllable: false
+		controllable: false
+		shootOnDeath: true
+		shootSound: none
+		shoot: {
+			type: ShootSpread
+			shots: 8
+			spread: 45
+		}
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BulletType
+					collides: false
+					lifetime: 63
+					speed: 2
+					drag: -0.04
+					hitEffect: none
+					despawnEffect: none
+					weaveScale: 600
+					weaveMag: -3
+					weaveRandom: false
+					trailInterval: 1
+					trailRotation: true
+					trailEffect: {
+						type: ParticleEffect
+						particles: 1
+						line: true
+						lifetime: 40
+						layer: 113
+						length: 1
+						cone: 0
+						colorFrom: EB1E463F
+						colorTo: 0000007F
+						clip: 128
+						interp: circleIn
+					}
+				}
+				{
+					type: BulletType
+					collides: false
+					lifetime: 63
+					speed: 2
+					drag: -0.04
+					hitEffect: none
+					despawnEffect: none
+					weaveScale: 600
+					weaveMag: 3
+					weaveRandom: false
+					trailInterval: 1
+					trailRotation: true
+					trailEffect: {
+						type: ParticleEffect
+						particles: 1
+						line: true
+						lifetime: 40
+						layer: 113
+						length: 1
+						cone: 0
+						colorFrom: EB1E463F
+						colorTo: 0000007F
+						clip: 128
+						interp: circleIn
+					}
+				}
+				{
+					type: BulletType
+					collides: false
+					lifetime: 30
+					speed: 0
+					hitEffect: none
+					despawnEffect: none
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						pierce: true
+						removeAfterPierce: false
+						lifetime: 63
+						damage: 25
+						width: 8
+						height: 12
+						backMove: false
+						frontColor: FF5675
+						backColor: EB1E46
+						trailColor: EB1E46
+						trailLength: 8
+						trailWidth: 1
+						layer: 114
+						lightScl: 0
+						speed: 2
+						drag: -0.04
+						hitEffect: none
+						despawnEffect: none
+						weaveScale: 600
+						weaveMag: -3
+						weaveRandom: false
+						trailInterval: 0.5
+						trailEffect: {
+							type: ParticleEffect
+							particles: 1
+							lifetime: 40
+							layer: 113
+							baseRotation: 270
+							length: 24
+							cone: 0
+							colorFrom: EB1E46
+							colorTo: 000000
+							clip: 128
+						}
+					}
+				}
+				{
+					type: BulletType
+					collides: false
+					lifetime: 30
+					speed: 0
+					hitEffect: none
+					despawnEffect: none
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						pierce: true
+						removeAfterPierce: false
+						lifetime: 63
+						damage: 25
+						width: 8
+						height: 12
+						backMove: false
+						frontColor: FF5675
+						backColor: EB1E46
+						trailColor: EB1E46
+						trailLength: 8
+						trailWidth: 1
+						layer: 114
+						lightScl: 0
+						speed: 2
+						drag: -0.04
+						hitEffect: none
+						despawnEffect: none
+						weaveScale: 600
+						weaveMag: 3
+						weaveRandom: false
+						trailInterval: 0.5
+						trailEffect: {
+							type: ParticleEffect
+							particles: 1
+							lifetime: 40
+							layer: 113
+							baseRotation: 270
+							length: 24
+							cone: 0
+							colorFrom: EB1E46
+							colorTo: 000000
+							clip: 128
+						}
+					}
+				}
+			]
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		color: FFFFFF
+		colorTo: FFFFFF
+		name: virtuality-deliciousfruit
+		layer: 115
+		outline: false
+		xScl: 2
+		yScl: 2
+	}
+]

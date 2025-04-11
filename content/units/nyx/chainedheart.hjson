@@ -1,0 +1,667 @@
+health: 500
+hitSize: 32
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+rotateSpeed: 0
+groundLayer: -1
+weapons: [
+	{
+		type: Weapon
+		reload: 150
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shootWarmupSpeed: 0.015
+		minWarmup: 0.9
+		shoot: {
+			type: ShootSpread
+			shots: 8
+			spread: 45
+		}
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BulletType
+					collides: false
+					lifetime: 60
+					speed: 2
+					drag: -0.04
+					hitEffect: none
+					despawnEffect: none
+					weaveScale: 600
+					weaveMag: -2
+					weaveRandom: false
+					trailInterval: 1
+					trailRotation: true
+					trailEffect: {
+						type: ParticleEffect
+						particles: 1
+						line: true
+						lifetime: 40
+						layer: 113
+						length: 1
+						cone: 0
+						colorFrom: EB1E463F
+						colorTo: 0000007F
+						clip: 128
+						interp: circleIn
+					}
+				}
+				{
+					type: BulletType
+					collides: false
+					lifetime: 60
+					speed: 2
+					drag: -0.04
+					hitEffect: none
+					despawnEffect: none
+					weaveScale: 600
+					weaveMag: 2
+					weaveRandom: false
+					trailInterval: 1
+					trailRotation: true
+					trailEffect: {
+						type: ParticleEffect
+						particles: 1
+						line: true
+						lifetime: 40
+						layer: 113
+						length: 1
+						cone: 0
+						colorFrom: EB1E463F
+						colorTo: 0000007F
+						clip: 128
+						interp: circleIn
+					}
+				}
+				{
+					type: BulletType
+					collides: false
+					lifetime: 40
+					speed: 0
+					hitEffect: none
+					despawnEffect: none
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						pierce: true
+						removeAfterPierce: false
+						lifetime: 60
+						damage: 0
+						status: virtuality-5dpf
+						statusDuration: 5
+						width: 8
+						height: 12
+						backMove: false
+						frontColor: FF5675
+						backColor: EB1E46
+						trailColor: EB1E46
+						trailLength: 8
+						trailWidth: 1
+						layer: 114
+						lightScl: 0
+						speed: 2
+						drag: -0.04
+						hitEffect: none
+						despawnEffect: none
+						weaveScale: 600
+						weaveMag: -2
+						weaveRandom: false
+						trailInterval: 0.5
+						trailEffect: {
+							type: ParticleEffect
+							particles: 1
+							lifetime: 40
+							layer: 113
+							baseRotation: 270
+							length: 24
+							cone: 0
+							colorFrom: EB1E46
+							colorTo: 000000
+							clip: 128
+						}
+						bulletInterval: 1
+						intervalBullet: {
+							type: BulletType
+							speed: 0
+							collidesTiles: false
+							lifetime: 8
+							damage: 0
+							status: virtuality-5dpf
+							statusDuration: 5
+							keepVelocity: false
+							hitEffect: none
+							despawnEffect: none
+						}
+					}
+				}
+				{
+					type: BulletType
+					collides: false
+					lifetime: 40
+					speed: 0
+					hitEffect: none
+					despawnEffect: none
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						pierce: true
+						removeAfterPierce: false
+						lifetime: 60
+						damage: 0
+						status: virtuality-5dpf
+						statusDuration: 5
+						width: 8
+						height: 12
+						backMove: false
+						frontColor: FF5675
+						backColor: EB1E46
+						trailColor: EB1E46
+						trailLength: 8
+						trailWidth: 1
+						layer: 114
+						lightScl: 0
+						speed: 2
+						drag: -0.04
+						hitEffect: none
+						despawnEffect: none
+						weaveScale: 600
+						weaveMag: 2
+						weaveRandom: false
+						trailInterval: 0.5
+						trailEffect: {
+							type: ParticleEffect
+							particles: 1
+							lifetime: 40
+							layer: 113
+							baseRotation: 270
+							length: 24
+							cone: 0
+							colorFrom: EB1E46
+							colorTo: 000000
+							clip: 128
+						}
+						bulletInterval: 1
+						intervalBullet: {
+							type: BulletType
+							speed: 0
+							collidesTiles: false
+							lifetime: 8
+							damage: 0
+							status: virtuality-5dpf
+							statusDuration: 5
+							keepVelocity: false
+							hitEffect: none
+							despawnEffect: none
+						}
+					}
+				}
+			]
+		}
+	}
+	{
+		type: Weapon
+		reload: 6
+		alternate: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shootWarmupSpeed: 0.015
+		minWarmup: 0.5
+		rotate: true
+		rotateSpeed: 1
+		bullet: {
+			type: RailBulletType
+			length: 32
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+			fragBullets: 2
+			fragSpread: 180
+			fragRandomSpread: 0
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragOnHit: false
+			fragBullet: {
+				type: RailBulletType
+				length: 256
+				collidesTiles: false
+				damage: 0.0001
+				status: virtuality-5dpf
+				statusDuration: 5
+				despawnEffect: none
+				hitEffect: none
+				smokeEffect: none
+				shootEffect: none
+				pierceEffect: none
+			}
+		}
+		shoot: {
+			shots: 6
+			shotDelay: 2
+		}
+		parts: [
+			{
+				type: RegionPart
+				name: virtuality-lasermask
+				color: 000000
+				colorTo: 000000
+				outline: false
+				layer: 105.15
+				x: 208
+				yScl: 2
+				rotation: 90
+			}
+			{
+				type: RegionPart
+				name: virtuality-square
+				outline: false
+				progress: {
+					type: warmup
+					ops: [
+						{
+							op: curve
+							interp: reverse
+						}
+						{
+							op: compress
+							start: 0
+							end: 0.5
+						}
+					]
+				}
+				color: EB1E4600
+				colorTo: EB1E467F
+				layer: 105.1
+				xScl: 64
+				yScl: 4
+				x: 128
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 24
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						gy: -0.5
+						x: -24
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 48
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 72
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 96
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 120
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 144
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 168
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 192
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 216
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				progress: reload
+				color: EB1E46
+				colorTo: EB1E46
+				layer: 105.1
+				xScl: 0
+				yScl: 0.5
+				x: 240
+				rotation: 90
+				moves: [
+					{
+						type: PartMove
+						gx: 0.5
+						progress: {
+							type: warmup
+							ops: [
+								{
+									op: compress
+									start: 0.5
+									end: 1
+								}
+							]
+						}
+					}
+					{
+						type: PartMove
+						x: -48
+						progress: reload
+					}
+				]
+			}
+		]
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		color: FFFFFF00
+		colorTo: FFFFFF
+		name: virtuality-chainedheart
+		layer: 115
+		progress: warmup
+		outline: false
+	}
+]

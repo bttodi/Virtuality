@@ -3,7 +3,7 @@ health: 500
 speed: 2
 rotateSpeed: 0
 faceTarget: false
-drag: 0.1
+drag: 0.5
 outlineColor: 383D34
 groundLayer: -1
 weapons: [
@@ -22,7 +22,7 @@ weapons: [
 		bullet: {
 			type: BasicBulletType
 			collidesTiles: false
-			damage: 10
+			damage: 100
 			keepVelocity: false
 			speed: 8
 			lifetime: 40
@@ -39,40 +39,6 @@ parts: [
 		circle: true
 		radius: 480
 		color: 000000
-	}
-	{
-		type: RegionPart
-		suffix: "-square"
-		layer: 218
-		radius: 480
-		color: 000000
-		y: 128
-		x: -300
-		xScl: 10
-	}
-	{
-		type: RegionPart
-		suffix: "-square"
-		layer: 218
-		radius: 480
-		color: 000000
-		y: -128
-		x: -300
-		xScl: 10
-	}
-	{
-		type: RegionPart
-		suffix: "-bossbar"
-		layer: 218
-		outline: false
-		y: -128
-	}
-	{
-		type: RegionPart
-		suffix: "-bossbar"
-		layer: 218
-		outline: false
-		y: 128
 	}
 ]
 alwaysUnlocked: true

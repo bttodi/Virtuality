@@ -1,0 +1,597 @@
+health: 1500
+speed: 1
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+rotateSpeed: 0
+groundLayer: -1
+clipSize: 1024
+targetable: false
+hittable: false
+weapons: [
+	{
+		type: Weapon
+		reload: 600
+		alternate: false
+		mirror: false
+		x: 0
+		y: -64
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		xRand: 2
+		shoot: {
+			type: ShootAlternate
+			barrels: 128
+			shots: 128
+			spread: 4
+		}
+		bullet: {
+			type: RailBulletType
+			ignoreSpawnAngle: true
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+		parts: [
+			// MASKING
+			{
+				type: RegionPart
+				color: 000000
+				name: virtuality-square
+				outline: false
+				layer: 105.91
+				xScl: 512
+				yScl: 80
+				y: 200
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC00003F
+				name: virtuality-square
+				outline: false
+				layer: 105.89
+				xScl: 512
+				yScl: 80
+				y: -71
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC0000
+				name: virtuality-beam
+				outline: false
+				layer: 105.91
+				xScl: 32
+				yScl: 256
+				y: -71
+				progress: reload
+				rotation: 90
+			}
+			{
+				type: RegionPart
+				color: DC0000
+				name: virtuality-square
+				outline: false
+				layer: 105.91
+				xScl: 512
+				yScl: 32
+				y: -128
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: 000000
+				name: virtuality-beam
+				outline: false
+				layer: 105.91
+				xScl: 8
+				yScl: 256
+				y: 48
+				progress: reload
+				rotation: 90
+			}
+			// TOP SLOW
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 256
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 512
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -256
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -512
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 768
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -768
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 1024
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -1024
+				y: 128
+				xScl: 2
+				progress: reload
+			}
+			// BOTTOM SLOW
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 256
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 512
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -256
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -512
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 768
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -768
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 1024
+				xScl: 2
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: DC1E46
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -1024
+				xScl: 2
+				progress: reload
+			}
+		]
+	}
+	{
+		type: Weapon
+		reload: 371
+		alternate: false
+		mirror: false
+		x: 0
+		y: -64
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+		parts: [
+			// TOP FAST
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 256
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 512
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -256
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -512
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 768
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -768
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 1024
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -1024
+				y: 128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			// BOTTOM FAST
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 256
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 512
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -256
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -512
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 768
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -768
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: 1024
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+			{
+				type: RegionPart
+				color: DC0000A5
+				name: virtuality-voronoi
+				outline: false
+				layer: 105.9
+				moveX: -256
+				moveY: -128
+				x: -1024
+				xScl: 2
+				progress: reload
+				rotation: 180
+			}
+		]
+	}
+]

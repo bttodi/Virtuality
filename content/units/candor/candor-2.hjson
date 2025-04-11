@@ -1,0 +1,345 @@
+health: 1500
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+groundLayer: 150
+hitSize: 32
+outlineColor: 000000
+drawCell: false
+weapons: [
+	{
+		type: Weapon
+		mirror: false
+		x: 0
+		aiControllable: false
+		shootOnDeath: true
+		shootSound: largeCannon
+		soundPitchMin: 1.8
+		soundPitchMax: 1.8
+		shootCone: 360
+		bullet: {
+			type: BulletType
+			collides: false
+			lifetime: 0
+			speed: 0
+		}
+	}
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		shootY: 4
+		inaccuracy: 360
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collides: false
+			damage: 0
+			lifetime: 0
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: MultiEffect
+				effects: [
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 45
+						layer: 150.1
+						sizeFrom: 8
+						cone: 0
+						randLength: false
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 45
+						layer: 150.2
+						sizeFrom: 6
+						cone: 0
+						randLength: false
+						colorFrom: 000000
+						colorTo: 000000
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 45
+						layer: 150.1
+						sizeFrom: 8
+						cone: 0
+						randLength: false
+						baseRotation: 137.5
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 45
+						layer: 150.2
+						sizeFrom: 6
+						cone: 0
+						randLength: false
+						colorFrom: 000000
+						colorTo: 000000
+						baseRotation: 137.5
+					}
+				]
+			}
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		name: "virtuality-candor"
+		layer: 150
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 8
+		radiusTo: 8
+		shapes: 16
+		layer: 150.1
+		tri: true
+		triLength: 2
+		triLengthTo: 2
+		shapeRotation: 180
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 8
+		radiusTo: 8
+		shapes: 16
+		layer: 150.1
+		tri: true
+		triLength: 2
+		triLengthTo: 2
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 4
+		radiusTo: 4
+		shapes: 16
+		layer: 150.1
+		tri: true
+		triLength: 6
+		triLengthTo: 6
+		shapeRotation: 180
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 4
+		radiusTo: 4
+		shapes: 16
+		layer: 150.1
+		tri: true
+		triLength: 6
+		triLengthTo: 6
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 6
+		radiusTo: 6
+		shapes: 16
+		color: 000000
+		colorTo: 000000
+		layer: 150.2
+		tri: true
+		triLength: 1
+		triLengthTo: 1
+		shapeRotation: 180
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 6
+		radiusTo: 6
+		shapes: 16
+		color: 000000
+		colorTo: 000000
+		layer: 150.2
+		tri: true
+		triLength: 1
+		triLengthTo: 1
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 2
+		radiusTo: 2
+		shapes: 16
+		color: 000000
+		colorTo: 000000
+		layer: 150.2
+		tri: true
+		triLength: 4
+		triLengthTo: 4
+		shapeRotation: 180
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 2
+		radiusTo: 2
+		shapes: 16
+		color: 000000
+		colorTo: 000000
+		layer: 150.2
+		tri: true
+		triLength: 4
+		triLengthTo: 4
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 8
+		radiusTo: 8
+		shapes: 16
+		layer: 150.1
+		tri: true
+		triLength: 2
+		triLengthTo: 2
+		shapeRotation: 180
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 8
+		radiusTo: 8
+		shapes: 16
+		layer: 150.1
+		tri: true
+		triLength: 2
+		triLengthTo: 2
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 4
+		radiusTo: 4
+		shapes: 16
+		layer: 150.1
+		tri: true
+		triLength: 6
+		triLengthTo: 6
+		shapeRotation: 180
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 4
+		radiusTo: 4
+		shapes: 16
+		layer: 150.1
+		tri: true
+		triLength: 6
+		triLengthTo: 6
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 6
+		radiusTo: 6
+		shapes: 16
+		color: 000000
+		colorTo: 000000
+		layer: 150.2
+		tri: true
+		triLength: 1
+		triLengthTo: 1
+		shapeRotation: 180
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 6
+		radiusTo: 6
+		shapes: 16
+		color: 000000
+		colorTo: 000000
+		layer: 150.2
+		tri: true
+		triLength: 1
+		triLengthTo: 1
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 2
+		radiusTo: 2
+		shapes: 16
+		color: 000000
+		colorTo: 000000
+		layer: 150.2
+		tri: true
+		triLength: 4
+		triLengthTo: 4
+		shapeRotation: 180
+		haloRotateSpeed: 0.2
+	}
+	{
+		type: HaloPart
+		haloRadius: 32
+		haloRadiusTo: 32
+		radius: 2
+		radiusTo: 2
+		shapes: 16
+		color: 000000
+		colorTo: 000000
+		layer: 150.2
+		tri: true
+		triLength: 4
+		triLengthTo: 4
+		haloRotateSpeed: 0.2
+	}
+]
+abilities: [
+	{
+		type: SpawnDeathAbility
+		spread: 0
+		faceOutwards: false
+		unit: candor-3
+	}
+]

@@ -1,0 +1,73 @@
+health: 4000
+hitSize: 32
+speed: 6
+rotateSpeed: 6
+accel: 1
+drag: 0.025
+physics: false
+bounded: false
+groundLayer: 95
+drawCell: false
+outlineColor: DC1E46
+omniMovement: false
+weapons: [
+	{
+		type: Weapon
+		reload: 2
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		minShootVelocity: 7
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: ParticleEffect
+				particles: 4
+				lifetime: 30
+				colorFrom: EB1E46
+				colorTo: EB1E4600
+				length: 32
+				layer: 111
+				sizeFrom: 4
+				sizeTo: 4
+			}
+			spawnBullets: [
+				{
+					type: BulletType
+					keepVelocity: false
+					lifetime: 90
+					speed: 0
+					collidesTiles: false
+					damage: 50
+					despawnEffect: none
+					hitEffect: none
+					pierce: true
+					hitSize: 16
+					trailInterval: 1
+					trailEffect: {
+						type: ParticleEffect
+						particles: 4
+						lifetime: 30
+						colorFrom: EB1E467F
+						colorTo: 00000000
+						length: 0
+						baseLength: 16
+						layer: 111
+						sizeFrom: 4
+						sizeTo: 4
+					}
+				}
+			]
+		}
+	}
+]

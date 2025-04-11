@@ -1,0 +1,157 @@
+health: 750
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+faceTarget: false
+weapons: [
+	{
+		type: Weapon
+		reload: 6
+		alternate: false
+		x: 0
+		shootY: -128
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		parentizeEffects: true
+		predictTarget: false
+		alwaysShooting: true
+		baseRotation: 270
+		shoot: {
+			firstShotDelay: 90
+		}
+		bullet: {
+			type: BasicBulletType
+			collidesTiles: false
+			pierce: true
+			removeAfterPierce: false
+			lifetime: 180
+			damage: 10
+			width: 8
+			height: 12
+			sprite: missile-large
+			backMove: false
+			frontColor: 000000
+			backColor: 000000
+			trailColor: 000000
+			trailLength: 3
+			layer: 116
+			speed: 1.5
+			drag: -0.025
+			hitEffect: none
+			despawnEffect: none
+			shrinkY: 0
+			parts: [
+				{
+					type: RegionPart
+					name: virtuality-square
+					color: 000000
+					colorTo: 00000000
+					progress: {
+						type: life
+						ops: [
+							{
+								op: compress
+								start: 0
+								end: 0.75
+							}
+							{
+								op: curve
+								interp: circleIn
+							}
+						]
+					}
+					yScl: 256
+					y: 512
+					xScl: 0.25
+					layer: 116
+					outline: false
+				}
+			]
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		color: FF3A7D
+		colorTo: FF3A7D
+		name: virtuality-square
+		layer: 29.15
+		outline: false
+		xScl: 128
+		yScl: 64
+		y: -128
+	}
+	{
+		type: RegionPart
+		color: 2D81FF
+		colorTo: 2D81FF
+		name: virtuality-square
+		layer: 29.15
+		outline: false
+		xScl: 128
+		yScl: 64
+		y: 128
+	}
+	{
+		type: ShapePart
+		color: FF3A7D
+		colorTo: FF3A7D
+		layer: 29.16
+		outline: false
+		radius: 128
+		sides: 32
+		x: -128
+	}
+	{
+		type: ShapePart
+		color: 2D81FF
+		colorTo: 2D81FF
+		layer: 29.16
+		outline: false
+		radius: 128
+		sides: 32
+		x: 128
+	}
+	{
+		type: ShapePart
+		color: 000000
+		colorTo: 000000
+		layer: 29.17
+		outline: false
+		radius: 64
+		sides: 32
+		x: -128
+	}
+	{
+		type: ShapePart
+		color: 000000
+		colorTo: 000000
+		layer: 29.17
+		outline: false
+		radius: 64
+		sides: 32
+		x: 128
+	}
+	{
+		type: ShapePart
+		color: 000000
+		colorTo: 000000
+		layer: 29.18
+		outline: false
+		hollow: true
+		radius: 320
+		stroke: 128
+		sides: 64
+	}
+]

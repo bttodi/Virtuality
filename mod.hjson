@@ -2,8 +2,8 @@ name: virtuality
 displayName: Virtuality
 author: bttodi
 description: A mod featuring boss fights, only using HJSON and world processors. Best experienced with a mouse and a keyboard.
-subtitle: v146-final
-minGameVersion: 146
+subtitle: v147-initial
+minGameVersion: 147
+version: v147-initial
 dependencies: [ ]
 hidden: false
-hideBrowser: false

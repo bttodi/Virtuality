@@ -1,0 +1,325 @@
+type: missile
+lifetime: 90
+health: 750
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+weapons: [
+	{
+		type: Weapon
+		reload: 120
+		mirror: false
+		x: 0
+		y: 0
+		shootY: -128
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		parentizeEffects: true
+		predictTarget: false
+		alwaysShooting: true
+		bullet: {
+			type: RailBulletType
+			length: 1024
+			damage: 0
+			collides: false
+			status: virtuality-5dpf
+			shootEffect: none
+			smokeEffect: none
+			statusDuration: 5
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BasicBulletType
+					collides: false
+					keepVelocity: false
+					speed: 0
+					lifetime: 60
+					despawnEffect: none
+					hitEffect: none
+					smokeEffect: none
+					shootEffect: none
+					shrinkY: 0
+					frontColor: 000000
+					backColor: 000000
+					sprite: missile-large
+					width: 8
+					height: 12
+					drawSize: 512
+					layer: 116
+					despawnSound: blaster
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						pierce: true
+						removeAfterPierce: false
+						lifetime: 120
+						damage: 5
+						width: 8
+						height: 12
+						sprite: missile-large
+						backMove: false
+						frontColor: FFFFFF
+						backColor: FF3A7D
+						trailColor: FF3A7D
+						trailLength: 3
+						layer: 116
+						speed: 12
+						hitEffect: none
+						despawnEffect: none
+						shrinkY: 0
+					}
+					parts: [
+						{
+							type: RegionPart
+							name: virtuality-square
+							color: 000000
+							colorTo: 00000000
+							progress: {
+								type: life
+								ops: [
+									{
+										op: compress
+										start: 0
+										end: 0.75
+									}
+									{
+										op: curve
+										interp: circleIn
+									}
+								]
+							}
+							yScl: 256
+							y: 512
+							xScl: 0.25
+							layer: 116
+							outline: false
+						}
+					]
+				}
+			]
+		}
+		shoot: {
+			type: ShootAlternate
+			firstShotDelay: 5
+			barrels: 7
+			spread: 8
+			shots: 7
+		}
+	}
+	{
+		type: Weapon
+		reload: 120
+		mirror: false
+		x: 0
+		y: 0
+		shootY: -128
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		parentizeEffects: true
+		predictTarget: false
+		alwaysShooting: true
+		bullet: {
+			type: RailBulletType
+			length: 1024
+			damage: 0
+			collides: false
+			status: virtuality-5dpf
+			shootEffect: none
+			smokeEffect: none
+			statusDuration: 5
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BasicBulletType
+					collides: false
+					keepVelocity: false
+					speed: 0
+					lifetime: 60
+					despawnEffect: none
+					hitEffect: none
+					smokeEffect: none
+					shootEffect: none
+					shrinkY: 0
+					frontColor: 000000
+					backColor: 000000
+					sprite: missile-large
+					width: 8
+					height: 12
+					drawSize: 512
+					layer: 116
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						pierce: true
+						removeAfterPierce: false
+						lifetime: 120
+						damage: 25
+						width: 8
+						height: 12
+						sprite: missile-large
+						backMove: false
+						frontColor: FFFFFF
+						backColor: FF3A7D
+						trailColor: FF3A7D
+						trailLength: 3
+						layer: 116
+						speed: 12
+						hitEffect: none
+						despawnEffect: none
+						shrinkY: 0
+					}
+					parts: [
+						{
+							type: RegionPart
+							name: virtuality-square
+							color: 000000
+							colorTo: 00000000
+							progress: {
+								type: life
+								ops: [
+									{
+										op: compress
+										start: 0
+										end: 0.75
+									}
+									{
+										op: curve
+										interp: circleIn
+									}
+								]
+							}
+							yScl: 256
+							y: 512
+							xScl: 0.25
+							layer: 116
+							outline: false
+						}
+					]
+				}
+			]
+		}
+		shoot: {
+			type: ShootAlternate
+			firstShotDelay: 5
+			barrels: 29
+			spread: 32
+			shots: 29
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		color: 000000
+		colorTo: 000000
+		name: virtuality-square
+		layer: 115
+		outline: false
+		xScl: 256
+		yScl: 20
+		progress: {
+			type: life
+			ops: [
+				{
+					op: mul
+					amount: 4
+				}
+			]
+		}
+		moves: [
+			{
+				rot: -360
+				progress: {
+					type: life
+					ops: [
+						{
+							op: compress
+							start: 0
+							end: 0.75
+						}
+						{
+							op: curve
+							interp: pow5Out
+						}
+					]
+				}
+			}
+			{
+				gy: 180
+				progress: {
+					type: life
+					ops: [
+						{
+							op: compress
+							start: 0.5
+							end: 1
+						}
+						{
+							op: curve
+							interp: pow3In
+						}
+					]
+				}
+			}
+		]
+	}
+	{
+		type: RegionPart
+		color: FF3A7D00
+		colorTo: FF3A7D
+		name: virtuality-square
+		layer: 114
+		outline: false
+		xScl: 256
+		yScl: 256
+		progress: {
+			type: life
+			ops: [
+				{
+					op: mul
+					amount: 4
+				}
+			]
+		}
+		moves: [
+			{
+				rot: -360
+				progress: {
+					type: life
+					ops: [
+						{
+							op: compress
+							start: 0
+							end: 0.75
+						}
+						{
+							op: curve
+							interp: pow5Out
+						}
+					]
+				}
+			}
+		]
+	}
+]

@@ -1,0 +1,123 @@
+health: 1500
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+rotateSpeed: 0
+groundLayer: -1
+clipSize: 1024
+targetable: false
+hittable: false
+drawMinimap: false
+hoverable: false
+weapons: [
+	{
+		type: Weapon
+		reload: 240
+		alternate: false
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shootWarmupSpeed: 0.04
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+		parts: [
+			{
+				type: RegionPart
+				color: EB1E4600
+				colorTo: EB1E462F
+				name: virtuality-square
+				outline: false
+				layer: 29.2
+				xScl: 128
+				yScl: 128
+				progress: warmup
+			}
+			{
+				type: RegionPart
+				color: 000000
+				name: virtuality-clouds
+				outline: false
+				layer: 29.5
+				moveX: 512
+				xScl: 4
+				yScl: 3
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: 000000
+				name: virtuality-clouds
+				outline: false
+				layer: 29.5
+				moveX: 512
+				x: -512
+				xScl: 4
+				yScl: 3
+				progress: reload
+			}
+		]
+	}
+	{
+		type: Weapon
+		reload: 388
+		alternate: false
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+		parts: [
+			{
+				type: RegionPart
+				color: 000000
+				name: virtuality-clouds
+				outline: false
+				layer: 29.5
+				moveX: 512
+				xScl: 4
+				yScl: 3
+				rotation: 180
+				progress: reload
+			}
+			{
+				type: RegionPart
+				color: 000000
+				name: virtuality-clouds
+				outline: false
+				layer: 29.5
+				moveX: 512
+				x: -512
+				xScl: 4
+				yScl: 3
+				rotation: 180
+				progress: reload
+			}
+		]
+	}
+]

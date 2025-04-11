@@ -1,0 +1,125 @@
+type: missile
+lifetime: 570
+health: 750
+speed: 0
+rotateSpeed: 1
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+weapons: [
+	{
+		type: Weapon
+		reload: 30
+		mirror: false
+		x: 0
+		y: 0
+		shootY: 0
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		parentizeEffects: true
+		predictTarget: false
+		alwaysShooting: true
+		inaccuracy: 180
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			lifetime: 60
+			speed: 0
+			collides: false
+			damage: 25
+			shootEffect: none
+			smokeEffect: none
+			despawnEffect: none
+			hitEffect: none
+			pierce: true
+			hitSize: 8
+			trailInterval: 1
+			trailEffect: {
+				type: ParticleEffect
+				particles: 4
+				lifetime: 30
+				colorFrom: EB1E467F
+				colorTo: 00000000
+				length: 0
+				baseLength: 16
+				layer: 111
+				sizeFrom: 4
+				sizeTo: 4
+			}
+			parts: [
+				{
+					type: RegionPart
+					color: EB1E4600
+					colorTo: EB1E467F
+					name: virtuality-ringblur
+					layer: 115
+					progress: life
+					outline: false
+					xScl: 0.5
+					yScl: 0.5
+				}
+			]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragBullet: {
+				type: BulletType
+				keepVelocity: false
+				lifetime: 210
+				speed: 0
+				collides: false
+				damage: 0
+				despawnEffect: none
+				hitEffect: none
+				bulletInterval: 5
+				intervalBullet: {
+					type: BulletType
+					lifetime: 1
+					collides: false
+					speed: 0
+					despawnEffect: none
+					hitEffect: none
+					splashDamageRadius: 32
+					splashDamage: 5
+				}
+				trailInterval: 1
+				trailEffect: {
+					type: ParticleEffect
+					particles: 6
+					lifetime: 30
+					colorFrom: EB1E467F
+					colorTo: 00000000
+					length: 0
+					baseLength: 16
+					layer: 111
+					sizeFrom: 4
+					sizeTo: 4
+					blending: additive
+				}
+				parts: [
+					{
+						type: RegionPart
+						color: EB1E46
+						colorTo: EB1E46
+						name: virtuality-ringblur
+						layer: 115
+						progress: life
+						outline: false
+						xScl: 0.5
+						yScl: 0.5
+					}
+				]
+			}
+		}
+	}
+]

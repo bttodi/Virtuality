@@ -1,0 +1,162 @@
+health: 1500
+hitSize: 32
+speed: 6
+rotateSpeed: 999
+physics: false
+bounded: false
+faceTarget: false
+rotateSpeed: 0
+groundLayer: 0
+deathSound: titanExplosion
+deathExplosionEffect: {
+	type: MultiEffect
+	effects: [
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-burst
+			cone: 0
+			lifetime: 60
+			randLength: false
+			colorFrom: 7FD4FF7f
+			colorTo: 2D81FF00
+			layer: 110
+			sizeFrom: 8
+			sizeTo: 256
+			length: 0
+			sizeInterp: circleOut
+			interp: pow10In
+			clip: 512
+			spin: 1
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-burst
+			cone: 0
+			lifetime: 60
+			randLength: false
+			colorFrom: 7FD4FF7f
+			colorTo: 2D81FF00
+			layer: 110
+			sizeFrom: 8
+			sizeTo: 256
+			length: 0
+			sizeInterp: circleOut
+			interp: pow10In
+			clip: 512
+			spin: -1
+		}
+		{
+			type: ParticleEffect
+			region: virtuality-explosion
+			lifetime: 30
+			particles: 1
+			spin: -0.5
+			length: 0
+			sizeFrom: 80
+			sizeTo: 96
+			colorFrom: 7FD4FF
+			colorTo: 7FD4FF00
+			interp: circleIn
+			sizeInterp: slope
+			layer: 110
+			clip: 512
+		}
+		{
+			type: ParticleEffect
+			region: virtuality-explosion
+			lifetime: 30
+			particles: 1
+			spin: 1
+			length: 0
+			sizeFrom: 80
+			sizeTo: 96
+			colorFrom: 2D81FF
+			colorTo: 2D81FF00
+			interp: circleIn
+			sizeInterp: slope
+			layer: 109
+			clip: 512
+		}
+	]
+}
+weapons: [
+	{
+		type: Weapon
+		reload: 120
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collides: false
+			damage: 0
+			lifetime: 0
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		moveRot: 2160
+		name: virtuality-halo
+		color: 3180FF
+		colorTo: 3180FF
+		layer: 215
+		progress: reload
+		outline: false
+	}
+	{
+		type: RegionPart
+		moveRot: 2160
+		name: virtuality-spinner-accent
+		layer: 215.1
+		progress: reload
+		outline: false
+		xScl: -1
+	}
+	{
+		type: RegionPart
+		moveRot: 2160
+		name: virtuality-argent-head
+		layer: 214
+		progress: reload
+		outline: false
+	}
+]
+abilities: [
+	{
+		type: MoveEffectAbility
+		minVelocity: 0
+		interval: 2
+		effect: {
+			type: ParticleEffect
+			particles: 1
+			lifetime: 30
+			region: virtuality-halo
+			length: 8
+			sizeFrom: 32
+			sizeTo: 32
+			colorFrom: 82bbd8
+			colorTo: 2993d100
+			layer: 213
+			interp: circleOut
+		}
+	}
+	{
+		type: SpawnDeathAbility
+		spread: 0
+		faceOutwards: false
+		unit: argent2
+	}
+]

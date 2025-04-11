@@ -1,0 +1,71 @@
+type: missile
+lifetime: 720
+health: 750
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		y: 4
+		shootY: 16
+		shootCone: 360
+		rotate: true
+		rotateSpeed: 1
+		alwaysShooting: true
+		recoil: 0
+		shootStatus: virtuality-stopshootingdammit
+		shootStatusDuration: 5000
+		shootSound: lasershoot
+		xRand: 16
+		velocityRnd: 0.1
+		shoot: {
+			firstShotDelay: 60
+			shots: 140
+			shotDelay: 5
+		}
+		bullet: {
+			type: BasicBulletType
+			collidesTiles: false
+			inaccuracy: 5
+			keepVelocity: false
+			damage: 20
+			speed: 32
+			lifetime: 60
+			drag: 0.05
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shrinkY: 0
+			backColor: 2D81FF
+			frontColor: 7FD4FF
+			trailColor: 2D81FF
+			trailLength: 4
+			width: 8
+			height: 12
+			shootEffect: {
+				type: ParticleEffect
+				lifetime: 12
+				region: virtuality-square
+				length: 64
+				cone: 20
+				interp: circleOut
+				sizeFrom: 4
+				colorFrom: FFFFFF
+				colorTo: 2D81FF
+			}
+		}
+	}
+]

@@ -1,0 +1,152 @@
+type: missile
+lifetime: 120
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [
+	{
+		type: Weapon
+		reload: 120
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shootWarmupSpeed: 0.1
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+		}
+	}
+	{
+		type: Weapon
+		reload: 9999
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		shootSound: none
+		shoot: {
+			type: ShootSpread
+			shots: 10
+			spread: 36
+		}
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BasicBulletType
+					collidesTiles: false
+					pierce: true
+					removeAfterPierce: false
+					lifetime: 90
+					damage: 25
+					width: 8
+					height: 12
+					backMove: false
+					shrinkY: 0
+					frontColor: FF5675
+					backColor: EB1E46
+					sprite: missile-large
+					trailColor: EB1E46
+					trailLength: 8
+					trailWidth: 1
+					layer: 114
+					lightScl: 0
+					speed: 5
+					drag: 0.05
+					hitEffect: none
+					despawnEffect: none
+					weaveScale: 600
+					weaveMag: -1
+					weaveRandom: false
+					trailInterval: 0.5
+					trailEffect: {
+						type: ParticleEffect
+						particles: 1
+						lifetime: 40
+						layer: 113
+						baseRotation: 270
+						length: 24
+						cone: 0
+						colorFrom: EB1E46
+						colorTo: 000000
+						clip: 128
+					}
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 1
+					fragOffsetMin: 0
+					fragOffsetMax: 0
+					fragBullet: {
+						type: BasicBulletType
+						collidesTiles: false
+						pierce: true
+						removeAfterPierce: false
+						lifetime: 120
+						damage: 25
+						width: 8
+						height: 12
+						backMove: false
+						shrinkY: 0
+						frontColor: FF5675
+						backColor: EB1E46
+						sprite: missile-large
+						trailColor: EB1E46
+						trailLength: 8
+						trailWidth: 1
+						layer: 114
+						lightScl: 0
+						speed: 4
+						drag: -0.03
+						hitEffect: none
+						despawnEffect: none
+						weaveScale: 600
+						weaveMag: -3
+						weaveRandom: false
+						trailInterval: 0.5
+						trailEffect: {
+							type: ParticleEffect
+							particles: 1
+							lifetime: 40
+							layer: 113
+							baseRotation: 270
+							length: 24
+							cone: 0
+							colorFrom: EB1E46
+							colorTo: 000000
+							clip: 128
+						}
+					}
+				}
+			]
+		}
+	}
+]

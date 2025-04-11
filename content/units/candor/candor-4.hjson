@@ -1,0 +1,90 @@
+health: 1500
+type: missile
+lifetime: 180
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [
+	{
+		type: Weapon
+		reload: 1
+		mirror: false
+		x: 0
+		shootY: 4
+		inaccuracy: 360
+		shootCone: 360
+		alwaysShooting: true
+		shootSound: none
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			collides: false
+			damage: 0
+			lifetime: 0
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: MultiEffect
+				effects: [
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 60
+						layer: 150.1
+						sizeFrom: 24
+						cone: 0
+						length: 80
+						randLength: false
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 60
+						layer: 150.2
+						sizeFrom: 20
+						cone: 0
+						length: 80
+						randLength: false
+						colorFrom: 000000
+						colorTo: 000000
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 60
+						layer: 150.1
+						sizeFrom: 24
+						cone: 0
+						length: 80
+						randLength: false
+						baseRotation: 137.5
+					}
+					{
+						type: ParticleEffect
+						particles: 1
+						lifetime: 60
+						layer: 150.2
+						sizeFrom: 20
+						cone: 0
+						length: 80
+						randLength: false
+						colorFrom: 000000
+						colorTo: 000000
+						baseRotation: 137.5
+					}
+				]
+			}
+		}
+	}
+]
