@@ -22,13 +22,7 @@ weapons: [
 		alwaysShooting: true
 		shootSound: none
 		recoil: 0
-		xRand: 2
-		shoot: {
-			type: ShootAlternate
-			barrels: 128
-			shots: 128
-			spread: 4
-		}
+		shootWarmupSpeed: 0.02
 		bullet: {
 			type: RailBulletType
 			ignoreSpawnAngle: true
@@ -41,6 +35,20 @@ weapons: [
 			shootEffect: none
 		}
 		parts: [
+			{
+				type: RegionPart
+				color: EB1E46
+				colorTo: EB1E4600
+				name: virtuality-gradient
+				outline: false
+				layer: 117
+				xScl: 64
+				y: -128
+				moveY: 1024
+				rotation: 180
+				progress: warmup
+				blending: additive
+			}
 			// MASKING
 			{
 				type: RegionPart

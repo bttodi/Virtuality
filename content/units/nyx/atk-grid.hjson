@@ -1,0 +1,203 @@
+type: missile
+lifetime: 10
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+deathShake: 0
+weapons: [
+	{
+		type: Weapon
+		reload: 180
+		mirror: false
+		x: 0
+		y: -512
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shoot: {
+			type: ShootAlternate
+			barrels: 7
+			shots: 7
+			spread: 32
+			firstShotDelay: 5
+		}
+		bullet: {
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: 0
+			lifetime: 30
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			drawSize: 1024
+			despawnEffect: none
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragAngle: 90
+			fragVelocityMin: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragBullet: {
+				type: BasicBulletType
+				collidesTiles: false
+				pierce: true
+				removeAfterPierce: false
+				lifetime: 120
+				damage: 25
+				width: 8
+				height: 12
+				sprite: missile-large
+				backMove: false
+				frontColor: FF5675
+				backColor: EB1E46
+				layer: 95
+				speed: 8
+				hitEffect: none
+				despawnEffect: none
+				shrinkY: 0
+				trailInterval: 0.5
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 94
+					baseRotation: 270
+					length: 24
+					interp: circleIn
+					cone: 0
+					colorFrom: EB1E46
+					colorTo: 000000
+					clip: 128
+				}
+			}
+			parts: [
+				{
+					type: RegionPart
+					name: virtuality-gradient
+					color: EB1E467F
+					colorTo: EB1E4600
+					outline: false
+					layer: 95
+					blending: additive
+					progress: {
+						type: life
+						ops: [
+							{
+								op: curve
+								interp: circleIn
+							}
+						]
+					}
+					xScl: 0.0625
+					yScl: 32
+					x: -1024
+					rotation: 90
+				}
+			]
+		}
+	}
+	{
+		type: Weapon
+		reload: 180
+		mirror: false
+		x: -512
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		baseRotation: 90
+		shoot: {
+			type: ShootAlternate
+			barrels: 7
+			shots: 7
+			spread: 32
+			firstShotDelay: 5
+		}
+		bullet: {
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: 0
+			lifetime: 30
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			drawSize: 1024
+			despawnEffect: none
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragBullet: {
+				type: BasicBulletType
+				collidesTiles: false
+				pierce: true
+				removeAfterPierce: false
+				lifetime: 120
+				damage: 25
+				width: 8
+				height: 12
+				sprite: missile-large
+				backMove: false
+				frontColor: FF5675
+				backColor: EB1E46
+				layer: 95
+				speed: 8
+				hitEffect: none
+				despawnEffect: none
+				shrinkY: 0
+				trailInterval: 0.5
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 94
+					baseRotation: 270
+					length: 24
+					interp: circleIn
+					cone: 0
+					colorFrom: EB1E46
+					colorTo: 000000
+					clip: 128
+				}
+			}
+			parts: [
+				{
+					type: RegionPart
+					name: virtuality-gradient
+					color: EB1E467F
+					colorTo: EB1E4600
+					outline: false
+					layer: 95
+					blending: additive
+					progress: {
+						type: life
+						ops: [
+							{
+								op: curve
+								interp: circleIn
+							}
+						]
+					}
+					xScl: 0.0625
+					yScl: 32
+					y: 1024
+				}
+			]
+		}
+	}
+]

@@ -1,0 +1,180 @@
+type: missile
+lifetime: 240
+speed: 6
+rotateSpeed: 6
+accel: 1
+drag: 0.025
+physics: false
+bounded: false
+targetable: false
+hittable: false
+groundLayer: -1
+drawCell: false
+omniMovement: false
+softShadowScl: 0
+deathSound: none
+deathExplosionEffect: none
+hitSize: 1
+deathShake: 0
+clipSize: 1024
+weapons: [
+	{
+		type: Weapon
+		reload: 999
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		recoil: 0
+		shootSound: none
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: SoundEffect
+				sound: largeExplosion
+				minVolume: 5
+				maxVolume: 5
+				minPitch: 0.65
+				maxPitch: 0.65
+				effect: none
+			}
+		}
+	}
+	{
+		type: Weapon
+		reload: 999
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		inaccuracy: 180
+		shootSound: cannon
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			spawnBullets: [
+				{
+					type: BasicBulletType
+					collides: false
+					lifetime: 30
+					speed: 1.5
+					hitEffect: none
+					despawnEffect: none
+					shrinkX: 1
+					sprite: virtuality-diamond
+					width: 8
+					height: 64
+					layer: 216.55
+					frontColor: 000000
+				}
+			]
+		}
+		shoot: {
+			type: ShootSummon
+			radius: 24
+			shots: 8
+			firstShotDelay: 60
+			shotDelay: 12
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		name: virtuality-nyx-head
+		color: 000000
+		colorTo: 00000000
+		outline: false
+		layer: 216.55
+		progress: {
+			type: life
+			ops: [
+				{
+					op: compress
+					start: 0.8
+					end: 0.9
+				}
+			]
+		}
+	}
+	{
+		type: RegionPart
+		name: virtuality-square
+		xScl: 512
+		yScl: 512
+		color: FFFFFF
+		colorTo: FFFFFF00
+		outline: false
+		layer: 216.5
+		progress: {
+			type: life
+			ops: [
+				{
+					op: compress
+					start: 0
+					end: 0.2
+				}
+			]
+		}
+	}
+	{
+		type: RegionPart
+		name: virtuality-square
+		xScl: 512
+		yScl: 512
+		color: EB1E46
+		colorTo: EB1E4600
+		outline: false
+		layer: 216.4
+		progress: {
+			type: life
+			ops: [
+				{
+					op: compress
+					start: 0.8
+					end: 1
+				}
+			]
+		}
+	}
+	{
+		type: RegionPart
+		name: virtuality-square
+		xScl: 512
+		yScl: 512
+		color: 00000000
+		colorTo: 000000
+		outline: false
+		layer: 216.4
+		progress: {
+			type: life
+			ops: [
+				{
+					op: compress
+					start: 0.8
+					end: 1
+				}
+				{
+					op: curve
+					interp: slope
+				}
+			]
+		}
+	}
+]

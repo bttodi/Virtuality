@@ -1,0 +1,569 @@
+type: missile
+lifetime: 1200
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+deathShake: 0
+clipSize: 512
+weapons: [
+	{
+		type: Weapon
+		reload: 360
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+		}
+	}
+	{
+		type: Weapon
+		reload: 155
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+		}
+	}
+	{
+		type: Weapon
+		reload: 240
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		inaccuracy: 180
+		shoot: {
+			shots: 2
+			firstShotDelay: 300
+			shotDelay: 120
+		}
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+		}
+	}
+	{
+		type: Weapon
+		reload: 10
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		inaccuracy: 180
+		shoot: {
+			type: ShootSpread
+			shots: 3
+			spread: 120
+			firstShotDelay: 60
+		}
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			smokeEffect: none
+			shootEffect: none
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BasicBulletType
+					collidesTiles: false
+					pierce: true
+					removeAfterPierce: false
+					lifetime: 300
+					damage: 25
+					width: 8
+					height: 12
+					sprite: missile-large
+					backMove: false
+					frontColor: FF5675
+					backColor: EB1E46
+					layer: 95
+					speed: 2
+					drag: -0.01
+					hitEffect: none
+					despawnEffect: none
+					shrinkY: 0
+					trailInterval: 0.5
+					trailEffect: {
+						type: ParticleEffect
+						particles: 1
+						lifetime: 10
+						layer: 94
+						baseRotation: 270
+						length: 24
+						interp: circleIn
+						cone: 0
+						colorFrom: EB1E46
+						colorTo: 000000
+						clip: 128
+					}
+				}
+			]
+		}
+	}
+	{
+		type: Weapon
+		reload: 90
+		baseRotation: 45
+		x: 0
+		shootY: 0
+		alternate: false
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shoot: {
+			shots: 18
+			shotDelay: 10
+		}
+		bullet: {
+			type: RailBulletType
+			length: 2048
+			collides: false
+			damage: 0
+			despawnEffect: none
+			hitEffect: none
+			pierceEffect: none
+			smokeEffect: none
+			shootEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 45
+				region: virtuality-explosion
+				colorFrom: EB1E467F
+				colorTo: EB1E4600
+				sizeFrom: 72
+				sizeTo: 72
+				length: 32
+				randLength: false
+			}
+		}
+		parts: [
+			{
+				type: RegionPart
+				name: virtuality-lasermask
+				color: 000000
+				colorTo: 000000
+				outline: false
+				layer: 106.15
+				x: 264
+				yScl: 2
+				rotation: 90
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 0
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 24
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 48
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 72
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 96
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 120
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 144
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 168
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 192
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 216
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-open
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 240
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+			{
+				type: RegionPart
+				name: virtuality-chain-closed
+				outline: false
+				color: EB1E4600
+				colorTo: EB1E46BF
+				layer: 106.1
+				xScl: 0.5
+				yScl: 0.5
+				x: 264
+				rotation: 90
+				progress: warmup
+				moves: [
+					{
+						x: 48
+						progress: reload
+					}
+				]
+			}
+		]
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		name: virtuality-lensflare
+		color: FFFFFF00
+		colorTo: FFFFFF7F
+		outline: false
+		layer: 115
+		blending: additive
+		progress: warmup
+		moves: [
+			{
+				rot: 360
+				progress: reload
+			}
+		]
+	}
+	{
+		type: RegionPart
+		name: virtuality-lensflare
+		color: EB1E4600
+		colorTo: EB1E46
+		outline: false
+		layer: 115
+		blending: additive
+		progress: warmup
+		xScl: 3
+		moves: [
+			{
+				rot: 360
+				progress: reload
+			}
+		]
+	}
+	{
+		type: RegionPart
+		name: virtuality-lensflare
+		color: EB1E4600
+		colorTo: EB1E46
+		outline: false
+		layer: 115
+		blending: additive
+		progress: warmup
+		xScl: 2
+		weaponIndex: 1
+		moves: [
+			{
+				rot: 360
+				progress: reload
+			}
+		]
+	}
+	{
+		type: RegionPart
+		name: virtuality-lensflare
+		color: FAFF1E00
+		colorTo: FAFF1E
+		outline: false
+		layer: 115
+		blending: additive
+		progress: warmup
+		weaponIndex: 1
+		moves: [
+			{
+				rot: 360
+				progress: reload
+			}
+		]
+	}
+	{
+		type: RegionPart
+		color: EB1E4600
+		colorTo: EB1E46
+		name: virtuality-ringblur
+		layer: 115
+		progress: warmup
+		outline: false
+	}
+	{
+		type: RegionPart
+		color: FAFF1E00
+		colorTo: FAFF1E7F
+		name: virtuality-ripplethin
+		layer: 115
+		progress: warmup
+		outline: false
+		blending: additive
+		xScl: 2.5
+		yScl: 2.5
+		moves: [
+			{
+				rot: -360
+				progress: reload
+			}
+		]
+	}
+	{
+		type: RegionPart
+		color: FAFF1E00
+		colorTo: FAFF1E7F
+		name: virtuality-ripplethin
+		layer: 115
+		progress: warmup
+		outline: false
+		blending: additive
+		xScl: 2.5
+		yScl: 2.5
+		weaponIndex: 1
+		moves: [
+			{
+				rot: -360
+				progress: reload
+			}
+		]
+	}
+	{
+		type: ShapePart
+		color: 00000000
+		colorTo: 000000
+		layer: 114
+		progress: {
+			type: warmup
+			ops: [
+				{
+					op: mul
+					amount: 5
+				}
+			]
+		}
+		radius: 30
+		stroke: 60
+		circle: true
+		hollow: true
+	}
+]

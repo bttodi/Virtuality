@@ -1,0 +1,112 @@
+type: missile
+lifetime: 780
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+deathShake: 0
+weapons: [
+	{
+		type: Weapon
+		reload: 9999
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shoot: {
+			shots: 30
+			shotDelay: 6
+		}
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			velocityScaleRandMin: 0.2
+			lifeScaleRandMin: 0.5
+			angleOffset: 270
+			collides: false
+			speed: 0
+			lifetime: 30
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			drawSize: 32
+			despawnEffect: none
+			parts: [
+				{
+					type: RegionPart
+					name: virtuality-smoke
+					color: EB1E46FF
+					colorTo: EB1E4600
+					outline: false
+					layer: 115
+					blending: additive
+					xScl: 0.5
+					yScl: 0.5
+					growX: 0.5
+					growY: 0.5
+					moveRot: 173.5
+					progress: life
+				}
+			]
+		}
+	}
+	{
+		type: Weapon
+		reload: 3
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: none
+		recoil: 0
+		shoot: {
+			firstShotDelay: 180
+		}
+		bullet: {
+			type: BulletType
+			keepVelocity: false
+			velocityScaleRandMin: 0.2
+			lifeScaleRandMin: 0.5
+			angleOffset: 270
+			collidesTiles: false
+			damage: 5
+			speed: 8
+			lifetime: 120
+			drag: 0.025
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			drawSize: 32
+			despawnEffect: none
+			parts: [
+				{
+					type: RegionPart
+					name: virtuality-smoke
+					color: EB1E46FF
+					colorTo: EB1E4600
+					outline: false
+					layer: 115
+					blending: additive
+					xScl: 0.33
+					yScl: 0.33
+					growX: 1.67
+					growY: 1.67
+					moveRot: 173.5
+					progress: life
+				}
+			]
+		}
+	}
+]

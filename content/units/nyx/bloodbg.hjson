@@ -42,7 +42,7 @@ weapons: [
 				name: virtuality-square
 				outline: false
 				layer: 29.2
-				xScl: 128
+				xScl: 160
 				yScl: 128
 				progress: warmup
 			}

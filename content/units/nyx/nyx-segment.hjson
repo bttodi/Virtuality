@@ -9,77 +9,42 @@ bounded: false
 groundLayer: 95
 drawCell: false
 outlineColor: DC1E46
-deathSound: titanExplosion
-deathExplosionEffect: {
-	type: MultiEffect
-	effects: [
-		{
-			type: ParticleEffect
-			particles: 1
-			region: virtuality-burst
-			cone: 0
-			lifetime: 60
-			randLength: false
-			colorFrom: ff9cc27f
-			colorTo: ff479000
-			layer: 110
-			sizeFrom: 8
-			sizeTo: 256
-			length: 0
-			sizeInterp: circleOut
-			interp: pow10In
-			clip: 512
-			spin: 1
+omniMovement: false
+softShadowScl: 0
+deathSound: none
+deathExplosionEffect: none
+hitSize: 1
+deathShake: 0
+weapons: [
+	{
+		type: Weapon
+		alternate: false
+		x: 6
+		y: -16
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		alwaysShooting: true
+		alwaysContinuous: true
+		bullet: {
+			type: BulletType
+			speed: 0
+			collides: false
+			despawnEffect: none
+			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
+			trailLength: 8
+			trailColor: EB1E46
+			layer: 94
 		}
-		{
-			type: ParticleEffect
-			particles: 1
-			region: virtuality-burst
-			cone: 0
-			lifetime: 60
-			randLength: false
-			colorFrom: ff9cc27f
-			colorTo: ff479000
-			layer: 110
-			sizeFrom: 8
-			sizeTo: 256
-			length: 0
-			sizeInterp: circleOut
-			interp: pow10In
-			clip: 512
-			spin: -1
-		}
-		{
-			type: ParticleEffect
-			region: virtuality-explosion
-			lifetime: 30
-			particles: 1
-			spin: -0.5
-			length: 0
-			sizeFrom: 80
-			sizeTo: 96
-			colorFrom: ff9cc2
-			colorTo: ff9cc200
-			interp: circleIn
-			sizeInterp: slope
-			layer: 110
-			clip: 512
-		}
-		{
-			type: ParticleEffect
-			region: virtuality-explosion
-			lifetime: 30
-			particles: 1
-			spin: 1
-			length: 0
-			sizeFrom: 80
-			sizeTo: 96
-			colorFrom: ff4790
-			colorTo: ff479000
-			interp: circleIn
-			sizeInterp: slope
-			layer: 109
-			clip: 512
-		}
-	]
-}
+	}
+]
+abilities: [
+	{
+		type: SpawnDeathAbility
+		spread: 0
+		faceOutwards: false
+		unit: nyx-segment-dead
+	}
+]

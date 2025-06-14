@@ -1,0 +1,856 @@
+type: missile
+lifetime: 120
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+weapons: [
+	{
+		type: Weapon
+		reload: 300
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		recoil: 0
+		shootSound: shotgun
+		soundPitchMin: 1
+		parentizeEffects: true
+		predictTarget: false
+		alwaysShooting: true
+		shoot: {
+			type: ShootSpread
+			shots: 60
+			spread: 2
+			firstShotDelay: 100
+		}
+		bullet: {
+			type: RailBulletType
+			length: 512
+			damage: 0.001
+			collidesTiles: false
+			status: virtuality-5dpf
+			statusDuration: 10
+			shootEffect: none
+			smokeEffect: none
+			pierceEffect: none
+		}
+	}
+	{
+		type: Weapon
+		reload: 300
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		soundPitchMin: 1
+		parentizeEffects: true
+		predictTarget: false
+		alwaysShooting: true
+		shoot: {
+			shots: 45
+			shotDelay: 2
+		}
+		bullet: {
+			type: RailBulletType
+			length: 512
+			collides: false
+			damage: 0
+			shootEffect: {
+				type: ParticleEffect
+				particles: 24
+				lifetime: 30
+				baseLength: 512
+				length: 64
+				line: true
+				lenFrom: 16
+				lenTo: 8
+				colorFrom: EB1E467F
+				colorTo: EB1E4600
+				cone: 60
+			}
+			smokeEffect: none
+			pierceEffect: none
+		}
+	}
+	{
+		type: Weapon
+		reload: 300
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		soundPitchMin: 1
+		parentizeEffects: true
+		predictTarget: false
+		alwaysShooting: true
+		shoot: {
+			type: ShootSpread
+			firstShotDelay: 70
+			shots: 65
+			spread: 2
+		}
+		bullet: {
+			type: RailBulletType
+			length: 512
+			collides: false
+			damage: 0
+			shootEffect: none
+			smokeEffect: none
+			pierceEffect: none
+			spawnBullets: [
+				{
+					type: BulletType
+					speed: 16
+					lifetime: 30
+					velocityScaleRandMin: 0.1
+					collides: false
+					damage: 0
+					despawnEffect: none
+					hitEffect: none
+					fragBullets: 1
+					fragRandomSpread: 0
+					fragVelocityMin: 0.5
+					fragBullet: {
+						type: BasicBulletType
+						collides: false
+						lifetime: 15
+						speed: 4
+						hitEffect: none
+						despawnEffect: none
+						shrinkX: 1
+						sprite: virtuality-diamond
+						width: 8
+						height: 64
+						layer: 216.55
+						frontColor: EB1E46
+					}
+				}
+			]
+		}
+	}
+]
+parts: [
+	{
+		type: RegionPart
+		name: virtuality-square
+		outline: false
+		layer: 94
+		xScl: 0.5
+		yScl: 256
+		y: 512
+		originY: -2
+		color: EB1E4600
+		colorTo: EB1E46
+		progress: {
+			type: life
+			ops: [
+				{
+					op: compress
+					start: 0
+					end: 0.65
+				}
+				{
+					op: curve
+					interp: slope
+				}
+			]
+		}
+		moves: [
+			{
+				rot: -60
+				progress: {
+					type: life
+					ops: [
+						{
+							op: curve
+							interp: pow5Out
+						}
+						{
+							op: compress
+							start: 0
+							end: 0.65
+						}
+					]
+				}
+			}
+		]
+	}
+	{
+		type: RegionPart
+		name: virtuality-square
+		outline: false
+		layer: 94
+		xScl: 0.5
+		yScl: 256
+		y: 512
+		originY: -2
+		color: EB1E4600
+		colorTo: EB1E46
+		progress: {
+			type: life
+			ops: [
+				{
+					op: compress
+					start: 0
+					end: 0.65
+				}
+				{
+					op: curve
+					interp: slope
+				}
+			]
+		}
+		moves: [
+			{
+				rot: 60
+				progress: {
+					type: life
+					ops: [
+						{
+							op: curve
+							interp: pow5Out
+						}
+						{
+							op: compress
+							start: 0
+							end: 0.65
+						}
+					]
+				}
+			}
+		]
+	}
+	{
+		type: RegionPart
+		name: virtuality-whipline
+		outline: false
+		layer: 94
+		y: 8
+		originY: 0
+		rotation: -60
+		yScl: 0.25
+		moves: [
+			{
+				gy: 2
+				progress: {
+					type: life
+					ops: [
+						{
+							op: compress
+							start: 0.75
+							end: 1
+						}
+						{
+							op: curve
+							interp: slope
+						}
+						{
+							op: add
+							amount: -0.75
+						}
+						{
+							op: mul
+							amount: 2
+						}
+					]
+				}
+			}
+			{
+				rot: 120
+				progress: {
+					type: life
+					ops: [
+						{
+							op: compress
+							start: 0.75
+							end: 1
+						}
+					]
+				}
+			}
+		]
+		children: [
+			{
+				type: RegionPart
+				name: virtuality-whipline
+				outline: false
+				layer: 94
+				y: 8
+				originY: 0
+				rotation: -60
+				moves: [
+					{
+						y: 64
+						progress: {
+							type: life
+							ops: [
+								{
+									op: compress
+									start: 0.75
+									end: 1
+								}
+								{
+									op: curve
+									interp: slope
+								}
+								{
+									op: add
+									amount: -0.75
+								}
+								{
+									op: mul
+									amount: 2
+								}
+							]
+						}
+					}
+					{
+						rot: 120
+						progress: {
+							type: life
+							ops: [
+								{
+									op: compress
+									start: 0.75
+									end: 1
+								}
+							]
+						}
+					}
+				]
+				children: [
+					{
+						type: RegionPart
+						name: virtuality-whipline
+						outline: false
+						layer: 94
+						y: 8
+						originY: 0
+						rotation: -60
+						moves: [
+							{
+								y: 64
+								progress: {
+									type: life
+									ops: [
+										{
+											op: compress
+											start: 0.75
+											end: 1
+										}
+										{
+											op: curve
+											interp: slope
+										}
+										{
+											op: add
+											amount: -0.75
+										}
+										{
+											op: mul
+											amount: 2
+										}
+									]
+								}
+							}
+							{
+								rot: 120
+								progress: {
+									type: life
+									ops: [
+										{
+											op: compress
+											start: 0.75
+											end: 1
+										}
+									]
+								}
+							}
+						]
+						children: [
+							{
+								type: RegionPart
+								name: virtuality-whipline
+								outline: false
+								layer: 94
+								y: 8
+								originY: 0
+								rotation: -60
+								moves: [
+									{
+										y: 64
+										progress: {
+											type: life
+											ops: [
+												{
+													op: compress
+													start: 0.75
+													end: 1
+												}
+												{
+													op: curve
+													interp: slope
+												}
+												{
+													op: add
+													amount: -0.75
+												}
+												{
+													op: mul
+													amount: 2
+												}
+											]
+										}
+									}
+									{
+										rot: 120
+										progress: {
+											type: life
+											ops: [
+												{
+													op: compress
+													start: 0.75
+													end: 1
+												}
+											]
+										}
+									}
+								]
+								children: [
+									{
+										type: RegionPart
+										name: virtuality-whipline
+										outline: false
+										progress: reload
+										layer: 94
+										y: 8
+										originY: 0
+										rotation: -60
+										moves: [
+											{
+												y: 64
+												progress: {
+													type: life
+													ops: [
+														{
+															op: compress
+															start: 0.75
+															end: 1
+														}
+														{
+															op: curve
+															interp: slope
+														}
+														{
+															op: add
+															amount: -0.75
+														}
+														{
+															op: mul
+															amount: 2
+														}
+													]
+												}
+											}
+											{
+												rot: 120
+												progress: {
+													type: life
+													ops: [
+														{
+															op: compress
+															start: 0.75
+															end: 1
+														}
+													]
+												}
+											}
+										]
+										children: [
+											{
+												type: RegionPart
+												name: virtuality-whipline
+												outline: false
+												progress: reload
+												layer: 94
+												y: 8
+												originY: 0
+												rotation: -60
+												moves: [
+													{
+														y: 64
+														progress: {
+															type: life
+															ops: [
+																{
+																	op: compress
+																	start: 0.75
+																	end: 1
+																}
+																{
+																	op: curve
+																	interp: slope
+																}
+																{
+																	op: add
+																	amount: -0.75
+																}
+																{
+																	op: mul
+																	amount: 2
+																}
+															]
+														}
+													}
+													{
+														rot: 120
+														progress: {
+															type: life
+															ops: [
+																{
+																	op: compress
+																	start: 0.75
+																	end: 1
+																}
+															]
+														}
+													}
+												]
+												children: [
+													{
+														type: RegionPart
+														name: virtuality-whipline
+														outline: false
+														progress: reload
+														layer: 94
+														y: 8
+														originY: 0
+														rotation: -60
+														moves: [
+															{
+																y: 64
+																progress: {
+																	type: life
+																	ops: [
+																		{
+																			op: compress
+																			start: 0.75
+																			end: 1
+																		}
+																		{
+																			op: curve
+																			interp: slope
+																		}
+																		{
+																			op: add
+																			amount: -0.75
+																		}
+																		{
+																			op: mul
+																			amount: 2
+																		}
+																	]
+																}
+															}
+															{
+																rot: 120
+																progress: {
+																	type: life
+																	ops: [
+																		{
+																			op: compress
+																			start: 0.75
+																			end: 1
+																		}
+																	]
+																}
+															}
+														]
+														children: [
+															{
+																type: RegionPart
+																name: virtuality-whipline
+																outline: false
+																progress: reload
+																layer: 94
+																y: 8
+																originY: 0
+																rotation: -60
+																moves: [
+																	{
+																		y: 64
+																		progress: {
+																			type: life
+																			ops: [
+																				{
+																					op: compress
+																					start: 0.75
+																					end: 1
+																				}
+																				{
+																					op: curve
+																					interp: slope
+																				}
+																				{
+																					op: add
+																					amount: -0.75
+																				}
+																				{
+																					op: mul
+																					amount: 2
+																				}
+																			]
+																		}
+																	}
+																	{
+																		rot: 120
+																		progress: {
+																			type: life
+																			ops: [
+																				{
+																					op: compress
+																					start: 0.75
+																					end: 1
+																				}
+																			]
+																		}
+																	}
+																]
+																children: [
+																	{
+																		type: RegionPart
+																		name: virtuality-whipline
+																		outline: false
+																		progress: reload
+																		layer: 94
+																		y: 8
+																		originY: 0
+																		rotation: -60
+																		moves: [
+																			{
+																				y: 64
+																				progress: {
+																					type: life
+																					ops: [
+																						{
+																							op: compress
+																							start: 0.75
+																							end: 1
+																						}
+																						{
+																							op: curve
+																							interp: slope
+																						}
+																						{
+																							op: add
+																							amount: -0.75
+																						}
+																						{
+																							op: mul
+																							amount: 2
+																						}
+																					]
+																				}
+																			}
+																			{
+																				rot: 120
+																				progress: {
+																					type: life
+																					ops: [
+																						{
+																							op: compress
+																							start: 0.75
+																							end: 1
+																						}
+																					]
+																				}
+																			}
+																		]
+																		children: [
+																			{
+																				type: RegionPart
+																				name: virtuality-whipline
+																				outline: false
+																				progress: reload
+																				layer: 94
+																				y: 8
+																				originY: 0
+																				rotation: -60
+																				moves: [
+																					{
+																						y: 64
+																						progress: {
+																							type: life
+																							ops: [
+																								{
+																									op: compress
+																									start: 0.75
+																									end: 1
+																								}
+																								{
+																									op: curve
+																									interp: slope
+																								}
+																								{
+																									op: add
+																									amount: -0.75
+																								}
+																								{
+																									op: mul
+																									amount: 2
+																								}
+																							]
+																						}
+																					}
+																					{
+																						rot: 120
+																						progress: {
+																							type: life
+																							ops: [
+																								{
+																									op: compress
+																									start: 0.75
+																									end: 1
+																								}
+																							]
+																						}
+																					}
+																				]
+																				children: [
+																					{
+																						type: RegionPart
+																						name: virtuality-whipline
+																						outline: false
+																						progress: reload
+																						layer: 94
+																						y: 8
+																						originY: 0
+																						rotation: -60
+																						moves: [
+																							{
+																								y: 64
+																								progress: {
+																									type: life
+																									ops: [
+																										{
+																											op: compress
+																											start: 0.75
+																											end: 1
+																										}
+																										{
+																											op: curve
+																											interp: slope
+																										}
+																										{
+																											op: add
+																											amount: -0.75
+																										}
+																										{
+																											op: mul
+																											amount: 2
+																										}
+																									]
+																								}
+																							}
+																							{
+																								rot: 120
+																								progress: {
+																									type: life
+																									ops: [
+																										{
+																											op: compress
+																											start: 0.75
+																											end: 1
+																										}
+																									]
+																								}
+																							}
+																						]
+																						children: [
+																							{
+																								type: RegionPart
+																								name: virtuality-whipend
+																								outline: false
+																								progress: reload
+																								layer: 94
+																								y: 8
+																								originY: 0
+																								rotation: -60
+																								moves: [
+																									{
+																										y: 64
+																										progress: {
+																											type: life
+																											ops: [
+																												{
+																													op: compress
+																													start: 0.75
+																													end: 1
+																												}
+																												{
+																													op: curve
+																													interp: slope
+																												}
+																												{
+																													op: add
+																													amount: -0.75
+																												}
+																												{
+																													op: mul
+																													amount: 2
+																												}
+																											]
+																										}
+																									}
+																									{
+																										rot: 120
+																										progress: {
+																											type: life
+																											ops: [
+																												{
+																													op: compress
+																													start: 0.75
+																													end: 1
+																												}
+																											]
+																										}
+																									}
+																								]
+																							}
+																						]
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

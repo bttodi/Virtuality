@@ -10,6 +10,10 @@ groundLayer: 95
 drawCell: false
 outlineColor: DC1E46
 omniMovement: false
+softShadowScl: 0
+deathSound: none
+deathExplosionEffect: none
+deathShake: 0
 weapons: [
 	{
 		type: Weapon
@@ -39,7 +43,6 @@ weapons: [
 				length: 32
 				layer: 111
 				sizeFrom: 4
-				sizeTo: 4
 			}
 			spawnBullets: [
 				{
@@ -64,10 +67,40 @@ weapons: [
 						baseLength: 16
 						layer: 111
 						sizeFrom: 4
-						sizeTo: 4
 					}
 				}
 			]
 		}
+	}
+	{
+		type: Weapon
+		alternate: false
+		x: 6
+		y: -16
+		shootCone: 360
+		recoil: 0
+		shootSound: none
+		alwaysShooting: true
+		alwaysContinuous: true
+		bullet: {
+			type: BulletType
+			speed: 0
+			collides: false
+			despawnEffect: none
+			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
+			trailLength: 8
+			trailColor: EB1E46
+			layer: 94
+		}
+	}
+]
+abilities: [
+	{
+		type: SpawnDeathAbility
+		spread: 0
+		faceOutwards: false
+		unit: nyx-head-dead
 	}
 ]
