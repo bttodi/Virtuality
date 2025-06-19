@@ -1,3 +1,4 @@
+hideDatabase: true
 health: 500000
 speed: 0
 rotateSpeed: 0

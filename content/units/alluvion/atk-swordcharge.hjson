@@ -1,3 +1,4 @@
+hideDatabase: true
 type: missile
 lifetime: 555
 health: 750

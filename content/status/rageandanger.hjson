@@ -1,5 +1,5 @@
-name: grrrrr
-type: StatusEffect
+hideDatabase: true
+name: wait did i deprecate this yet
 parentizeEffect: true
 parentizeApplyEffect: true
 applyExtend: true

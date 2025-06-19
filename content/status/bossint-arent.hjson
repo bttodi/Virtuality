@@ -1,5 +1,4 @@
-name: Ardent Argent Intro
-type: StatusEffect
+hideDatabase: true
 parentizeEffect: true
 parentizeApplyEffect: true
 applyExtend: true

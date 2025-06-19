@@ -1,3 +1,4 @@
+hideDatabase: true
 type: CoreBlock
 health: 500000
 size: 2

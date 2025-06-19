@@ -1,5 +1,4 @@
-name: because fast doesnt show up in wprocs
-type: StatusEffect
+hideDatabase: true
 parentizeEffect: true
 parentizeApplyEffect: true
 applyExtend: true

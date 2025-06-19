@@ -1,6 +1,3 @@
-name: disarmed but actually
-type: StatusEffect
-parentizeEffect: true
-parentizeApplyEffect: true
+hideDatabase: true
 applyExtend: true
 reloadMultiplier: 0

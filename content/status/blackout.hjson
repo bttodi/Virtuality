@@ -1,5 +1,4 @@
-name: blackout
-type: StatusEffect
+hideDatabase: true
 parentizeEffect: true
 parentizeApplyEffect: true
 applyExtend: true

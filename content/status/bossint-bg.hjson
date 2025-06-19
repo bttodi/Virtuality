@@ -1,5 +1,4 @@
-name: Boss Intro Background
-type: StatusEffect
+hideDatabase: true
 parentizeEffect: true
 parentizeApplyEffect: true
 applyExtend: true

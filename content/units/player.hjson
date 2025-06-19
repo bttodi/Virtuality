@@ -1,3 +1,4 @@
+hideDatabase: true
 type: hover
 health: 500
 speed: 2
