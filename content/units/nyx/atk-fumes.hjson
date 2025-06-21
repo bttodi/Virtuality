@@ -81,8 +81,7 @@ weapons: [
 			velocityScaleRandMin: 0.2
 			lifeScaleRandMin: 0.5
 			angleOffset: 270
-			collidesTiles: false
-			damage: 5
+			collides: false
 			speed: 8
 			lifetime: 120
 			drag: 0.025
@@ -108,6 +107,18 @@ weapons: [
 					progress: life
 				}
 			]
+			intervalDelay: 5
+			bulletInterval: 3
+			intervalBullet: {
+				type: BulletType
+				collides: false
+				speed: 0
+				lifetime: 0
+				hitEffect: none
+				despawnEffect: none
+				splashDamage: 5
+				splashDamageRadius: 32
+			}
 		}
 	}
 ]

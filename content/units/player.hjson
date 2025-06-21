@@ -23,7 +23,7 @@ weapons: [
 		bullet: {
 			type: BasicBulletType
 			collidesTiles: false
-			damage: 100
+			damage: 10
 			keepVelocity: false
 			speed: 8
 			lifetime: 40
