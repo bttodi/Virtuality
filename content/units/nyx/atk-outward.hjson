@@ -1,6 +1,6 @@
 hideDatabase: true
 type: missile
-lifetime: 120
+lifetime: 660
 health: 750
 speed: 0
 rotateSpeed: 0
@@ -17,135 +17,105 @@ deathExplosionEffect: none
 weapons: [
 	{
 		type: Weapon
-		reload: 120
+		reload: 150
 		mirror: false
 		x: 0
 		shootY: 0
 		shootCone: 180
+		shootSound: none
 		alwaysShooting: true
-		shootSound: none
-		recoil: 0
-		shootWarmupSpeed: 0.1
-		bullet: {
-			type: RailBulletType
-			length: 2048
-			collides: false
-			damage: 0
-			despawnEffect: none
-			hitEffect: none
-			smokeEffect: none
-			shootEffect: none
-			pierceEffect: none
-		}
-	}
-	{
-		type: Weapon
-		reload: 9999
-		mirror: false
-		x: 0
-		shootY: 0
-		shootCone: 180
-		shootSound: none
 		shoot: {
+			firstShotDelay: 5
 			type: ShootSpread
-			shots: 10
-			spread: 36
+			shots: 12
+			spread: 30
 		}
 		bullet: {
-			type: RailBulletType
-			length: 2048
-			collides: false
-			damage: 0
-			despawnEffect: none
-			hitEffect: none
-			smokeEffect: none
+			type: BasicBulletType
 			shootEffect: none
-			pierceEffect: none
-			spawnBullets: [
+			smokeEffect: none
+			collides: false
+			lifetime: 120
+			width: 8
+			height: 12
+			backMove: false
+			shrinkY: 0
+			frontColor: FF56757F
+			backColor: EB1E467F
+			sprite: missile-large
+			trailColor: EB1E467F
+			trailLength: 8
+			trailWidth: 1
+			layer: 114
+			lightScl: 0
+			speed: 8
+			drag: 0.075
+			hitEffect: none
+			despawnEffect: none
+			despawnSound: cannon
+			trailInterval: 0.5
+			trailRotation: true
+			trailEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 40
+				layer: 113
+				length: 96
+				cone: 60
+				colorFrom: EB1E46
+				colorTo: 000000
+				clip: 128
+			}
+			fragBullets: 11
+			fragSpread: 20
+			fragRandomSpread: 0
+			fragVelocityMin: 1
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragBullet: {
+				type: BasicBulletType
+				collidesTiles: false
+				pierce: true
+				lifetime: 30
+				damage: 15
+				width: 8
+				height: 12
+				backMove: false
+				shrinkY: 0
+				frontColor: FF5675
+				backColor: EB1E46
+				sprite: missile-large
+				trailColor: EB1E46
+				trailLength: 8
+				trailWidth: 1
+				layer: 114
+				lightScl: 0
+				speed: 16
+				drag: 0.025
+				hitEffect: none
+				despawnEffect: none
+			}
+			parts: [
 				{
-					type: BasicBulletType
-					collidesTiles: false
-					pierce: true
-					removeAfterPierce: false
-					lifetime: 90
-					damage: 25
-					width: 8
-					height: 12
-					backMove: false
-					shrinkY: 0
-					frontColor: FF5675
-					backColor: EB1E46
-					sprite: missile-large
-					trailColor: EB1E46
-					trailLength: 8
-					trailWidth: 1
-					layer: 114
-					lightScl: 0
-					speed: 5
-					drag: 0.05
-					hitEffect: none
-					despawnEffect: none
-					weaveScale: 600
-					weaveMag: -1
-					weaveRandom: false
-					trailInterval: 0.5
-					trailEffect: {
-						type: ParticleEffect
-						particles: 1
-						lifetime: 40
-						layer: 113
-						baseRotation: 270
-						length: 24
-						cone: 0
-						colorFrom: EB1E46
-						colorTo: 000000
-						clip: 128
+					type: RegionPart
+					name: virtuality-gradient
+					color: EB1E46
+					colorTo: EB1E4600
+					outline: false
+					layer: 95
+					blending: additive
+					progress: {
+						type: life
+						ops: [
+							{
+								op: curve
+								interp: circleIn
+							}
+						]
 					}
-					fragBullets: 1
-					fragRandomSpread: 0
-					fragVelocityMin: 1
-					fragOffsetMin: 0
-					fragOffsetMax: 0
-					fragBullet: {
-						type: BasicBulletType
-						collidesTiles: false
-						pierce: true
-						removeAfterPierce: false
-						lifetime: 120
-						damage: 25
-						width: 8
-						height: 12
-						backMove: false
-						shrinkY: 0
-						frontColor: FF5675
-						backColor: EB1E46
-						sprite: missile-large
-						trailColor: EB1E46
-						trailLength: 8
-						trailWidth: 1
-						layer: 114
-						lightScl: 0
-						speed: 4
-						drag: -0.03
-						hitEffect: none
-						despawnEffect: none
-						weaveScale: 600
-						weaveMag: -3
-						weaveRandom: false
-						trailInterval: 0.5
-						trailEffect: {
-							type: ParticleEffect
-							particles: 1
-							lifetime: 40
-							layer: 113
-							baseRotation: 270
-							length: 24
-							cone: 0
-							colorFrom: EB1E46
-							colorTo: 000000
-							clip: 128
-						}
-					}
+					xScl: 0.03125
+					yScl: 1
+					y: 32
 				}
 			]
 		}

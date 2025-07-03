@@ -1,0 +1,10 @@
+hideDatabase: true
+research: {
+	parent: sector-6-alluvion
+	objectives: [
+		{
+			type: SectorComplete
+			preset: sector-6-alluvion
+		}
+	]
+}

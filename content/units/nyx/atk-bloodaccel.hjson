@@ -17,7 +17,7 @@ deathShake: 0
 weapons: [
 	{
 		type: Weapon
-		reload: 90
+		reload: 30
 		mirror: false
 		x: 0
 		shootY: 0
@@ -25,14 +25,7 @@ weapons: [
 		alwaysShooting: true
 		shootSound: none
 		recoil: 0
-		shoot: {
-			type: ShootAlternate
-			barrels: 15
-			shots: 15
-			spread: 64
-			firstShotDelay: 5
-		}
-		xRand: 16
+		xRand: 64
 		bullet: {
 			type: BulletType
 			ignoreSpawnAngle: true
@@ -42,7 +35,6 @@ weapons: [
 			shootEffect: none
 			smokeEffect: none
 			hitEffect: none
-			drawSize: 512
 			despawnEffect: {
 				type: SoundEffect
 				sound: drillImpact
@@ -73,20 +65,23 @@ weapons: [
 				collidesTiles: false
 				pierce: true
 				removeAfterPierce: false
-				lifetime: 120
+				lifetime: 180
 				damage: 25
-				width: 8
-				height: 12
-				sprite: missile-large
+				width: 16
+				height: 16
+				sprite: mine-bullet
+				spin: 2
 				backMove: false
 				frontColor: FF5675
 				backColor: EB1E46
 				layer: 95
-				speed: 8
+				speed: 1.5
+				drag: -0.02
 				hitEffect: none
 				despawnEffect: none
 				shrinkY: 0
 				trailInterval: 0.5
+				drawSize: 128
 				trailEffect: {
 					type: ParticleEffect
 					particles: 1
@@ -100,31 +95,30 @@ weapons: [
 					colorTo: 000000
 					clip: 128
 				}
-			}
-			parts: [
-				{
-					type: RegionPart
-					name: virtuality-gradient
-					color: EB1E467F
-					colorTo: EB1E4600
-					outline: false
-					layer: 95
-					blending: additive
-					progress: {
-						type: life
-						ops: [
-							{
-								op: curve
-								interp: circleIn
-							}
-						]
+				parts: [
+					{
+						type: RegionPart
+						name: virtuality-gradient
+						color: EB1E467F
+						colorTo: EB1E4600
+						outline: false
+						layer: 95
+						blending: additive
+						progress: {
+							type: life
+							ops: [
+								{
+									op: curve
+									interp: circleIn
+								}
+							]
+						}
+						xScl: 0.0625
+						yScl: 2
+						y: 64
 					}
-					xScl: 0.0625
-					yScl: 8
-					x: -256
-					rotation: 90
-				}
-			]
+				]
+			}
 		}
 	}
 ]

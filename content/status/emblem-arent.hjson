@@ -1,0 +1,10 @@
+hideDatabase: true
+research: {
+	parent: sector-2-arent
+	objectives: [
+		{
+			type: SectorComplete
+			preset: sector-2-arent
+		}
+	]
+}

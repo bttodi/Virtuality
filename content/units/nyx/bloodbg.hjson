@@ -53,8 +53,8 @@ weapons: [
 				name: virtuality-clouds
 				outline: false
 				layer: 29.5
-				moveX: 512
-				xScl: 4
+				moveX: 640
+				xScl: 5
 				yScl: 3
 				progress: reload
 			}
@@ -64,9 +64,9 @@ weapons: [
 				name: virtuality-clouds
 				outline: false
 				layer: 29.5
-				moveX: 512
-				x: -512
-				xScl: 4
+				moveX: 640
+				x: -640
+				xScl: 5
 				yScl: 3
 				progress: reload
 			}
@@ -100,8 +100,8 @@ weapons: [
 				name: virtuality-clouds
 				outline: false
 				layer: 29.5
-				moveX: 512
-				xScl: 4
+				moveX: 640
+				xScl: 5
 				yScl: 3
 				rotation: 180
 				progress: reload
@@ -112,9 +112,9 @@ weapons: [
 				name: virtuality-clouds
 				outline: false
 				layer: 29.5
-				moveX: 512
-				x: -512
-				xScl: 4
+				moveX: 640
+				x: -640
+				xScl: 5
 				yScl: 3
 				rotation: 180
 				progress: reload

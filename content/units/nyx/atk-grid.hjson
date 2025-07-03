@@ -20,6 +20,27 @@ weapons: [
 		reload: 180
 		mirror: false
 		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: drillImpact
+		recoil: 0
+		bullet: {
+			type: BulletType
+			despawnEffect: none
+			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
+			collides: false
+			lifetime: 0
+			speed: 0
+		}
+	}
+	{
+		type: Weapon
+		reload: 180
+		mirror: false
+		x: 0
 		y: -512
 		shootY: 0
 		shootCone: 180

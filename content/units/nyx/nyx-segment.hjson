@@ -4,13 +4,12 @@ hittable: false
 speed: 6
 accel: 1
 drag: 1
-rotateSpeed: 999
+rotateSpeed: 30
 physics: false
 bounded: false
 groundLayer: 95
 drawCell: false
 outlineColor: DC1E46
-omniMovement: false
 softShadowScl: 0
 deathSound: none
 deathExplosionEffect: none

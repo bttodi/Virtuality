@@ -1,0 +1,10 @@
+hideDatabase: true
+research: {
+	parent: sector-5-nyx
+	objectives: [
+		{
+			type: SectorComplete
+			preset: sector-5-nyx
+		}
+	]
+}

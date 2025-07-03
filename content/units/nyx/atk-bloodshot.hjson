@@ -58,6 +58,7 @@ weapons: [
 					height: 12
 					drawSize: 256
 					layer: 114
+					despawnSound: drillImpact
 					fragBullets: 1
 					fragRandomSpread: 0
 					fragVelocityMin: 1

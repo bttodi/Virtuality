@@ -1,0 +1,10 @@
+hideDatabase: true
+research: {
+	parent: sector-1-candor
+	objectives: [
+		{
+			type: SectorComplete
+			preset: sector-1-candor
+		}
+	]
+}
