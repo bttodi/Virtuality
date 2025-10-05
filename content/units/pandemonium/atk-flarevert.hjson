@@ -1,0 +1,221 @@
+hideDatabase: true
+type: missile
+lifetime: 360
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 0
+	y: 256
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	aiControllable: false
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 30
+		shotDelay: 60
+		shots: 10
+	}
+	bullet: {
+		type: BulletType
+		lifetime: 0
+		collides: false
+		speed: 0
+		ignoreSpawnAngle: true
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		fragBullets: 1
+		fragRandomSpread: 0
+		fragVelocityMin: 1
+		fragOffsetMin: 0
+		fragOffsetMax: 0
+		fragAngle: 270
+		fragBullet: {
+			type: BulletType
+			collidesTiles: false
+			lifetime: 120
+			pierce: true
+			speed: 6
+			damage: 15
+			hitEffect: none
+			despawnSound: none
+			keepVelocity: false
+			trailInterval: 0.5
+			trailRotation: true
+			shootEffect: none
+			smokeEffect: none
+			drawSize: 256
+			trailEffect: {
+				type: MultiEffect
+				effects: [{
+					type: ParticleEffect
+					lifetime: 15
+					particles: 2
+					baseLength: 1
+					length: 2
+					colorFrom: EB46467F
+					colorTo: 36363600
+					sizeTo: 4
+					layer: 94
+					offsetX: -8
+				}{
+					type: ParticleEffect
+					lifetime: 5
+					particles: 1
+					baseLength: 2
+					length: -8
+					colorFrom: E8A2A2
+					colorTo: EB4646
+					sizeFrom: 3
+					layer: 94.5
+					cone: 20
+					offsetX: -8
+				}]
+			}
+			parts: [{
+				type: RegionPart
+				name: virtuality-flare
+				outline: false
+				layer: 95
+			}{
+				type: RegionPart
+				name: virtuality-glow
+				blending: additive
+				color: EB46467F
+				outline: false
+				layer: 95
+				xScl: 0.5
+				yScl: 0.5
+			}{
+				type: RegionPart
+				name: virtuality-gradient
+				color: FFA53F3F
+				outline: false
+				layer: 94
+				blending: additive
+				xScl: 0.03125
+				yScl: 2
+				y: 64
+			}]
+		}
+	}
+}{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 0
+	y: -256
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	aiControllable: false
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 30
+		shotDelay: 60
+		shots: 10
+	}
+	bullet: {
+		type: BulletType
+		lifetime: 0
+		collides: false
+		speed: 0
+		ignoreSpawnAngle: true
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		fragBullets: 1
+		fragRandomSpread: 0
+		fragVelocityMin: 1
+		fragOffsetMin: 0
+		fragOffsetMax: 0
+		fragAngle: 90
+		fragBullet: {
+			type: BulletType
+			collidesTiles: false
+			lifetime: 120
+			pierce: true
+			speed: 6
+			damage: 15
+			hitEffect: none
+			despawnSound: none
+			keepVelocity: false
+			trailInterval: 0.5
+			trailRotation: true
+			shootEffect: none
+			smokeEffect: none
+			drawSize: 256
+			trailEffect: {
+				type: MultiEffect
+				effects: [{
+					type: ParticleEffect
+					lifetime: 15
+					particles: 2
+					baseLength: 1
+					length: 2
+					colorFrom: EB46467F
+					colorTo: 36363600
+					sizeTo: 4
+					layer: 94
+					offsetX: -8
+				}{
+					type: ParticleEffect
+					lifetime: 5
+					particles: 1
+					baseLength: 2
+					length: -8
+					colorFrom: E8A2A2
+					colorTo: EB4646
+					sizeFrom: 3
+					layer: 94.5
+					cone: 20
+					offsetX: -8
+				}]
+			}
+			parts: [{
+				type: RegionPart
+				name: virtuality-flare
+				outline: false
+				layer: 95
+			}{
+				type: RegionPart
+				name: virtuality-glow
+				blending: additive
+				color: EB46467F
+				outline: false
+				layer: 95
+				xScl: 0.5
+				yScl: 0.5
+			}{
+				type: RegionPart
+				name: virtuality-gradient
+				color: FFA53F3F
+				outline: false
+				layer: 94
+				blending: additive
+				xScl: 0.03125
+				yScl: 2
+				y: 64
+			}]
+		}
+	}
+}]

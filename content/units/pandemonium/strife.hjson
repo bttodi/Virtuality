@@ -1,0 +1,28 @@
+hideDatabase: true
+health: 1000
+hitSize: 32
+speed: 0
+rotateSpeed: 0
+drag: 0.1
+physics: false
+bounded: false
+groundLayer: -1
+drawCell: false
+outlineColor: E7BE5A
+softShadowScl: 0
+deathSound: none
+deathExplosionEffect: none
+parts: [{
+	type: RegionPart
+	outline: false
+	color: ffffff
+	name: virtuality-strife
+	rotation: -90
+	layer: 115
+}]
+abilities: [{
+	type: SpawnDeathAbility
+	spread: 0
+	faceOutwards: false
+	unit: virtuality-strife-dead
+}]

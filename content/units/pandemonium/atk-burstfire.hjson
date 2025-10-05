@@ -1,0 +1,537 @@
+hideDatabase: true
+type: missile
+lifetime: 540
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			firstShotDelay: 90
+			shotDelay: 180
+			shots: 3
+		}
+		dest: [{
+			shotDelay: 5
+			shots: 9
+		}]
+	}
+	bullet: {
+		type: BulletType
+		smokeEffect: none
+		collides: false
+		lifetime: 1
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				particles: 8
+				lifetime: 60
+				sizeFrom: 4
+				sizeTo: 16
+				spin: 2
+				colorFrom: 363636
+				colorTo: 36363600
+				region: virtuality-smoke
+				cone: 30
+				length: -64
+				layer: 106
+				offsetY: -8
+				offsetX: -56
+				interp: circleOut
+			}{
+				type: ParticleEffect
+				particles: 8
+				lifetime: 60
+				sizeFrom: 8
+				sizeTo: 24
+				spin: -3
+				colorFrom: 363636
+				colorTo: 36363600
+				region: virtuality-smoke
+				cone: 30
+				length: -128
+				layer: 106
+				offset: 137.5
+				offsetY: -8
+				offsetX: -56
+				interp: circleOut
+			}{
+				type: ParticleEffect
+				particles: 6
+				lifetime: 120
+				sizeFrom: 4
+				sizeTo: 0
+				spin: 3
+				colorFrom: FFA53F
+				colorTo: 363636
+				region: virtuality-offdot
+				cone: 30
+				length: -128
+				layer: 106
+				offsetY: -8
+				offsetX: -56
+				interp: circleOut
+			}{
+				type: ParticleEffect
+				particles: 6
+				lifetime: 120
+				sizeFrom: 4
+				sizeTo: 0
+				spin: -2
+				colorFrom: FFA53F
+				colorTo: 363636
+				region: virtuality-offdot
+				cone: 30
+				length: -128
+				layer: 106
+				offsetY: -8
+				offsetX: -56
+				interp: circleOut
+			}]
+		}
+	}
+}{
+	type: Weapon
+	reload: 5
+	mirror: false
+	x: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	rotate: true
+	rotateSpeed: 9999
+	bullet: {
+		type: RailBulletType
+		damage: 5
+		pierce: true
+		shootEffect: none
+		smokeEffect: none
+		collidesTiles: false
+		speed: 0
+		length: 32
+		hitEffect: none
+		despawnEffect: none
+		pierceEffect: none
+	}
+}{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 56
+	shootX: 4
+	shootCone: 180
+	shootSound: missileSmall
+	alwaysShooting: true
+	predictTarget: false
+	inaccuracy: 3
+	shoot: {
+		type: ShootMulti
+		source: {
+			firstShotDelay: 90
+			shotDelay: 180
+			shots: 3
+		}
+		dest: [{
+			shotDelay: 5
+			shots: 9
+		}]
+	}
+	bullet: {
+		type: BulletType
+		smokeEffect: none
+		collidesTiles: false
+		damage: 25
+		lifetime: 75
+		speed: 8
+		hitSound: dullExplosion
+		despawnSound: dullExplosion
+		shootEffect: none
+		hitEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				particles: 4
+				lifetime: 60
+				sizeFrom: 16
+				sizeTo: 24
+				spin: 2
+				colorFrom: 363636
+				colorTo: 36363600
+				region: virtuality-smoke
+				baseLength: 16
+				length: 0
+				followParent: true
+				rotWithParent: true
+				layer: 106
+			}{
+				type: ParticleEffect
+				particles: 4
+				lifetime: 60
+				sizeFrom: 16
+				sizeTo: 24
+				spin: -3
+				colorFrom: 363636
+				colorTo: 36363600
+				region: virtuality-smoke
+				baseLength: 16
+				length: 0
+				followParent: true
+				rotWithParent: true
+				layer: 106
+				offset: 137.5
+			}{
+				type: ParticleEffect
+				particles: 3
+				lifetime: 120
+				sizeFrom: 4
+				sizeTo: 0
+				spin: 3
+				colorFrom: FFA53F
+				colorTo: 363636
+				region: virtuality-offdot
+				baseLength: 16
+				length: 24
+				interp: circleOut
+				sizeInterp: linear
+				followParent: true
+				rotWithParent: true
+				layer: 106
+			}{
+				type: ParticleEffect
+				particles: 3
+				lifetime: 120
+				sizeFrom: 4
+				sizeTo: 0
+				spin: -2
+				colorFrom: FFA53F
+				colorTo: 363636
+				region: virtuality-offdot
+				baseLength: 16
+				length: 24
+				interp: circleOut
+				sizeInterp: linear
+				followParent: true
+				rotWithParent: true
+				layer: 106
+				offset: 137.5
+			}]
+		}
+		despawnEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				particles: 4
+				lifetime: 60
+				sizeFrom: 16
+				sizeTo: 24
+				spin: 2
+				colorFrom: 363636
+				colorTo: 36363600
+				region: virtuality-smoke
+				baseLength: 16
+				length: 0
+				followParent: true
+				rotWithParent: true
+				layer: 106
+			}{
+				type: ParticleEffect
+				particles: 4
+				lifetime: 60
+				sizeFrom: 16
+				sizeTo: 24
+				spin: -3
+				colorFrom: 363636
+				colorTo: 36363600
+				region: virtuality-smoke
+				baseLength: 16
+				length: 0
+				followParent: true
+				rotWithParent: true
+				layer: 106
+				offset: 137.5
+			}{
+				type: ParticleEffect
+				particles: 3
+				lifetime: 120
+				sizeFrom: 4
+				sizeTo: 0
+				spin: 3
+				colorFrom: FFA53F
+				colorTo: 363636
+				region: virtuality-offdot
+				baseLength: 16
+				length: 24
+				interp: circleOut
+				sizeInterp: linear
+				followParent: true
+				rotWithParent: true
+				layer: 106
+			}{
+				type: ParticleEffect
+				particles: 3
+				lifetime: 120
+				sizeFrom: 4
+				sizeTo: 0
+				spin: -2
+				colorFrom: FFA53F
+				colorTo: 363636
+				region: virtuality-offdot
+				baseLength: 16
+				length: 24
+				interp: circleOut
+				sizeInterp: linear
+				followParent: true
+				rotWithParent: true
+				layer: 106
+				offset: 137.5
+			}]
+		}
+		keepVelocity: false
+		trailInterval: 0.5
+		trailRotation: true
+		drawSize: 128
+		trailEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				lifetime: 30
+				particles: 2
+				length: 8
+				colorTo: 3F3F3F00
+				sizeTo: 3
+				layer: 94
+				offsetX: -8
+			}{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 2
+				length: -16
+				colorFrom: FFD37F
+				colorTo: FFA53F
+				sizeFrom: 3
+				layer: 94.5
+				cone: 20
+				offsetX: -8
+			}]
+		}
+		parts: [{
+			type: RegionPart
+			name: virtuality-rocket
+			outline: false
+			layer: 95
+		}]
+		fragBullets: 1
+		fragOffsetMin: 0
+		fragOffsetMax: 0
+		fragBullet: {
+			type: BulletType
+			collides: false
+			lifetime: 15
+			speed: 0
+			despawnEffect: none
+			hitEffect: none
+			drawSize: 128
+			parts: [{
+				type: RegionPart
+				name: virtuality-explosion
+				blending: additive
+				color: 8CD38C
+				colorTo: 8CD38C00
+				outline: false
+				layer: 115
+				xScl: 0.75
+				yScl: 0.75
+				moveRot: 43.77
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0
+						end: 0.5
+					}]
+				}
+			}{
+				type: RegionPart
+				name: virtuality-explosion
+				blending: additive
+				color: 8CD38C
+				colorTo: 8CD38C00
+				outline: false
+				layer: 115
+				xScl: -0.75
+				yScl: 0.75
+				moveRot: -43.77
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0
+						end: 0.5
+					}]
+				}
+			}]
+		}
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-rof-inv
+	blending: additive
+	color: 8CD38C00
+	colorTo: 8CD38C
+	outline: false
+	layer: 85
+	xScl: 0.5
+	yScl: 0.5
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 10
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-rof-inv
+	blending: additive
+	color: F5945300
+	colorTo: F59453
+	outline: false
+	layer: 85
+	xScl: -0.5
+	yScl: 0.5
+	rotation: 137.5
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.0015
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 10
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-rof
+	blending: additive
+	color: 8CD38C00
+	colorTo: 8CD38C
+	outline: false
+	layer: 85
+	xScl: -0.527
+	yScl: 0.527
+	rotation: 137.5
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.0015
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 10
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-rof
+	blending: additive
+	color: 8CD38C00
+	colorTo: 8CD38C
+	outline: false
+	layer: 85
+	xScl: 0.527
+	yScl: 0.527
+	rotation: 137.5
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 10
+		}]
+	}
+}]

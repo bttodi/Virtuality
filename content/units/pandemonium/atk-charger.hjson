@@ -1,0 +1,32 @@
+hideDatabase: true
+type: missile
+lifetime: 510
+health: 750
+speed: 0
+rotateSpeed: 0
+drag: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+deathShake: 0
+clipSize: 512
+abilities: [{
+	type: EnergyFieldAbility
+	x: -4
+	y: 64
+	reload: 5
+	shootSound: none
+	targetGround: false
+	healPercent: 0
+	color: 99CCFF
+	sectors: 0
+	healEffect: none
+	range: 256
+	layer: 99.9
+}]

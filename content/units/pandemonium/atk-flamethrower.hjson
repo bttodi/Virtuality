@@ -1,0 +1,433 @@
+type: missile
+lifetime: 360
+health: 750
+speed: 4
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 512
+weapons: [{
+	type: Weapon
+	reload: 3
+	mirror: false
+	x: 0
+	shootY: 64
+	shootCone: 360
+	recoil: 0
+	shootSound: none
+	shootWarmupSpeed: 0.03
+	minWarmup: 0.5
+	alwaysShooting: true
+	aiControllable: false
+	bullet: {
+		type: RailBulletType
+		damage: 0
+		length: 448
+		collides: false
+		collidesTiles: false
+		shootEffect: none
+		smokeEffect: none
+		pointEffect: {
+			type: ParticleEffect
+			particles: 1
+			lifetime: 90
+			sizeFrom: 6
+			sizeTo: 0
+			spin: 6
+			colorFrom: ffa53f
+			colorTo: 363636
+			region: virtuality-offdot
+			length: 32
+			interp: circleOut
+			sizeInterp: linear
+			followParent: true
+			rotWithParent: true
+			layer: 85
+		}
+	}
+}{
+	type: Weapon
+	reload: 5
+	mirror: false
+	x: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	aiControllable: false
+	shoot: {
+		type: ShootAlternate
+		shots: 5
+		barrels: 5
+		spread: 3
+	}
+	bullet: {
+		type: RailBulletType
+		damage: 0.00001
+		status: virtuality-5dpf
+		statusDuration: 5
+		pierce: true
+		shootEffect: none
+		smokeEffect: none
+		collidesTiles: false
+		speed: 0
+		length: 512
+		hitEffect: none
+		despawnEffect: none
+		pierceEffect: none
+	}
+}{
+	type: Weapon
+	reload: 36
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 360
+	alwaysShooting: true
+	recoil: 0
+	shootSound: none
+	shootWarmupSpeed: 0.03
+	bullet: {
+		type: BulletType
+		lifetime: 30
+		speed: 96
+		collides: false
+		shootEffect: none
+		smokeEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		name: virtuality-beam
+		xScl: 0
+		yScl: 64
+		y: 280
+		color: ffa53f7f
+		outline: false
+		layer: 108
+		blending: additive
+		moves: [
+			{
+				type: PartMove
+				gx: 10
+				progress: warmup
+			}
+		]
+	}{
+		type: RegionPart
+		name: virtuality-lasermask-opaque
+		y: 56
+		color: 000000
+		colorTo: 000000
+		outline: false
+		layer: 109.5
+		yScl: 2
+	}{
+		type: RegionPart
+		name: virtuality-lasermask
+		y: 512
+		rotation: 180
+		color: 000000
+		colorTo: 000000
+		outline: false
+		layer: 109.5
+		yScl: 2
+	}{
+		type: RegionPart
+		name: virtuality-square
+		y: 832
+		color: 000000
+		colorTo: 000000
+		outline: false
+		layer: 109.5
+		yScl: 128
+		xScl: 16
+	}{
+		type: RegionPart
+		name: virtuality-square
+		y: -192
+		color: 000000
+		colorTo: 000000
+		outline: false
+		layer: 109.5
+		yScl: 96
+		xScl: 16
+	}{
+		type: RegionPart
+		name: virtuality-explosion
+		y: 56
+		xScl: 0
+		yScl: 0
+		growX: 2
+		growY: 2
+		growProgress: warmup
+		color: ffa53fbf
+		colorTo: ffa53fbf
+		outline: false
+		moveRot: 1080
+		layer: 109.33
+		blending: additive
+		progress: reload
+	}{
+		type: RegionPart
+		name: virtuality-explosion
+		y: 56
+		xScl: 0
+		yScl: 0
+		growX: 2
+		growY: 2
+		growProgress: warmup
+		color: ffa53fbf
+		colorTo: ffa53fbf
+		outline: false
+		moveRot: -1080
+		layer: 109.33
+		blending: additive
+		progress: reload
+	}
+// PRIMARY (ORANGE)
+	{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -128
+		y: 56
+		outline: false
+		layer: 109.33
+		blending: additive
+		moves: [{
+			type: PartMove
+			gx: 1
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -128
+		y: 184
+		outline: false
+		layer: 109.33
+		blending: additive
+		moves: [{
+			type: PartMove
+			gx: 1
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -128
+		y: 312
+		outline: false
+		layer: 109.33
+		blending: additive
+		moves: [{
+			type: PartMove
+			gx: 1
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -128
+		y: 440
+		outline: false
+		layer: 109.33
+		blending: additive
+		moves: [{
+			type: PartMove
+			gx: 1
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -128
+		y: 568
+		outline: false
+		layer: 109.33
+		blending: additive
+		moves: [{
+			type: PartMove
+			gx: 1
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -128
+		y: 696
+		outline: false
+		layer: 109.33
+		blending: additive
+		moves: [{
+			type: PartMove
+			gx: 1
+			progress: warmup
+		}]
+	}
+// SECONDARY (YELLOW)
+	{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -256
+		y: 56
+		outline: false
+		layer: 109.33
+		blending: additive
+		yScl: 2
+		moves: [{
+			type: PartMove
+			gx: 0.75
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -256
+		y: 312
+		outline: false
+		layer: 109.33
+		blending: additive
+		yScl: 2
+		moves: [{
+			type: PartMove
+			gx: 0.75
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -256
+		y: 568
+		outline: false
+		layer: 109.33
+		blending: additive
+		yScl: 2
+		moves: [{
+			type: PartMove
+			gx: 0.75
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa53f
+		progress: reload
+		xScl: 0
+		moveY: -256
+		y: 824
+		outline: false
+		layer: 109.33
+		blending: additive
+		yScl: 2
+		moves: [{
+			type: PartMove
+			gx: 0.75
+			progress: warmup
+		}]
+	}
+// TERTIARY (WHITE)
+	{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa57f
+		progress: reload
+		xScl: 0
+		moveY: -256
+		y: 56
+		outline: false
+		layer: 109.33
+		blending: additive
+		yScl: 2
+		moves: [{
+			type: PartMove
+			gx: 0.75
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa57f
+		progress: reload
+		xScl: 0
+		moveY: -256
+		y: 312
+		outline: false
+		layer: 109.33
+		blending: additive
+		yScl: 2
+		moves: [{
+			type: PartMove
+			gx: 0.75
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa57f
+		progress: reload
+		xScl: 0
+		moveY: -256
+		y: 568
+		outline: false
+		layer: 109.33
+		blending: additive
+		yScl: 2
+		moves: [{
+			type: PartMove
+			gx: 0.75
+			progress: warmup
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-firelaser
+		color: ffa57f
+		progress: reload
+		xScl: 0
+		moveY: -256
+		y: 824
+		outline: false
+		layer: 109.33
+		blending: additive
+		yScl: 2
+		moves: [{
+			type: PartMove
+			gx: 0.75
+			progress: warmup
+		}]
+	}]
+}]

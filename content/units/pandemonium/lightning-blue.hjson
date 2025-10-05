@@ -1,0 +1,108 @@
+hideDatabase: true
+type: missile
+lifetime: 60
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+deathShake: 0
+clipSize: 512
+parts: [{
+	type: RegionPart
+	name: virtuality-lightning
+	blending: additive
+	color: 99CCFF
+	colorTo: 99CCFF00
+	outline: false
+	layer: 115.1
+	y: 2048
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.5
+			end: 0.6
+		}]
+	}
+	moves: [{
+		y: -2048
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.5
+				end: 0.5
+			}]
+		}
+	}]
+	xScl: 3
+	yScl: 3
+}{
+	type: RegionPart
+	name: virtuality-lightning
+	blending: additive
+	color: 99CCFF
+	colorTo: 99CCFF00
+	outline: false
+	layer: 115.1
+	y: 2048
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.5
+			end: 0.65
+		}]
+	}
+	moves: [{
+		y: -2048
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.5
+				end: 0.5
+			}]
+		}
+	}]
+	xScl: 3
+	yScl: 3
+}{
+	type: RegionPart
+	name: virtuality-lightning
+	blending: additive
+	color: 99CCFF
+	colorTo: FFFFFF00
+	outline: false
+	layer: 115.1
+	y: 2048
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.5
+			end: 0.75
+		}]
+	}
+	moves: [{
+		y: -2048
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.5
+				end: 0.5
+			}]
+		}
+	}]
+	xScl: 3
+	yScl: 3
+}]

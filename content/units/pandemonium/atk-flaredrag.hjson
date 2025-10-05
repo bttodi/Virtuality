@@ -1,0 +1,87 @@
+hideDatabase: true
+type: missile
+lifetime: 360
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 60
+	mirror: false
+	x: 0
+	shootY: 48
+	shootX: -8
+	shootCone: 180
+	shootSound: malignShoot
+	soundPitchMin: 1.2
+	soundPitchMax: 1.3
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			firstShotDelay: 30
+			shots: 5
+			shotDelay: 3
+		}
+		dest: [{
+			type: ShootSpread
+			shots: 5
+			spread: 24
+		}]
+	}
+	bullet: {
+		type: BulletType
+		collidesTiles: false
+		lifetime: 240
+		damage: 10
+		pierce: true
+		speed: 4
+		despawnSound: none
+		hitEffect: none
+		despawnEffect: none
+		keepVelocity: false
+		trailInterval: 0.5
+		trailRotation: true
+		shootEffect: none
+		smokeEffect: none
+		trailEffect: {
+			type: ParticleEffect
+			lifetime: 5
+			particles: 1
+			baseLength: 2
+			length: -8
+			colorFrom: E8A2A2
+			colorTo: EB4646
+			sizeFrom: 3
+			layer: 94.5
+			cone: 20
+			offsetX: -8
+		}
+		parts: [{
+			type: RegionPart
+			name: virtuality-flare
+			outline: false
+			layer: 95
+		}{
+			type: RegionPart
+			name: virtuality-glow
+			blending: additive
+			color: EB46467F
+			outline: false
+			layer: 95
+			xScl: 0.5
+			yScl: 0.5
+		}]
+	}
+}]

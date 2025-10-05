@@ -1,0 +1,104 @@
+hideDatabase: true
+type: missile
+lifetime: 540
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 56
+	shootCone: 180
+	shootSound: drillImpact
+	alwaysShooting: true
+	aiControllable: false
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 120
+		shotDelay: 30
+		shots: 14
+	}
+	bullet: {
+		type: BulletType
+		pierce: true
+		keepVelocity: false
+		collidesTiles: false
+		damage: 15
+		lifetime: 150
+		hitSize: 8
+		speed: 4
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		bulletInterval: 1
+		intervalBullet: {
+			type: BulletType
+			keepVelocity: false
+			collides: false
+			speed: 0.2
+			lifetime: 15
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-explosion
+				blending: additive
+				color: FFA53F
+				colorTo: FF922600
+				outline: false
+				xScl: 0.33
+				yScl: 0.33
+				growX: -0.33
+				growY: -0.33
+				layer: 115
+				moveRot: -43.77
+				progress: life
+			}]
+		}
+		trailInterval: 1
+		trailEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				particles: 1
+				lifetime: 20
+				sizeFrom: 6
+				sizeTo: 8
+				spin: 2
+				colorFrom: FFA53F
+				colorTo: 36363600
+				region: virtuality-smoke
+				baseLength: 6
+				length: 0
+				interp: sineIn
+				layer: 85
+			}{
+				type: ParticleEffect
+				particles: 1
+				lifetime: 45
+				sizeFrom: 6
+				sizeTo: 0
+				spin: 6
+				colorFrom: FFA53F
+				colorTo: 363636
+				region: virtuality-offdot
+				length: 32
+				interp: circleOut
+				sizeInterp: linear
+				layer: 86
+			}]
+		}
+	}
+}]

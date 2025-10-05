@@ -1,0 +1,10 @@
+hideDatabase: true
+research: {
+	parent: sector-3-pandemonium
+	objectives: [
+		{
+			type: SectorComplete
+			preset: sector-3-pandemonium
+		}
+	]
+}

@@ -1,9 +1,13 @@
 name: virtuality
 displayName: Virtuality
 author: bttodi
-description: A mod centered around fighting bosses, only using HJSON and world processors. Best experienced with a mouse and a keyboard.
-subtitle: v8-nyx
-minGameVersion: 150
-version: v8-nyx
+description: '''
+A mod centered around fighting bosses, with a focus on pattern-based attacks. Entirely detached from Mindustry's traditional gameplay loop - The Virtuality Archives restrains the player in a measly vessel and pits them against encoded entities. Does not utilize scripts or Java, seeking to explore the technical scope of (H)JSON and MLOG. Best experienced with a mouse and keyboard.
+
+Currently features five of seven planned bosses in the campaign - Candor, Ardent & Argent, Pandemonium, Nyx, and Alluvion.
+'''
+subtitle: v8-pandemonium
+minGameVersion: 152.2
+version: v8-pandemonium
 dependencies: [ ]
 hidden: false

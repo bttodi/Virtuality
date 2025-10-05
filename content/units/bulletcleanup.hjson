@@ -1,0 +1,117 @@
+hideDatabase: true
+type: missile
+lifetime: 30
+health: 1000
+speed: 0
+rotateSpeed: 0
+hittable: false
+physics: false
+bounded: false
+groundLayer: -1
+drawCell: false
+softShadowScl: 0
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: PointDefenseWeapon
+	reload: 0
+	mirror: false
+	x: 128
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	targetInterval: 0
+	targetSwitchInterval: 0
+	beamEffect: none
+	bullet: {
+		type: BulletType
+		maxRange: 1024
+		damage: 9999
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+	}
+}{
+	type: PointDefenseWeapon
+	reload: 0
+	mirror: false
+	x: -128
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	targetInterval: 0
+	targetSwitchInterval: 0
+	beamEffect: none
+	bullet: {
+		type: BulletType
+		maxRange: 1024
+		damage: 9999
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+	}
+}{
+	type: PointDefenseWeapon
+	reload: 0
+	mirror: false
+	x: 0
+	y: 128
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	targetInterval: 0
+	targetSwitchInterval: 0
+	beamEffect: none
+	bullet: {
+		type: BulletType
+		maxRange: 1024
+		damage: 9999
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+	}
+}{
+	type: PointDefenseWeapon
+	reload: 0
+	mirror: false
+	x: 0
+	y: -128
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	targetInterval: 0
+	targetSwitchInterval: 0
+	beamEffect: none
+	bullet: {
+		type: BulletType
+		maxRange: 1024
+		damage: 9999
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+	}
+}{
+	type: PointDefenseWeapon
+	reload: 0
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	targetInterval: 0
+	targetSwitchInterval: 0
+	beamEffect: none
+	bullet: {
+		type: BulletType
+		maxRange: 1024
+		damage: 9999
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+	}
+}]

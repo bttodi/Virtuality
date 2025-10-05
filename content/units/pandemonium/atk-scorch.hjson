@@ -1,0 +1,215 @@
+hideDatabase: true
+type: missile
+lifetime: 540
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 56
+	shootCone: 180
+	shootSound: cannon
+	soundPitchMin: 0.8
+	soundPitchMax: 0.8
+	alwaysShooting: true
+	aiControllable: false
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			firstShotDelay: 120
+		}
+		dest: [{
+			shotDelay: 90
+			shots: 5
+		}]
+	}
+	bullet: {
+		type: BulletType
+		pierce: true
+		shootEffect: none
+		smokeEffect: none
+		collidesTiles: false
+		damage: 40
+		hitSize: 24
+		lifetime: 120
+		speed: 6
+		hitEffect: none
+		despawnEffect: none
+		keepVelocity: false
+		intervalBullets: 1
+		bulletInterval: 1
+		trailInterval: 1
+		trailEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				particles: 2
+				lifetime: 60
+				sizeFrom: 16
+				sizeTo: 24
+				spin: 2
+				colorFrom: FFA53F
+				colorTo: 36363600
+				region: virtuality-smoke
+				baseLength: 16
+				length: 0
+				interp: circleOut
+				sizeInterp: linear
+				followParent: true
+				rotWithParent: true
+				layer: 85
+			}{
+				type: ParticleEffect
+				particles: 2
+				lifetime: 60
+				sizeFrom: 16
+				sizeTo: 24
+				spin: -3
+				colorFrom: FFA53F
+				colorTo: 36363600
+				region: virtuality-smoke
+				baseLength: 16
+				length: 0
+				interp: circleOut
+				sizeInterp: linear
+				followParent: true
+				rotWithParent: true
+				layer: 85
+			}{
+				type: ParticleEffect
+				particles: 4
+				lifetime: 60
+				sizeFrom: 6
+				sizeTo: 0
+				spin: 6
+				colorFrom: FFA53F
+				colorTo: 363636
+				region: virtuality-offdot
+				length: 32
+				interp: circleOut
+				sizeInterp: linear
+				followParent: true
+				rotWithParent: true
+				layer: 86
+			}]
+		}
+		parts: [{
+			type: RegionPart
+			name: virtuality-explosion
+			layer: 105.2
+			color: FFA53F
+			outline: false
+			blending: additive
+			xScl: 0.8
+			yScl: 0.8
+			moves: [{
+				rot: 360
+				progress: {
+					type: time
+					ops: [{
+						op: mul
+						amount: 0.005
+					}{
+						op: loop
+						time: 1
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-explosion
+			layer: 105.2
+			color: FFA53F
+			outline: false
+			blending: additive
+			xScl: 0.8
+			yScl: 0.8
+			moves: [{
+				rot: -360
+				progress: {
+					type: time
+					ops: [{
+						op: mul
+						amount: 0.005
+					}{
+						op: loop
+						time: 1
+					}]
+				}
+			}]
+		}]
+		intervalBullet: {
+			type: BulletType
+			shootEffect: none
+			smokeEffect: none
+			collides: false
+			lifetime: 30
+			speed: 0
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-burst
+				layer: 105
+				color: FFA53F
+				outline: false
+				xScl: 0.4
+				yScl: 0.4
+				growX: -0.2
+				growY: -0.2
+				progress: life
+				moves: [{
+					rot: 360
+					progress: {
+						type: time
+						ops: [{
+							op: mul
+							amount: 0.005
+						}{
+							op: loop
+							time: 1
+						}]
+					}
+				}]
+			}{
+				type: RegionPart
+				name: virtuality-explosion
+				layer: 105.1
+				color: 000000
+				outline: false
+				xScl: 0.6
+				yScl: 0.6
+				growX: 0.4
+				growY: 0.4
+				progress: life
+				moves: [{
+					rot: -360
+					progress: {
+						type: time
+						ops: [{
+							op: mul
+							amount: 0.005
+						}{
+							op: loop
+							time: 1
+						}]
+					}
+				}]
+			}]
+		}
+	}
+}]

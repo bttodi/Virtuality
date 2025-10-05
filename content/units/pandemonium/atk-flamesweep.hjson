@@ -1,0 +1,271 @@
+hideDatabase: true
+type: missile
+lifetime: 600
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	aiControllable: false
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			type: ShootSpread
+			firstShotDelay: 60
+			spread: 137.5
+			shots: 5
+			shotDelay: 120
+		}
+		dest: [{
+			type: ShootMulti
+			source: {
+				type: ShootSpread
+				spread: 90
+				shots: 4
+			}
+			dest: [{
+				type: ShootSpread
+				shots: 30
+				spread: 2
+			}]
+		}]
+	}
+	bullet: {
+		type: BulletType
+		lifetime: 30
+		collides: false
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		fragBullets: 1
+		fragRandomSpread: 0
+		fragVelocityMin: 1
+		fragOffsetMin: 0
+		fragOffsetMax: 0
+		fragBullet: {
+			type: BulletType
+			pierce: true
+			keepVelocity: false
+			collidesTiles: false
+			damage: 15
+			lifetime: 150
+			hitSize: 8
+			speed: 4
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			bulletInterval: 1
+			intervalBullet: {
+				type: BulletType
+				keepVelocity: false
+				collides: false
+				speed: 0.2
+				lifetime: 15
+				despawnEffect: none
+				parts: [{
+					type: RegionPart
+					name: virtuality-explosion
+					blending: additive
+					color: FFA53F
+					colorTo: FF922600
+					outline: false
+					xScl: 0.33
+					yScl: 0.33
+					growX: -0.33
+					growY: -0.33
+					layer: 115
+					moveRot: -43.77
+					progress: life
+				}]
+			}
+			trailInterval: 3
+			trailEffect: {
+				type: MultiEffect
+				effects: [{
+					type: ParticleEffect
+					particles: 1
+					lifetime: 20
+					sizeFrom: 6
+					sizeTo: 8
+					spin: 2
+					colorFrom: FFA53F
+					colorTo: 36363600
+					region: virtuality-smoke
+					baseLength: 6
+					length: 0
+					interp: sineIn
+					layer: 85
+				}{
+					type: ParticleEffect
+					particles: 1
+					lifetime: 45
+					sizeFrom: 6
+					sizeTo: 0
+					spin: 6
+					colorFrom: FFA53F
+					colorTo: 363636
+					region: virtuality-offdot
+					length: 32
+					interp: circleOut
+					sizeInterp: linear
+					layer: 86
+				}]
+			}
+		}
+	}
+}{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	aiControllable: false
+	predictTarget: false
+	shoot: {
+		type: ShootSpread
+		firstShotDelay: 60
+		spread: 137.5
+		shots: 5
+		shotDelay: 120
+	}
+	bullet: {
+		type: BulletType
+		lifetime: 30
+		collides: false
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		drawSize: 1024
+		despawnSound: cannon
+		parts: [{
+			type: HaloPart
+			haloRadius: 512
+			radius: 512
+			shapeRotation: 180
+			color: FFFF9A5F
+			colorTo: FFFF9A00
+			progress: life
+			layer: 105.1
+			shapes: 4
+			haloRotation: 45
+		}]
+	}
+}{
+	type: Weapon
+	reload: 5
+	mirror: false
+	x: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	rotate: true
+	rotateSpeed: 9999
+	bullet: {
+		type: RailBulletType
+		damage: 5
+		pierce: true
+		shootEffect: none
+		smokeEffect: none
+		collidesTiles: false
+		speed: 0
+		length: 64
+		hitEffect: none
+		despawnEffect: none
+		pierceEffect: none
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-smokering
+	blending: additive
+	color: FFA53F00
+	colorTo: FFA53F
+	outline: false
+	layer: 115
+	xScl: 0.5
+	yScl: 0.5
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 10
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-smokering
+	blending: additive
+	color: FFA53F00
+	colorTo: FFA53F
+	outline: false
+	layer: 115
+	xScl: 0.5
+	yScl: 0.5
+	rotation: 137.5
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001618033
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 10
+		}]
+	}
+}]

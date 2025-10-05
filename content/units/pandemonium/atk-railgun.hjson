@@ -1,0 +1,281 @@
+hideDatabase: true
+type: missile
+lifetime: 450
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+parts: [{
+	type: RegionPart
+	name: virtuality-gradient
+	layer: 114
+	color: 99CCFF7F
+	colorTo: 99CCFF00
+	outline: false
+	xScl: 0.025
+	yScl: 8
+	y: 256
+	progress: warmup
+}]
+weapons: [{
+	type: Weapon
+	reload: 60
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: pulseBlast
+	alwaysShooting: true
+	aiControllable: false
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 90
+	}
+	bullet: {
+		type: BulletType
+		smokeEffect: none
+		collides: false
+		lifetime: 30
+		backMove: false
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		keepVelocity: false
+		shootEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				particles: 64
+				lifetime: 20
+				length: 512
+				cone: 3
+				colorFrom: FFFFFF
+				colorTo: CCE5FF
+				layer: 116
+				line: true
+				strokeFrom: 4
+				lenFrom: 16
+				interp: circleOut
+			}{
+				type: ParticleEffect
+				particles: 64
+				lifetime: 20
+				length: 256
+				cone: 5
+				colorFrom: FFFFFF
+				colorTo: CCE5FF
+				sizeFrom: 2
+				layer: 116
+				interp: circleOut
+			}{
+				type: ParticleEffect
+				particles: 64
+				lifetime: 20
+				length: 256
+				cone: 5
+				colorFrom: FFFFFF
+				colorTo: CCE5FF
+				sizeFrom: 2
+				layer: 116
+				interp: circleOut
+			}{
+				type: ParticleEffect
+				particles: 8
+				lifetime: 30
+				length: 64
+				cone: 10
+				region: virtuality-electric
+				colorFrom: FFFFFF
+				colorTo: 99CCFF00
+				sizeFrom: 6
+				sizeTo: 6
+				layer: 116
+				spin: 1
+				interp: circleOut
+			}{
+				type: ParticleEffect
+				particles: 8
+				lifetime: 30
+				length: 64
+				cone: 15
+				region: virtuality-electric
+				colorFrom: FFFFFF
+				colorTo: 99CCFF00
+				sizeFrom: 6
+				sizeTo: 6
+				layer: 116
+				spin: -1.618033
+				interp: circleOut
+			}]
+		}
+		spawnBullets: [{
+			type: RailBulletType
+			pierce: true
+			collides: false
+			damage: 25
+			length: 1024
+			pointEffectSpace: 10
+			pointEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 15
+				baseLength: 15
+				length: 0
+				cone: 15
+				region: virtuality-electric
+				colorFrom: FFFFFF
+				colorTo: 99CCFF00
+				sizeFrom: 6
+				sizeTo: 6
+				layer: 116
+			}
+			fragOnHit: false
+			fragBullets: 15
+			fragRandomSpread: 75
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragVelocityMin: 0.8
+			fragBullet: {
+				type: BulletType
+				keepVelocity: false
+				lifetime: 180
+				collides: false
+				speed: 24
+				drag: 0.05
+				shootEffect: none
+				smokeEffect: none
+				hitEffect: none
+				despawnEffect: none
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 32
+					colorFrom: FFFFFF
+					colorTo: 99CCFF00
+					baseLength: 4
+					length: 0
+					layer: 109.8
+					sizeFrom: 1
+				}
+				intervalBullets: 1
+				bulletInterval: 5
+				intervalDelay: 60
+				intervalBullet: {
+					type: BulletType
+					keepVelocity: false
+					lifetime: 30
+					collidesTiles: false
+					damage: 3
+					speed: 0
+					shootEffect: none
+					smokeEffect: none
+					hitEffect: none
+					despawnEffect: none
+					parts: [{
+						type: RegionPart
+						name: virtuality-electric
+						color: 99CCFF
+						colorTo: 99CCFF00
+						blending: additive
+						outline: false
+						layer: 114.5
+						progress: life
+						xScl: 0.5
+						yScl: 0.5
+					}]
+				}
+			}
+		}]
+		parts: [{
+			type: RegionPart
+			name: virtuality-smoketrail
+			color: 99CCFF7F
+			blending: additive
+			outline: false
+			layer: 115.1
+			yScl: 0
+			xScl: 2
+			rotation: 180
+			moves: [{
+				y: 512
+				gy: 8
+				progress: {
+					type: life
+					ops: [{
+						op: curve
+						interp: circleOut
+					}]
+				}
+			}{
+				gx: -2
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0
+						end: 0.75
+					}{
+						op: curve
+						interp: circleOut
+					}]
+				}
+			}]
+		}
+		{
+			type: RegionPart
+			name: virtuality-smoketrail
+			color: 99CCFF
+			colorTo: 99CCFF00
+			outline: false
+			layer: 115
+			yScl: 0
+			xScl: 2
+			growX: -1
+			rotation: 180
+			progress: life
+			moves: [{
+				y: 512
+				gy: 8
+				progress: {
+					type: life
+					ops: [{
+						op: curve
+						interp: circleOut
+					}]
+				}
+			}]
+		}
+		{
+			type: RegionPart
+			name: virtuality-smoketrail
+			color: 99CCFF
+			colorTo: 99CCFF00
+			outline: false
+			layer: 115
+			yScl: 0
+			xScl: 2
+			progress: life
+			moves: [{
+				y: 512
+				gy: 8
+				progress: {
+					type: life
+					ops: [{
+						op: curve
+						interp: circleOut
+					}]
+				}
+			}]
+		}]
+	}
+}]

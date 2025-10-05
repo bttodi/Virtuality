@@ -1,0 +1,43 @@
+hideDatabase: true
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+speedMultiplier: 0
+dragMultiplier: 9999
+reloadMultiplier: 0
+applyEffect: {
+	type: MultiEffect
+	effects: [
+			// BASE
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-splash-pandemonium
+			cone: 0
+			lifetime: 30
+			randLength: false
+			colorFrom: 99CCFF
+			colorTo: 99CCFF00
+			layer: 31
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			interp: circleOut
+		}
+		{
+			type: ParticleEffect
+			particles: 1
+			region: virtuality-splash-pandemonium
+			cone: 0
+			lifetime: 180
+			randLength: false
+			colorFrom: 5FBF9F
+			colorTo: 5FBF9F00
+			layer: 30
+			sizeFrom: 128
+			sizeTo: 128
+			length: 0
+			interp: circleIn
+		}
+	]
+}

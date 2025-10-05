@@ -1,0 +1,161 @@
+hideDatabase: true
+health: 1500
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+rotateSpeed: 0
+groundLayer: -1
+clipSize: 1024
+targetable: false
+hittable: false
+drawMinimap: false
+hoverable: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 240
+	alternate: false
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	alwaysShooting: true
+	shootSound: none
+	recoil: 0
+	shootWarmupSpeed: 0.03
+	bullet: {
+		type: RailBulletType
+		length: 2048
+		collides: false
+		damage: 0
+		despawnEffect: none
+		hitEffect: none
+		smokeEffect: none
+		shootEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		color: FFFFFF00
+		colorTo: FFFFFF
+		name: virtuality-gradient-heated
+		outline: false
+		layer: 29.49
+		xScl: 640
+		yScl: 3
+		progress: warmup
+	}{
+		type: RegionPart
+		blending: additive
+		color: 333B3F00
+		colorTo: 333B3F7F
+		name: virtuality-clouds
+		outline: false
+		layer: 29.5
+		xScl: 5
+		yScl: 3
+		progress: warmup
+		moves: [{
+			y: 384
+			progress: {
+				type: reload
+				ops: [{
+					op: curve
+					interp: reverse
+				}]
+			}
+		}]
+	}{
+		type: RegionPart
+		blending: additive
+		color: 333B3F00
+		colorTo: 333B3F7F
+		name: virtuality-clouds
+		outline: false
+		layer: 29.5
+		y: -384
+		xScl: 5
+		yScl: 3
+		progress: warmup
+		moves: [{
+			y: 384
+			progress: {
+				type: reload
+				ops: [{
+					op: curve
+					interp: reverse
+				}]
+			}
+		}]
+	}]
+}
+{
+	type: Weapon
+	reload: 388
+	alternate: false
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 360
+	alwaysShooting: true
+	shootSound: none
+	recoil: 0
+	bullet: {
+		type: RailBulletType
+		length: 2048
+		collides: false
+		damage: 0
+		despawnEffect: none
+		hitEffect: none
+		smokeEffect: none
+		shootEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		blending: additive
+		color: 333B3F00
+		colorTo: 333B3F7F
+		name: virtuality-clouds
+		outline: false
+		layer: 29.5
+		xScl: 5
+		yScl: 3
+		rotation: 180
+		progress: warmup
+		moves: [{
+			y: 384
+			progress: {
+				type: reload
+				ops: [{
+					op: curve
+					interp: reverse
+				}]
+			}
+		}]
+	}{
+		type: RegionPart
+		blending: additive
+		color: 333B3F00
+		colorTo: 333B3F7F
+		name: virtuality-clouds
+		outline: false
+		layer: 29.5
+		y: -384
+		xScl: 5
+		yScl: 3
+		rotation: 180
+		progress: warmup
+		moves: [{
+			y: 384
+			progress: {
+				type: reload
+				ops: [{
+					op: curve
+					interp: reverse
+				}]
+			}
+		}]
+	}]
+}]

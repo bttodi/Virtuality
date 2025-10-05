@@ -1,0 +1,818 @@
+hideDatabase: true
+type: missile
+lifetime: 480
+health: 750
+speed: 0
+drag: 0.1
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 128
+weapons: [{
+	type: Weapon
+	reload: 60
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	bullet: {
+		type: RailBulletType
+		length: 2048
+		collides: false
+		damage: 0
+		despawnEffect: none
+		hitEffect: none
+		smokeEffect: none
+		shootEffect: none
+		pierceEffect: none
+	}
+}{
+	type: Weapon
+	reload: 120
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: shockBlast
+	alwaysShooting: true
+	shoot: {
+		type: ShootSpread
+		shots: 16
+		spread: 22.5
+		firstShotDelay: 30
+	}
+	bullet: {
+		type: BulletType
+		keepVelocity: false
+		collidesTiles: false
+		pierce: true
+		removeAfterPierce: false
+		lifetime: 120
+		damage: 25
+		layer: 95
+		speed: 1
+		drag: -0.025
+		rotateSpeed: 1
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		shrinkY: 0
+		trailInterval: 0.5
+		trailLength: 4
+		trailColor: 99CCFF
+		trailEffect: {
+			type: MultiEffect
+			effects: [{
+				type: WaveEffect
+				sizeFrom: 4
+				sizeTo: 2
+				lifetime: 16
+				layer: 109.8
+				strokeFrom: 1
+				colorFrom: 99CCFF
+				colorTo: 99CCFF00
+			}{
+				type: ParticleEffect
+				lifetime: 8
+				colorFrom: FFFFFF
+				colorTo: 99CCFF00
+				baseLength: 2
+				length: 0
+				layer: 109.8
+				line: true
+			}{
+				type: ParticleEffect
+				particles: 1
+				lifetime: 32
+				colorFrom: 99CCFF
+				colorTo: 99CCFF00
+				baseLength: 2
+				length: 0
+				layer: 109.8
+				sizeFrom: 1
+			}]
+		}
+	}
+}{
+	type: Weapon
+	reload: 120
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: shockBlast
+	alwaysShooting: true
+	shoot: {
+		type: ShootSpread
+		firstShotDelay: 90
+		shots: 16
+		spread: 22.5
+	}
+	bullet: {
+		type: BulletType
+		keepVelocity: false
+		collidesTiles: false
+		pierce: true
+		removeAfterPierce: false
+		lifetime: 120
+		damage: 25
+		layer: 95
+		speed: 1
+		drag: -0.025
+		rotateSpeed: -1
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		shrinkY: 0
+		trailInterval: 0.5
+		trailLength: 4
+		trailColor: 99CCFF
+		trailEffect: {
+			type: MultiEffect
+			effects: [{
+				type: WaveEffect
+				sizeFrom: 4
+				sizeTo: 2
+				lifetime: 16
+				layer: 109.8
+				strokeFrom: 1
+				colorFrom: 99CCFF
+				colorTo: 99CCFF00
+			}{
+				type: ParticleEffect
+				lifetime: 8
+				colorFrom: FFFFFF
+				colorTo: 99CCFF00
+				baseLength: 2
+				length: 0
+				layer: 109.8
+				line: true
+			}{
+				type: ParticleEffect
+				particles: 1
+				lifetime: 32
+				colorFrom: 99CCFF
+				colorTo: 99CCFF00
+				baseLength: 2
+				length: 0
+				layer: 109.8
+				sizeFrom: 1
+			}]
+		}
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-rof
+	blending: additive
+	color: FF006A7F
+	colorTo: FF006A00
+	outline: false
+	layer: 115
+	xScl: 0.75
+	yScl: 0.75
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.9
+			end: 1
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-rof
+	blending: additive
+	color: FF006A7F
+	colorTo: FF006A00
+	outline: false
+	layer: 115
+	xScl: -0.75
+	yScl: 0.75
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.9
+			end: 1
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-explosion
+	color: FF006A
+	colorTo: FF006A00
+	outline: false
+	layer: 114.5
+	xScl: 0.375
+	yScl: 0.375
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.9
+			end: 1
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-explosion
+	blending: additive
+	color: FF006A
+	colorTo: FF006A00
+	outline: false
+	layer: 115
+	xScl: -0.375
+	yScl: 0.375
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.9
+			end: 1
+		}]
+	}
+}{
+	type: RegionPart
+	color: 00CCFF3F
+	colorTo: 00CCFF00
+	name: virtuality-ringblur
+	layer: 115
+	outline: false
+	blending: additive
+	xScl: 0.75
+	yScl: 0.75
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.9
+			end: 1
+		}]
+	}
+}{
+	type: RegionPart
+	color: FF006A00
+	colorTo: FF006A7F
+	growX: -0.25
+	growY: -0.25
+	xScl: 0.9375
+	yScl: 0.9375
+	progress: reload
+	growProgress: reload
+	name: virtuality-ringblur
+	layer: 115
+	outline: false
+	blending: additive
+}
+// NASTINESS IMMINENT
+{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril1
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.006
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 3
+			}{
+				op: mod
+				amount: 2
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril1
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	rotation: 137.5
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.005
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 5
+			}{
+				op: mod
+				amount: 2
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril2
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	rotation: 275
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.004
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 5
+			}{
+				op: mod
+				amount: 3
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril2
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	rotation: -17
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.0065
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 3
+			}{
+				op: mod
+				amount: 2
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril3
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	rotation: -137.5
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.0055
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 5
+			}{
+				op: mod
+				amount: 2
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril3
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	rotation: -275
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.0045
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 5
+			}{
+				op: mod
+				amount: 3
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril1
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	rotation: 60
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.004
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 3
+			}{
+				op: mod
+				amount: 2
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril3
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	rotation: 200
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.003
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 5
+			}{
+				op: mod
+				amount: 2
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	color: 00CCFFBF
+	name: virtuality-tendril2
+	blending: additive
+	layer: 114
+	outline: false
+	xScl: 0.7125
+	yScl: 0.7125
+	rotation: 240
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.002
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}{
+		gx: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: mul
+				amount: 6
+			}{
+				op: mod
+				amount: 5
+			}{
+				op: mod
+				amount: 3
+			}]
+		}
+	}{
+		gy: -1.425
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.5
+			}{
+				op: curve
+				interp: slope
+			}{
+				op: mul
+				amount: 60
+			}]
+		}
+	}]
+}]

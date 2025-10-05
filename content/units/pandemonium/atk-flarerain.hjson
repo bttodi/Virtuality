@@ -1,0 +1,160 @@
+hideDatabase: true
+type: missile
+lifetime: 540
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 90
+		shotDelay: 9
+		shots: 50
+	}
+	bullet: {
+		type: BulletType
+		smokeEffect: none
+		collides: false
+		lifetime: 1
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 16
+				baseLength: 1
+				length: 128
+				colorFrom: EB46467F
+				colorTo: 00000000
+				sizeTo: 4
+				layer: 95
+				cone: 30
+				offsetY: 8
+				offsetX: 44
+				followParent: false
+				interp: circleOut
+			}{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 12
+				baseLength: 2
+				length: 64
+				colorFrom: E8A2A2
+				colorTo: EB4646
+				sizeFrom: 3
+				layer: 95.5
+				cone: 30
+				offsetY: 8
+				offsetX: 44
+				followParent: false
+				interp: circleOut
+			}{
+				type: SoundEffect
+				sound: malignShoot
+				soundPitchMin: 1.2
+				soundPitchMax: 1.3
+				minVolume: 0.5
+				maxVolume: 0.5
+				effect: none
+			}]
+		}
+	}
+}{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 48
+	shootX: -8
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	aiControllable: false
+	predictTarget: false
+	inaccuracy: 35
+	shoot: {
+		firstShotDelay: 90
+		shotDelay: 9
+		shots: 50
+	}
+	bullet: {
+		type: BulletType
+		smokeEffect: none
+		collidesTiles: false
+		damage: 15
+		pierce: true
+		lifetime: 150
+		speed: 1
+		drag: -0.03
+		hitEffect: none
+		despawnSound: none
+		despawnEffect: none
+		keepVelocity: false
+		trailInterval: 0.5
+		trailRotation: true
+		shootEffect: none
+		trailEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 2
+				baseLength: 1
+				length: 2
+				colorFrom: EB46467F
+				colorTo: 36363600
+				sizeTo: 4
+				layer: 94
+				offsetX: -8
+			}{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 1
+				baseLength: 2
+				length: -8
+				colorFrom: E8A2A2
+				colorTo: EB4646
+				sizeFrom: 3
+				layer: 94.5
+				cone: 20
+				offsetX: -8
+			}]
+		}
+		parts: [{
+			type: RegionPart
+			name: virtuality-flare
+			outline: false
+			layer: 95
+		}{
+			type: RegionPart
+			name: virtuality-glow
+			blending: additive
+			color: EB46467F
+			outline: false
+			layer: 95
+			xScl: 0.5
+			yScl: 0.5
+		}]
+	}
+}]

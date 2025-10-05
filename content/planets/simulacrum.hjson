@@ -7,7 +7,7 @@ allowLaunchSchematics: false
 allowLaunchToNumbered: false
 allowSectorInvasion: false
 allowWaveSimulation: false
-atmosphereColor: 2a383f
+atmosphereColor: 00000000
 atmosphereRadIn: 0
 atmosphereRadOut: 0.1
 bloom: false
@@ -15,7 +15,7 @@ clearSectorOnLose: true
 defaultCore: core-spawn
 drawOrbit: false
 iconColor: f97100
-landCloudColor: b29785
+landCloudColor: 000000
 orbitTime: 1618
 prebuildBase: true
 radius: 1
@@ -45,24 +45,26 @@ hiddenItems: [
 	oxide
 	carbide
 ]
-mesh: {
-	type: NoiseMesh
-	seed: 17
-	divisions: 5
-	color1: b29785
-	color2: e1e1e1
-	radius: 1
-	octaves: 10
-	persistence: 0.8
-	scale: 2
-	mag: 0.5
-}
+mesh: [
+	{
+		type: NoiseMesh
+		seed: 19
+		divisions: 3
+		color1: f97100
+		color2: f97100
+		radius: 1.1
+		octaves: 10
+		persistence: 0.8
+		scale: 0
+		mag: 0
+	}
+]
 cloudMesh: {
 	type: HexSkyMesh
 	seed: 19
-	speed: 4
-	divisions: 4
-	color: b29785e1
+	speed: 1
+	divisions: 3
+	color: 000000
 	radius: 0.1
-	thresh: 0.6
+	thresh: 1
 }

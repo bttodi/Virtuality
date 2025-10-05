@@ -1,0 +1,1804 @@
+hideDatabase: true
+type: missile
+lifetime: 240
+health: 1000
+speed: 0
+rotateSpeed: 0
+drag: 0.1
+hittable: false
+physics: false
+bounded: false
+groundLayer: -1
+drawCell: false
+outlineColor: 99CCFF
+softShadowScl: 0
+deathSound: none
+deathExplosionEffect: none
+drawMinimap: false
+clipSize: 1024
+weapons: [{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 96
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	inaccuracy: 180
+	shoot: {
+		firstShotDelay: 150
+	}
+	bullet: {
+		type: BulletType
+		smokeEffect: none
+		collides: false
+		lifetime: 1
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: {
+			type: MultiEffect
+			effects: [{
+				type: SoundEffect
+				effect: none
+				sound: cannon
+				minPitch: 1.4
+				maxPitch: 1.4
+			}{
+				type: SoundEffect
+				effect: none
+				sound: release
+				minPitch: 1.8
+				maxPitch: 1.8
+				minVolume: 0.5
+				maxVolume: 0.5
+			}]
+		}
+	}
+}{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 96
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	inaccuracy: 30
+	shoot: {
+		type: ShootSpread
+		firstShotDelay: 60
+		shots: 6
+		spread: 60
+	}
+	bullet: {
+		type: BulletType
+		drawSize: 1024
+		keepVelocity: false
+		lifetime: 120
+		collides: false
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		bulletInterval: 2
+		intervalDelay: 90
+		intervalRandomSpread: 0
+		intervalBullet: {
+			type: RailBulletType
+			damage: 5
+			pierce: true
+			shootEffect: none
+			smokeEffect: none
+			collidesTiles: false
+			speed: 0
+			length: 1024
+			hitEffect: none
+			despawnEffect: none
+			pierceEffect: none
+		}
+		parts: [{
+			type: RegionPart
+			name: virtuality-gradient
+			color: FFA53F00
+			colorTo: FFA53F
+			outline: false
+			layer: 94
+			blending: additive
+			xScl: 0.0625
+			yScl: 8
+			y: 256
+			progress: {
+				type: life
+				ops: [{
+					op: compress
+					start: 0
+					end: 0.75
+				}]
+			}
+			rotation: -15
+			originY: -32
+			moves: [{
+				rot: 15
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.25
+						end: 0.75
+					}{
+						op: curve
+						interp: pow5
+					}]
+				}
+			}{
+				gx: -0.0625
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-beam
+			blending: additive
+			xScl: 0
+			yScl: 128
+			y: 512
+			color: FFA53F3F
+			moves: [{
+				gx: 5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+			outline: false
+			layer: 113
+		}
+// THE LASER
+		{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 0
+			moves: [{
+				gy: 1
+				y: 128
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 64
+			moves: [{
+				gy: 1
+				y: 256
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 128
+			moves: [{
+				gy: 1
+				y: 384
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 192
+			moves: [{
+				gy: 1
+				y: 512
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 256
+			moves: [{
+				gy: 1
+				y: 640
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 320
+			moves: [{
+				gy: 1
+				y: 768
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 384
+			moves: [{
+				gy: 1
+				y: 896
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 448
+			moves: [{
+				gy: 1
+				y: 1024
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}
+// THE LASER 2
+		{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFFF96
+			layer: 114
+			xScl: 0
+			yScl: 1
+			y: 32
+			moves: [{
+				gy: 2.5
+				y: 224
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFFF96
+			layer: 114
+			xScl: 0
+			yScl: 1
+			y: 160
+			moves: [{
+				gy: 2
+				y: 512
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFFF96
+			layer: 114
+			xScl: 0
+			yScl: 1
+			y: 288
+			moves: [{
+				gy: 2
+				y: 768
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFFF96
+			layer: 114
+			xScl: 0
+			yScl: 1
+			y: 416
+			moves: [{
+				gy: 2
+				y: 1024
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}]
+	}
+}{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 96
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	inaccuracy: 30
+	shoot: {
+		type: ShootSpread
+		firstShotDelay: 60
+		shots: 6
+		spread: 60
+	}
+	bullet: {
+		type: BulletType
+		drawSize: 1024
+		keepVelocity: false
+		lifetime: 120
+		collides: false
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		bulletInterval: 2
+		intervalDelay: 90
+		intervalRandomSpread: 0
+		intervalBullet: {
+			type: RailBulletType
+			damage: 5
+			pierce: true
+			shootEffect: none
+			smokeEffect: none
+			collidesTiles: false
+			speed: 0
+			length: 1024
+			hitEffect: none
+			despawnEffect: none
+			pierceEffect: none
+		}
+		parts: [{
+			type: RegionPart
+			name: virtuality-gradient
+			color: FFA53F00
+			colorTo: FFA53F
+			outline: false
+			layer: 94
+			blending: additive
+			xScl: 0.0625
+			yScl: 8
+			y: 256
+			progress: {
+				type: life
+				ops: [{
+					op: compress
+					start: 0
+					end: 0.75
+				}]
+			}
+			rotation: 15
+			originY: -32
+			moves: [{
+				rot: -15
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.25
+						end: 0.75
+					}{
+						op: curve
+						interp: pow5
+					}]
+				}
+			}{
+				gx: -0.0625
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-beam
+			blending: additive
+			xScl: 0
+			yScl: 128
+			y: 512
+			color: FFA53F3F
+			moves: [{
+				gx: 5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+			outline: false
+			layer: 113
+		}
+// THE LASER
+		{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 0
+			moves: [{
+				gy: 1
+				y: 128
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 64
+			moves: [{
+				gy: 1
+				y: 256
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 128
+			moves: [{
+				gy: 1
+				y: 384
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 192
+			moves: [{
+				gy: 1
+				y: 512
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 256
+			moves: [{
+				gy: 1
+				y: 640
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 320
+			moves: [{
+				gy: 1
+				y: 768
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 384
+			moves: [{
+				gy: 1
+				y: 896
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFA53F
+			layer: 114
+			xScl: 0
+			yScl: 0.5
+			y: 448
+			moves: [{
+				gy: 1
+				y: 1024
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.5
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}
+// THE LASER 2
+		{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFFF96
+			layer: 114
+			xScl: 0
+			yScl: 1
+			y: 32
+			moves: [{
+				gy: 2.5
+				y: 224
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFFF96
+			layer: 114
+			xScl: 0
+			yScl: 1
+			y: 160
+			moves: [{
+				gy: 2
+				y: 512
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFFF96
+			layer: 114
+			xScl: 0
+			yScl: 1
+			y: 288
+			moves: [{
+				gy: 2
+				y: 768
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-firelaser
+			blending: additive
+			outline: false
+			color: FFFF96
+			layer: 114
+			xScl: 0
+			yScl: 1
+			y: 416
+			moves: [{
+				gy: 2
+				y: 1024
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}]
+				}
+			}{
+				gx: 0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 0.75001
+					}]
+				}
+			}{
+				gx: -0.25
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0.75
+						end: 1
+					}{
+						op: curve
+						interp: sineIn
+					}]
+				}
+			}]
+		}]
+	}
+}]
+parts: [{
+	type: RegionPart
+	outline: false
+	y: 96
+	color: FFA53F
+	blending: additive
+	name: virtuality-explosion
+	layer: 115
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 2
+		gy: 2
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.125
+				end: 0.25
+			}]
+		}
+	}{
+		gx: -2
+		gy: -2
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.75
+				end: 0.875
+			}]
+		}
+	}{
+		gx: 0.5
+		gy: 0.5
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.625001
+			}]
+		}
+	}{
+		gx: -0.5
+		gy: -0.5
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.75
+			}{
+				op: curve
+				interp: circleOut
+			}]
+		}
+	}{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	outline: false
+	y: 96
+	color: FFA53F
+	blending: additive
+	name: virtuality-explosion
+	rotation: 173.5
+	layer: 115
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 2
+		gy: -2
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.125
+				end: 0.25
+			}]
+		}
+	}{
+		gx: -2
+		gy: 2
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.75
+				end: 0.875
+			}]
+		}
+	}{
+		gx: 0.5
+		gy: 0.5
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.625001
+			}]
+		}
+	}{
+		gx: -0.5
+		gy: -0.5
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.75
+			}{
+				op: curve
+				interp: circleOut
+			}]
+		}
+	}{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.0015
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	outline: false
+	y: 96
+	color: FFA53F
+	blending: additive
+	name: virtuality-explosion
+	layer: 115
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: -2
+		gy: 2
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.125
+				end: 0.25
+			}]
+		}
+	}{
+		gx: 2
+		gy: -2
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.75
+				end: 0.875
+			}]
+		}
+	}{
+		gx: 0.5
+		gy: 0.5
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.625001
+			}]
+		}
+	}{
+		gx: -0.5
+		gy: -0.5
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.75
+			}{
+				op: curve
+				interp: circleOut
+			}]
+		}
+	}{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.002
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	outline: false
+	y: 96
+	color: FFA53F
+	blending: additive
+	name: virtuality-explosion
+	rotation: -173.5
+	layer: 115
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: -2
+		gy: -2
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.125
+				end: 0.25
+			}]
+		}
+	}{
+		gx: 2
+		gy: 2
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.75
+				end: 0.875
+			}]
+		}
+	}{
+		gx: 0.5
+		gy: 0.5
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.625001
+			}]
+		}
+	}{
+		gx: -0.5
+		gy: -0.5
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.75
+			}{
+				op: curve
+				interp: circleOut
+			}]
+		}
+	}{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.0015
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	y: 96
+	color: FFBF963F
+	colorTo: FFBF9600
+	blending: additive
+	layer: 113
+	outline: false
+	xScl: 0
+	yScl: 0
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.625
+			end: 0.75
+		}]
+	}
+	moves: [{
+		gx: 512
+		gy: 512
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.625001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-glow
+	y: 96
+	color: FFFF7F3F
+	layer: 116
+	blending: additive
+	outline: false
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 8
+		gy: 8
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.25
+				end: 0.625
+			}]
+		}
+	}{
+		gx: -8
+		gy: -8
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.75
+				end: 0.875
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-glow
+	y: 96
+	color: FFA53FBF
+	colorTo: FFA53F00
+	blending: additive
+	layer: 113
+	outline: false
+	xScl: 0
+	yScl: 0
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.625
+			end: 0.75
+		}]
+	}
+	moves: [{
+		gx: 3
+		gy: 3
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.625001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-glow
+	y: 96
+	color: FFA53FBF
+	colorTo: FFA53F00
+	blending: additive
+	layer: 113
+	outline: false
+	xScl: 0
+	yScl: 0
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.625
+			end: 0.75
+		}]
+	}
+	moves: [{
+		gx: 4
+		gy: 4
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.625
+				end: 0.625001
+			}]
+		}
+	}]
+}]

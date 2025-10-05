@@ -1,0 +1,149 @@
+hideDatabase: true
+health: 1500
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+rotateSpeed: 0
+groundLayer: -1
+clipSize: 1024
+targetable: false
+hittable: false
+drawMinimap: false
+hoverable: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 240
+	alternate: false
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	alwaysShooting: true
+	shootSound: none
+	recoil: 0
+	shootWarmupSpeed: 0.04
+	bullet: {
+		type: RailBulletType
+		length: 2048
+		collides: false
+		damage: 0
+		despawnEffect: none
+		hitEffect: none
+		smokeEffect: none
+		shootEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		color: 000000
+		name: virtuality-gradient
+		outline: false
+		layer: 29.51
+		xScl: 12
+		yScl: 4
+		y: -64
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-gradient
+		outline: false
+		layer: 29.51
+		xScl: 12
+		yScl: 2
+		y: -128
+	}{
+		type: RegionPart
+		color: 333B3F
+		name: virtuality-clouds
+		outline: false
+		layer: 29.5
+		moveX: 640
+		xScl: 5
+		yScl: 3
+		progress: {
+			type: reload
+			ops: [{
+				op: curve
+				interp: reverse
+			}]
+		}
+	}{
+		type: RegionPart
+		color: 333B3F
+		name: virtuality-clouds
+		outline: false
+		layer: 29.5
+		moveX: 640
+		x: -640
+		xScl: 5
+		yScl: 3
+		progress: {
+			type: reload
+			ops: [{
+				op: curve
+				interp: reverse
+			}]
+		}
+	}]
+}
+{
+	type: Weapon
+	reload: 388
+	alternate: false
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 360
+	alwaysShooting: true
+	shootSound: none
+	recoil: 0
+	bullet: {
+		type: RailBulletType
+		length: 2048
+		collides: false
+		damage: 0
+		despawnEffect: none
+		hitEffect: none
+		smokeEffect: none
+		shootEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		color: 333B3F
+		name: virtuality-clouds
+		outline: false
+		layer: 29.5
+		moveX: 640
+		xScl: 5
+		yScl: 3
+		rotation: 180
+		progress: {
+			type: reload
+			ops: [{
+				op: curve
+				interp: reverse
+			}]
+		}
+	}{
+		type: RegionPart
+		color: 333B3F
+		name: virtuality-clouds
+		outline: false
+		layer: 29.5
+		moveX: 640
+		x: -640
+		xScl: 5
+		yScl: 3
+		rotation: 180
+		progress: {
+			type: reload
+			ops: [{
+				op: curve
+				interp: reverse
+			}]
+		}
+	}]
+}]

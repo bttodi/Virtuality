@@ -1,0 +1,111 @@
+hideDatabase: true
+type: missile
+lifetime: 540
+health: 750
+speed: 0.5
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+weapons: [{
+	type: Weapon
+	reload: 5
+	mirror: false
+	x: 0
+	shootY: 128
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	rotate: true
+	rotateSpeed: 9999
+	bullet: {
+		type: RailBulletType
+		damage: 5
+		pierce: true
+		shootEffect: none
+		smokeEffect: none
+		collidesTiles: false
+		speed: 0
+		length: 512
+		hitEffect: none
+		despawnEffect: none
+		pierceEffect: none
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-rof-inv
+	blending: additive
+	color: F5945300
+	colorTo: F59453
+	outline: false
+	layer: 115
+	xScl: 2
+	yScl: 2
+	moves: [{
+		rot: -360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.001
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 10
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-rof-inv
+	blending: additive
+	color: F5945300
+	colorTo: F59453
+	outline: false
+	layer: 115
+	xScl: -2
+	yScl: 2
+	rotation: 137.5
+	moves: [{
+		rot: 360
+		progress: {
+			type: time
+			ops: [{
+				op: mul
+				amount: 0.0015
+			}{
+				op: loop
+				time: 1
+			}]
+		}
+	}]
+	progress: {
+		type: life
+		ops: [{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 10
+		}]
+	}
+}]

@@ -1,0 +1,56 @@
+hideDatabase: true
+type: missile
+lifetime: 90
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 512
+parts: [{
+	type: RegionPart
+	name: virtuality-gradient
+	layer: 114
+	color: ffa53f00
+	colorTo: ffa53f3f
+	outline: false
+	xScl: 8
+	x: -32
+	rotation: 90
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.9
+			end: 1
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-gradient
+	layer: 114
+	color: ffa53f00
+	colorTo: ffa53f3f
+	outline: false
+	yScl: 2
+	xScl: 8
+	x: -64
+	rotation: 90
+	blending: additive
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0
+			end: 0.3
+		}]
+	}
+}]
