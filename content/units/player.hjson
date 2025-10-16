@@ -7,41 +7,37 @@ faceTarget: false
 drag: 0.5
 outlineColor: 383D34
 groundLayer: -1
-weapons: [
-	{
-		type: Weapon
-		name: player
-		reload: 12
-		x: 0
-		mirror: false
-		rotate: true
-		rotateSpeed: 999999
-		shootCone: 2
-		shootSound: noammo
-		recoil: 0
-		layerOffset: 210
-		bullet: {
-			type: BasicBulletType
-			collidesTiles: false
-			damage: 10
-			keepVelocity: false
-			speed: 8
-			lifetime: 40
-			trailLength: 4
-			trailWidth: 1
-			layer: 214
-		}
+weapons: [{
+	type: Weapon
+	name: argonaut-ship
+	reload: 12
+	x: 0
+	mirror: false
+	rotate: true
+	rotateSpeed: 999999
+	shootCone: 2
+	shootSound: noammo
+	recoil: 0
+	layerOffset: 210
+	bullet: {
+		type: BasicBulletType
+		collidesTiles: false
+		damage: 10
+		keepVelocity: false
+		speed: 8
+		lifetime: 40
+		trailLength: 4
+		trailWidth: 1
+		layer: 214
 	}
-]
-parts: [
-	{
-		type: ShapePart
-		layer: 29
-		circle: true
-		radius: 480
-		color: 000000
-	}
-]
+}]
+parts: [{
+	type: ShapePart
+	layer: 29
+	circle: true
+	radius: 480
+	color: 000000
+}]
 alwaysUnlocked: true
 research: {
 	name: Virtuality
