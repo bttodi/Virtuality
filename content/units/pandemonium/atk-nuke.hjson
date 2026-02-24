@@ -34,7 +34,7 @@ weapons: [{
 	shootY: 56
 	shootX: 4
 	shootCone: 180
-	shootSound: missileSmall
+	shootSound: shootMissileLong
 	alwaysShooting: true
 	shoot: {
 		firstShotDelay: 60
@@ -207,7 +207,7 @@ weapons: [{
 				}]
 			}
 		}]
-		despawnSound: largeExplosion
+		despawnSound: blockExplodeElectric
 		fragBullets: 1
 		fragRandomSpread: 0
 		fragVelocityMin: 1

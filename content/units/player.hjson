@@ -16,7 +16,7 @@ weapons: [{
 	rotate: true
 	rotateSpeed: 999999
 	shootCone: 2
-	shootSound: noammo
+	shootSound: shoot
 	recoil: 0
 	layerOffset: 210
 	bullet: {

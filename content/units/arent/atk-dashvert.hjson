@@ -12,7 +12,7 @@ hittable: false
 drawCell: false
 groundLayer: -1
 createScorch: false
-deathSound: none
+deathSound: shieldBreak
 deathExplosionEffect: none
 weapons: [
 	{

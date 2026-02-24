@@ -30,7 +30,7 @@ weapons: [
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
-		shootSound: shockBlast
+		shootSound: shootAfflict
 		soundPitchMin: 1.2
 		soundPitchMax: 1.2
 		shoot: {
@@ -198,7 +198,7 @@ weapons: [
 								fragBullets: 1
 								fragRandomSpread: 0
 								fragVelocityMin: 1
-								despawnSound: plasmaboom
+								despawnSound: explosionAfflict
 								fragBullet: {
 									type: BulletType
 									collidesTiles: false

@@ -8,7 +8,7 @@ bounded: false
 faceTarget: false
 rotateSpeed: 0
 groundLayer: 0
-deathSound: titanExplosion
+deathSound: explosionArtilleryShockBig
 deathExplosionEffect: {
 	type: MultiEffect
 	effects: [

@@ -43,7 +43,7 @@ weapons: [{
 	x: 0
 	shootY: 0
 	shootCone: 180
-	shootSound: shockBlast
+	shootSound: shootAvert
 	alwaysShooting: true
 	shoot: {
 		type: ShootSpread
@@ -111,7 +111,7 @@ weapons: [{
 	x: 0
 	shootY: 0
 	shootCone: 180
-	shootSound: shockBlast
+	shootSound: shootAvert
 	alwaysShooting: true
 	shoot: {
 		type: ShootSpread

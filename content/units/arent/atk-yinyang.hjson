@@ -22,7 +22,7 @@ weapons: [
 		shootY: -128
 		shootCone: 360
 		recoil: 0
-		shootSound: none
+		shootSound: walkerStepSmall
 		parentizeEffects: true
 		predictTarget: false
 		alwaysShooting: true
@@ -49,6 +49,8 @@ weapons: [
 			speed: 1.5
 			drag: -0.025
 			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
 			despawnEffect: none
 			shrinkY: 0
 			parts: [

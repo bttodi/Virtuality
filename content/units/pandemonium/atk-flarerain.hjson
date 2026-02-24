@@ -71,7 +71,7 @@ weapons: [{
 				interp: circleOut
 			}{
 				type: SoundEffect
-				sound: malignShoot
+				sound: shootArtillerySmall
 				soundPitchMin: 1.2
 				soundPitchMax: 1.3
 				minVolume: 0.5

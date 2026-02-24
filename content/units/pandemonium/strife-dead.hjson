@@ -143,7 +143,7 @@ weapons: [{
 			type: MultiEffect
 			effects: [{
 				type: SoundEffect
-				sound: largeExplosion
+				sound: explosionDull
 				minPitch: 0.5
 				maxPitch: 0.5
 				minVolume: 2
@@ -151,19 +151,9 @@ weapons: [{
 				effect: none
 			}{
 				type: SoundEffect
-				sound: largeCannon
-				minPitch: 0.8
-				maxPitch: 0.8
+				sound: explosionReactor
 				minVolume: 2
 				maxVolume: 2
-				effect: none
-			}{
-				type: SoundEffect
-				sound: titanExplosion
-				minPitch: 1
-				maxPitch: 1
-				minVolume: 1
-				maxVolume: 1
 				effect: none
 			}]
 		}
@@ -177,7 +167,7 @@ weapons: [{
 	shootY: 0
 	shootCone: 180
 	alwaysShooting: true
-	shootSound: none
+	shootSound: blockExplodeFlammable
 	recoil: 0
 	bullet: {
 		type: RailBulletType
@@ -188,26 +178,7 @@ weapons: [{
 		hitEffect: none
 		smokeEffect: none
 		pierceEffect: none
-		shootEffect: {
-			type: MultiEffect
-			effects: [{
-				type: SoundEffect
-				sound: explosionBig
-				minPitch: 1
-				maxPitch: 1
-				minVolume: 2
-				maxVolume: 2
-				effect: none
-			}{
-				type: SoundEffect
-				sound: cannon
-				minPitch: 0.7
-				maxPitch: 0.7
-				minVolume: 4
-				maxVolume: 4
-				effect: none
-			}]
-		}
+		shootEffect: none
 	}
 }]
 parts: [{

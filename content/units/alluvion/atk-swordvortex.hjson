@@ -13,7 +13,7 @@ hittable: false
 drawCell: false
 groundLayer: -1
 createScorch: false
-deathSound: none
+deathSound: explosionNavanax
 deathExplosionEffect: {
 	type: MultiEffect
 	effects: [
@@ -195,16 +195,15 @@ weapons: [
 		shootCone: 360
 		alwaysShooting: true
 		recoil: 0
-		shootSound: none
+		shootSound: shootAtrax
 		predictTarget: false
 		shootWarmupSpeed: 0.05
 		shoot: {
-			type: ShootSine
+			type: ShootSpread
 			firstShotDelay: 60
 			shots: 50
 			shotDelay: 6
-			mag: 720
-			scl: 360
+			spread: 3
 		}
 		parts: [
 			{

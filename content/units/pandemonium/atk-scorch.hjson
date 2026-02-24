@@ -21,9 +21,9 @@ weapons: [{
 	x: 0
 	shootY: 56
 	shootCone: 180
-	shootSound: cannon
-	soundPitchMin: 0.8
-	soundPitchMax: 0.8
+	shootSound: shootFlame
+	soundPitchMin: 1.2
+	soundPitchMax: 1.3
 	alwaysShooting: true
 	aiControllable: false
 	predictTarget: false

@@ -61,7 +61,7 @@ weapons: [
 				lifetime: 90
 				splashDamage: 0
 				splashDamageRadius: 64
-				despawnSound: mediumCannon
+				despawnSound: explosionQuad
 				trailInterval: 1
 				trailEffect: {
 					type: ParticleEffect

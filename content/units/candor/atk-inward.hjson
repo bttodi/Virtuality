@@ -27,7 +27,7 @@ weapons: [
 		rotateSpeed: 999999
 		alwaysShooting: true
 		predictTarget: false
-		shootSound: mineDeploy
+		shootSound: walkerStepSmall
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000

@@ -148,6 +148,14 @@ weapons: [
 					despawnEffect: none
 					intervalBullets: 1
 					bulletInterval: 30
+					trailInterval: 30
+					trailEffect: {
+						type: SoundEffect
+						effect: none
+						sound: shootNavanax
+						minPitch: 0.7
+						maxPitch: 0.8
+					}
 					intervalBullet: {
 						type: BulletType
 						speed: 0

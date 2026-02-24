@@ -254,7 +254,7 @@ weapons: [
 			// MAIN LASER
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: FFFFFF
 				colorTo: FFFFFF
 				progress: reload
@@ -282,7 +282,7 @@ weapons: [
 			}
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: FFFFFF
 				colorTo: FFFFFF
 				progress: reload
@@ -310,7 +310,7 @@ weapons: [
 			}
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: FFFFFF
 				colorTo: FFFFFF
 				progress: reload
@@ -338,7 +338,7 @@ weapons: [
 			}
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: FFFFFF
 				colorTo: FFFFFF
 				progress: reload
@@ -366,7 +366,7 @@ weapons: [
 			}
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: FFFFFF
 				colorTo: FFFFFF
 				progress: reload
@@ -394,7 +394,7 @@ weapons: [
 			}
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: FFFFFF
 				colorTo: FFFFFF
 				progress: reload
@@ -423,7 +423,7 @@ weapons: [
 			// BACK LASER
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: EB1E46
 				colorTo: EB1E46
 				progress: reload
@@ -452,7 +452,7 @@ weapons: [
 			}
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: EB1E46
 				colorTo: EB1E46
 				progress: reload
@@ -481,7 +481,7 @@ weapons: [
 			}
 			{
 				type: RegionPart
-				name: virtuality-anotherlaser
+				name: virtuality-firelaser
 				color: EB1E46
 				colorTo: EB1E46
 				progress: reload

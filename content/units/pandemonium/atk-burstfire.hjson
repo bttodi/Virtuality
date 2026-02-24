@@ -146,7 +146,7 @@ weapons: [{
 	shootY: 56
 	shootX: 4
 	shootCone: 180
-	shootSound: missileSmall
+	shootSound: shootMissilePlasma
 	alwaysShooting: true
 	predictTarget: false
 	inaccuracy: 3
@@ -169,8 +169,8 @@ weapons: [{
 		damage: 25
 		lifetime: 75
 		speed: 8
-		hitSound: dullExplosion
-		despawnSound: dullExplosion
+		hitSound: explosionCrawler
+		despawnSound: explosionCrawler
 		shootEffect: none
 		hitEffect: {
 			type: MultiEffect

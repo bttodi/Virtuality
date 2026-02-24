@@ -29,7 +29,7 @@ weapons: [
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
-		shootSound: lasershoot
+		shootSound: walkerStepSmall
 		xRand: 16
 		velocityRnd: 0.1
 		shoot: {

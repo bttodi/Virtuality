@@ -28,7 +28,7 @@ weapons: [
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
-		shootSound: shootAlt
+		shootSound: unitCreateBig
 		predictTarget: false
 		inaccuracy: 180
 		shoot: {

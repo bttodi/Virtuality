@@ -9,25 +9,9 @@ groundLayer: 150
 hitSize: 32
 outlineColor: 000000
 drawCell: false
+deathSound: explosionArtilleryShockBig
 deathExplosionEffect: none
 weapons: [
-	{
-		type: Weapon
-		mirror: false
-		x: 0
-		aiControllable: false
-		shootOnDeath: true
-		shootSound: largeCannon
-		soundPitchMin: 1.8
-		soundPitchMax: 1.8
-		shootCone: 360
-		bullet: {
-			type: BulletType
-			collides: false
-			lifetime: 0
-			speed: 0
-		}
-	}
 	{
 		type: Weapon
 		reload: 1

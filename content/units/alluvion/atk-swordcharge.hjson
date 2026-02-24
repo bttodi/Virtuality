@@ -13,7 +13,7 @@ hittable: false
 drawCell: false
 groundLayer: -1
 createScorch: false
-deathSound: none
+deathSound: explosionNavanax
 deathExplosionEffect: {
 	type: MultiEffect
 	effects: [
@@ -195,7 +195,7 @@ weapons: [
 		shootCone: 360
 		alwaysShooting: true
 		recoil: 0
-		shootSound: none
+		shootSound: mechStepHeavy
 		predictTarget: false
 		shootWarmupSpeed: 0.05
 		rotate: true

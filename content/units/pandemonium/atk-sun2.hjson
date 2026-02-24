@@ -27,7 +27,7 @@ weapons: [{
 	alwaysShooting: true
 	inaccuracy: 180
 	shoot: {
-		firstShotDelay: 150
+		firstShotDelay: 165
 	}
 	bullet: {
 		type: BulletType
@@ -42,15 +42,13 @@ weapons: [{
 			effects: [{
 				type: SoundEffect
 				effect: none
-				sound: cannon
-				minPitch: 1.4
-				maxPitch: 1.4
+				sound: explosionReactorNeoplasm
+				minPitch: 2
+				maxPitch: 2
 			}{
 				type: SoundEffect
 				effect: none
-				sound: release
-				minPitch: 1.8
-				maxPitch: 1.8
+				sound: explosionAfflict
 				minVolume: 0.5
 				maxVolume: 0.5
 			}]
@@ -65,10 +63,39 @@ weapons: [{
 	shootCone: 180
 	shootSound: none
 	alwaysShooting: true
+	inaccuracy: 180
+	shoot: {
+		firstShotDelay: 100
+	}
+	bullet: {
+		type: BulletType
+		smokeEffect: none
+		collides: false
+		lifetime: 1
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: {
+			type: SoundEffect
+			effect: none
+			sound: chargeVela
+			minPitch: 0.75
+			maxPitch: 0.75
+		}
+	}
+}{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 96
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
 	inaccuracy: 30
 	shoot: {
 		type: ShootSpread
-		firstShotDelay: 60
+		firstShotDelay: 70
 		shots: 6
 		spread: 60
 	}
@@ -115,7 +142,7 @@ weapons: [{
 				ops: [{
 					op: compress
 					start: 0
-					end: 0.75
+					end: 0.8125
 				}]
 			}
 			rotation: -15
@@ -127,7 +154,7 @@ weapons: [{
 					ops: [{
 						op: compress
 						start: 0.25
-						end: 0.75
+						end: 0.8125
 					}{
 						op: curve
 						interp: pow5
@@ -139,8 +166,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}]
@@ -158,8 +185,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -168,7 +195,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -197,7 +224,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -207,8 +234,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -217,7 +244,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -242,7 +269,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -252,8 +279,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -262,7 +289,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -287,7 +314,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -297,8 +324,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -307,7 +334,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -332,7 +359,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -342,8 +369,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -352,7 +379,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -377,7 +404,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -387,8 +414,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -397,7 +424,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -422,7 +449,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -432,8 +459,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -442,7 +469,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -467,7 +494,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -477,8 +504,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -487,7 +514,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -512,7 +539,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -522,8 +549,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -532,7 +559,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -559,7 +586,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -569,8 +596,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -579,7 +606,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -604,7 +631,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -614,8 +641,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -624,7 +651,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -649,7 +676,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -659,8 +686,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -669,7 +696,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -694,7 +721,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -704,8 +731,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -714,7 +741,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -736,7 +763,7 @@ weapons: [{
 	inaccuracy: 30
 	shoot: {
 		type: ShootSpread
-		firstShotDelay: 60
+		firstShotDelay: 70
 		shots: 6
 		spread: 60
 	}
@@ -783,7 +810,7 @@ weapons: [{
 				ops: [{
 					op: compress
 					start: 0
-					end: 0.75
+					end: 0.8125
 				}]
 			}
 			rotation: 15
@@ -795,7 +822,7 @@ weapons: [{
 					ops: [{
 						op: compress
 						start: 0.25
-						end: 0.75
+						end: 0.8125
 					}{
 						op: curve
 						interp: pow5
@@ -807,8 +834,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}]
@@ -826,8 +853,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -836,7 +863,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -865,7 +892,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -875,8 +902,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -885,7 +912,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -910,7 +937,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -920,8 +947,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -930,7 +957,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -955,7 +982,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -965,8 +992,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -975,7 +1002,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1000,7 +1027,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1010,8 +1037,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1020,7 +1047,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1045,7 +1072,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1055,8 +1082,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1065,7 +1092,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1090,7 +1117,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1100,8 +1127,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1110,7 +1137,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1135,7 +1162,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1145,8 +1172,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1155,7 +1182,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1180,7 +1207,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1190,8 +1217,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1200,7 +1227,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1227,7 +1254,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1237,8 +1264,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1247,7 +1274,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1272,7 +1299,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1282,8 +1309,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1292,7 +1319,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1317,7 +1344,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1327,8 +1354,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1337,7 +1364,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1362,7 +1389,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}]
 				}
@@ -1372,8 +1399,8 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
-						end: 0.75001
+						start: 0.8125
+						end: 0.8125001
 					}]
 				}
 			}{
@@ -1382,7 +1409,7 @@ weapons: [{
 					type: life
 					ops: [{
 						op: compress
-						start: 0.75
+						start: 0.8125
 						end: 1
 					}{
 						op: curve
@@ -1421,7 +1448,7 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.75
+				start: 0.8125
 				end: 0.875
 			}]
 		}
@@ -1432,8 +1459,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.625001
+				start: 0.6875
+				end: 0.6875001
 			}]
 		}
 	}{
@@ -1443,8 +1470,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.75
+				start: 0.6875
+				end: 0.8125
 			}{
 				op: curve
 				interp: circleOut
@@ -1492,7 +1519,7 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.75
+				start: 0.8125
 				end: 0.875
 			}]
 		}
@@ -1503,8 +1530,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.625001
+				start: 0.6875
+				end: 0.6875001
 			}]
 		}
 	}{
@@ -1514,8 +1541,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.75
+				start: 0.6875
+				end: 0.8125
 			}{
 				op: curve
 				interp: circleOut
@@ -1562,7 +1589,7 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.75
+				start: 0.8125
 				end: 0.875
 			}]
 		}
@@ -1573,8 +1600,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.625001
+				start: 0.6875
+				end: 0.6875001
 			}]
 		}
 	}{
@@ -1584,8 +1611,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.75
+				start: 0.6875
+				end: 0.8125
 			}{
 				op: curve
 				interp: circleOut
@@ -1633,7 +1660,7 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.75
+				start: 0.8125
 				end: 0.875
 			}]
 		}
@@ -1644,8 +1671,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.625001
+				start: 0.6875
+				end: 0.6875001
 			}]
 		}
 	}{
@@ -1655,8 +1682,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.75
+				start: 0.6875
+				end: 0.8125
 			}{
 				op: curve
 				interp: circleOut
@@ -1690,8 +1717,8 @@ parts: [{
 		type: life
 		ops: [{
 			op: compress
-			start: 0.625
-			end: 0.75
+			start: 0.6875
+			end: 0.8125
 		}]
 	}
 	moves: [{
@@ -1701,8 +1728,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.625001
+				start: 0.6875
+				end: 0.6875001
 			}]
 		}
 	}]
@@ -1724,7 +1751,7 @@ parts: [{
 			ops: [{
 				op: compress
 				start: 0.25
-				end: 0.625
+				end: 0.6875
 			}]
 		}
 	}{
@@ -1734,7 +1761,7 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.75
+				start: 0.8125
 				end: 0.875
 			}]
 		}
@@ -1754,8 +1781,8 @@ parts: [{
 		type: life
 		ops: [{
 			op: compress
-			start: 0.625
-			end: 0.75
+			start: 0.6875
+			end: 0.8125
 		}]
 	}
 	moves: [{
@@ -1765,8 +1792,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.625001
+				start: 0.6875
+				end: 0.6875001
 			}]
 		}
 	}]
@@ -1785,8 +1812,8 @@ parts: [{
 		type: life
 		ops: [{
 			op: compress
-			start: 0.625
-			end: 0.75
+			start: 0.6875
+			end: 0.8125
 		}]
 	}
 	moves: [{
@@ -1796,8 +1823,8 @@ parts: [{
 			type: life
 			ops: [{
 				op: compress
-				start: 0.625
-				end: 0.625001
+				start: 0.6875
+				end: 0.6875001
 			}]
 		}
 	}]

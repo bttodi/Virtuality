@@ -250,6 +250,7 @@ weapons: [
 		parentizeEffects: true
 		predictTarget: false
 		shootWarmupSpeed: 0.03
+		activeSound: loopThoriumReactor
 		shoot: {
 			shots: 9
 			shotDelay: 5

@@ -39,11 +39,11 @@ weapons: [
 			smokeEffect: none
 			shootEffect: {
 				type: SoundEffect
-				sound: largeExplosion
+				sound: explosionReactorNeoplasm
 				minVolume: 5
 				maxVolume: 5
-				minPitch: 0.65
-				maxPitch: 0.65
+				minPitch: 1.2
+				maxPitch: 1.2
 				effect: none
 			}
 		}
@@ -59,7 +59,7 @@ weapons: [
 		shootSound: none
 		recoil: 0
 		inaccuracy: 180
-		shootSound: cannon
+		shootSound: shootArtillerySap
 		bullet: {
 			type: RailBulletType
 			length: 2048

@@ -162,7 +162,7 @@ weapons: [{
 		hitEffect: none
 		despawnEffect: none
 		drawSize: 1024
-		despawnSound: cannon
+		despawnSound: shootFlame
 		parts: [{
 			type: HaloPart
 			haloRadius: 512

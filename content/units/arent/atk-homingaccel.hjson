@@ -30,7 +30,7 @@ weapons: [
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
-		shootSound: missile
+		shootSound: shieldBreakSmall
 		predictTarget: false
 		inaccuracy: 16
 		shoot: {
@@ -48,6 +48,7 @@ weapons: [
 			speed: 4
 			drag: 0.025
 			lifetime: 45
+			despawnSound: shootCleroi
 			despawnEffect: {
 				type: ParticleEffect
 				lifetime: 30

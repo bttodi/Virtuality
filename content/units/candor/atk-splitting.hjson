@@ -24,7 +24,7 @@ weapons: [
 		shootCone: 360
 		alwaysShooting: true
 		predictTarget: false
-		shootSound: shootSmite
+		shootSound: shockwaveTower
 		soundPitchMin: 1
 		recoil: 0
 		shootStatus: virtuality-stopshootingdammit

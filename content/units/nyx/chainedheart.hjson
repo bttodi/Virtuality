@@ -9,6 +9,35 @@ faceTarget: false
 rotateSpeed: 0
 groundLayer: -1
 outlineColor: DC1E46
+deathSound: explosionReactorNeoplasm
+deathExplosionEffect: {
+	type: MultiEffect
+	effects: [{
+		type: ParticleEffect
+		particles: 64
+		line: true
+		lenFrom: 16
+		strokeFrom: 4
+		lifetime: 150
+		layer: 113
+		length: 256
+		colorFrom: EB1E467F
+		colorTo: 0000007F
+		clip: 128
+		interp: circleOut
+	}{
+		type: ParticleEffect
+		particles: 64
+		sizeFrom: 32
+		lifetime: 150
+		layer: 113
+		length: 256
+		colorFrom: EB1E467F
+		colorTo: 0000007F
+		clip: 128
+		interp: circleOut
+	}]
+}
 weapons: [
 	{
 		type: Weapon
@@ -18,7 +47,7 @@ weapons: [
 		shootY: 0
 		shootCone: 180
 		alwaysShooting: true
-		shootSound: none
+		shootSound: shootSalvo
 		recoil: 0
 		shootWarmupSpeed: 0.015
 		minWarmup: 0.9
@@ -99,6 +128,7 @@ weapons: [
 					speed: 0
 					hitEffect: none
 					despawnEffect: none
+					despawnSound: shootReign
 					fragBullets: 1
 					fragRandomSpread: 0
 					fragVelocityMin: 1

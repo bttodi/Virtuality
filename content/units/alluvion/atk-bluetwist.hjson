@@ -91,6 +91,7 @@ weapons: [
 				splashDamageRadius: 120
 				status: virtuality-5dpf
 				statusDuration: 8
+				despawnSound: shootArtillerySapBig
 				parts: [
 					{
 						type: RegionPart
@@ -302,6 +303,7 @@ weapons: [
 				splashDamageRadius: 120
 				status: virtuality-5dpf
 				statusDuration: 8
+				despawnSound: shootArtillerySapBig
 				parts: [
 					{
 						type: RegionPart
@@ -470,7 +472,7 @@ weapons: [
 		shootCone: 360
 		alwaysShooting: true
 		recoil: 0
-		shootSound: none
+		shootSound: shieldHit
 		bullet: {
 			type: BulletType
 			collides: false

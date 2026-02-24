@@ -114,7 +114,7 @@ weapons: [{
 	shootY: 56
 	shootX: 4
 	shootCone: 180
-	shootSound: missileLarge
+	shootSound: shootMissileLong
 	alwaysShooting: true
 	predictTarget: false
 	shoot: {
@@ -140,8 +140,8 @@ weapons: [{
 		homingDelay: 15
 		homingPower: 0.04
 		homingRange: 1024
-		despawnSound: dullExplosion
-		hitSound: dullExplosion
+		despawnSound: explosionCrawler
+		hitSound: explosionCrawler
 		trailEffect: {
 			type: MultiEffect
 			effects: [{

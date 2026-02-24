@@ -67,11 +67,9 @@ weapons: [{
 			despawnEffect: {
 				type: SoundEffect
 				effect: none
-				sound: bang
+				sound: explosion
 				minPitch: 1.2
 				maxPitch: 1.3
-				minVolume: 0.5
-				maxVolume: 0.5
 			}
 			keepVelocity: false
 			trailInterval: 0.5

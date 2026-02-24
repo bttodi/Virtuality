@@ -85,6 +85,7 @@ weapons: [
 		predictTarget: false
 		shootWarmupSpeed: 0.01
 		linearWarmup: true
+		activeSound: loopThoriumReactor
 		shoot: {
 			shots: 9
 			shotDelay: 5

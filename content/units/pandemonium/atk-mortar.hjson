@@ -47,7 +47,7 @@ weapons: [{
 		splashDamageRadius: 32
 		status: virtuality-5dpf
 		statusDuration: 5
-		despawnSound: dullExplosion
+		despawnSound: explosionCrawler
 		despawnEffect: {
 			type: MultiEffect
 			effects: [{

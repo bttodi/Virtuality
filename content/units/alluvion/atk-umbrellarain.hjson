@@ -12,7 +12,7 @@ hittable: false
 drawCell: false
 groundLayer: -1
 createScorch: false
-deathSound: none
+deathSound: explosionNavanax
 deathExplosionEffect: none
 clipSize: 1024
 deathExplosionEffect: {
@@ -248,7 +248,7 @@ weapons: [
 		shootCone: 360
 		recoil: 0
 		rotation: 180
-		shootSound: none
+		shootSound: mechStepHeavy
 		parentizeEffects: true
 		predictTarget: false
 		shootWarmupSpeed: 0.015

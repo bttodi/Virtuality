@@ -114,7 +114,7 @@ weapons: [{
 	shootY: 56
 	shootX: 4
 	shootCone: 180
-	shootSound: missileSmall
+	shootSound: shootMissilePlasma
 	alwaysShooting: true
 	aiControllable: false
 	predictTarget: false

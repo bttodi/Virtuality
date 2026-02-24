@@ -23,6 +23,51 @@ weapons: [
 		shootY: 0
 		shootCone: 180
 		alwaysShooting: true
+		shootSound: shootSalvo
+		recoil: 0
+		bullet: {
+			type: BulletType
+			despawnEffect: none
+			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
+			collides: false
+			lifetime: 0
+			speed: 0
+		}
+	}
+	{
+		type: Weapon
+		reload: 90
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
+		shootSound: shootReign
+		recoil: 0
+		shoot: {
+			firstShotDelay: 30
+		}
+		bullet: {
+			type: BulletType
+			despawnEffect: none
+			hitEffect: none
+			shootEffect: none
+			smokeEffect: none
+			collides: false
+			lifetime: 0
+			speed: 0
+		}
+	}
+	{
+		type: Weapon
+		reload: 90
+		mirror: false
+		x: 0
+		shootY: 0
+		shootCone: 180
+		alwaysShooting: true
 		shootSound: none
 		recoil: 0
 		shoot: {
@@ -44,23 +89,18 @@ weapons: [
 			hitEffect: none
 			drawSize: 512
 			despawnEffect: {
-				type: SoundEffect
-				sound: drillImpact
-				minVolume: 5
-				effect: {
-					type: ParticleEffect
-					particles: 16
-					lifetime: 30
-					layer: 94
-					baseRotation: 90
-					length: 64
-					interp: circleOut
-					cone: 45
-					sizeFrom: 4
-					colorFrom: EB1E46
-					colorTo: EB1E46
-					clip: 128
-				}
+				type: ParticleEffect
+				particles: 16
+				lifetime: 30
+				layer: 94
+				baseRotation: 90
+				length: 64
+				interp: circleOut
+				cone: 45
+				sizeFrom: 4
+				colorFrom: EB1E46
+				colorTo: EB1E46
+				clip: 128
 			}
 			fragBullets: 1
 			fragRandomSpread: 0

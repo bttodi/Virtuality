@@ -31,7 +31,7 @@ weapons: [
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
 		inaccuracy: 180
-		shootSound: shockBlast
+		shootSound: shootAfflict
 		soundPitchMin: 1.2
 		soundPitchMax: 1.2
 		shoot: {
@@ -194,7 +194,7 @@ weapons: [
 								lifetime: 45
 								hitEffect: none
 								despawnEffect: none
-								despawnSound: plasmaboom
+								despawnSound: explosionAfflict
 								fragBullets: 1
 								fragRandomSpread: 0
 								fragVelocityMin: 1

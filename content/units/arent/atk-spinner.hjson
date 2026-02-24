@@ -57,7 +57,7 @@ weapons: [
 					height: 12
 					drawSize: 512
 					layer: 116
-					despawnSound: blaster
+					despawnSound: shootSpectre
 					fragBullets: 1
 					fragRandomSpread: 0
 					fragVelocityMin: 1

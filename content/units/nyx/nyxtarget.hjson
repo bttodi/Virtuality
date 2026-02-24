@@ -71,7 +71,7 @@ weapons: [
 		aiControllable: false
 		controllable: false
 		shootOnDeath: true
-		shootSound: none
+		shootSound: shootSalvo
 		shoot: {
 			type: ShootSpread
 			shots: 8
@@ -149,6 +149,7 @@ weapons: [
 					speed: 0
 					hitEffect: none
 					despawnEffect: none
+					despawnSound: shootReign
 					fragBullets: 1
 					fragRandomSpread: 0
 					fragVelocityMin: 1

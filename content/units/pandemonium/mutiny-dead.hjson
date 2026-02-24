@@ -93,7 +93,7 @@ weapons: [{
 			type: MultiEffect
 			effects: [{
 				type: SoundEffect
-				sound: largeExplosion
+				sound: explosionDull
 				minPitch: 0.5
 				maxPitch: 0.5
 				minVolume: 2
@@ -101,19 +101,15 @@ weapons: [{
 				effect: none
 			}{
 				type: SoundEffect
-				sound: largeCannon
-				minPitch: 0.8
-				maxPitch: 0.8
+				sound: explosionReactor2
 				minVolume: 2
 				maxVolume: 2
 				effect: none
 			}{
 				type: SoundEffect
-				sound: titanExplosion
-				minPitch: 1
-				maxPitch: 1
-				minVolume: 1
-				maxVolume: 1
+				sound: blockExplodeElectricBig
+				minVolume: 2
+				maxVolume: 2
 				effect: none
 			}]
 		}
@@ -141,18 +137,14 @@ weapons: [{
 			effects: [{
 				type: SoundEffect
 				sound: shootSmite
-				minPitch: 1
-				maxPitch: 1
 				minVolume: 2
 				maxVolume: 2
 				effect: none
 			}{
 				type: SoundEffect
-				sound: spark
-				minPitch: 1
-				maxPitch: 1
-				minVolume: 4
-				maxVolume: 4
+				sound: blockExplodeElectric
+				minVolume: 2
+				maxVolume: 2
 				effect: none
 			}]
 		}

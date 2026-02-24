@@ -1,3 +1,4 @@
+hideDatabase: true
 type: missile
 lifetime: 360
 health: 750
@@ -86,6 +87,28 @@ weapons: [{
 	}
 }{
 	type: Weapon
+	reload: 5000
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 360
+	alwaysShooting: true
+	recoil: 0
+	shootSound: acceleratorConstruct
+	shootSoundVolume: 5
+	activeSound: beamLustre
+	activeSoundVolume: 0.2
+	bullet: {
+		type: BulletType
+		lifetime: 30
+		speed: 96
+		collides: false
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+	}
+}{
+	type: Weapon
 	reload: 36
 	mirror: false
 	x: 0
@@ -93,8 +116,8 @@ weapons: [{
 	shootCone: 360
 	alwaysShooting: true
 	recoil: 0
-	shootSound: none
 	shootWarmupSpeed: 0.03
+	shootSound: none
 	bullet: {
 		type: BulletType
 		lifetime: 30

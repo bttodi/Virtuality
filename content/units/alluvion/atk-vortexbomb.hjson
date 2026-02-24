@@ -151,6 +151,7 @@ weapons: [
 					splashDamageRadius: 128
 					status: virtuality-5dpf
 					statusDuration: 8
+					despawnSound: shootArtillerySapBig
 					trailInterval: 1
 					trailEffect: {
 						type: MultiEffect
@@ -391,7 +392,8 @@ weapons: [
 		rotateSpeed: 6
 		alwaysShooting: true
 		recoil: 0
-		shootSound: none
+		shootSound: shieldHit
+		shootSoundVolume: 0.2
 		shootStatus: virtuality-stopshootingdammit
 		shootStatusDuration: 5000
 		targetInterval: 0

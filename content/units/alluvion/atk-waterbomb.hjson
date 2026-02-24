@@ -51,6 +51,7 @@ weapons: [
 					speed: 0
 					collides: false
 					despawnEffect: none
+					despawnSound: shieldBreakSmall
 					hitEffect: none
 					parts: [
 						{
@@ -164,6 +165,7 @@ weapons: [
 				splashDamageRadius: 64
 				status: virtuality-5dpf
 				statusDuration: 8
+				despawnSound: shootArtillerySap
 				trailInterval: 1
 				trailEffect: {
 					type: MultiEffect
