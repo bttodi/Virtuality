@@ -1,0 +1,1627 @@
+hideDatabase: true
+type: missile
+lifetime: 768
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+weapons: [{
+	type: Weapon
+	mirror: false
+	reload: 192
+	x: -95.5
+	y: -56
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 12
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		spawnBullets: [{
+			type: BulletType
+			collidesTiles: false
+			angleOffset: 30.38682395
+			pierce: true
+			speed: 1
+			drag: -0.015
+			lifetime: 120
+			despawnEffect: none
+			hitEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-bullet-pixel
+				layer: 115.1
+				outline: false
+			}]
+		}{
+			type: BulletType
+			collidesTiles: false
+			angleOffset: 18.38682395
+			pierce: true
+			speed: 1
+			drag: -0.015
+			lifetime: 120
+			despawnEffect: none
+			hitEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-bullet-pixel
+				layer: 115.1
+				outline: false
+			}]
+		}{
+			type: BulletType
+			collidesTiles: false
+			angleOffset: 42.38682395
+			pierce: true
+			speed: 1
+			drag: -0.015
+			lifetime: 120
+			despawnEffect: none
+			hitEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-bullet-pixel
+				layer: 115.1
+				outline: false
+			}]
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: -95.5
+	y: -24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	rotate: true
+	rotateSpeed: 9999
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			type: ShootSpread
+			firstShotDelay: 60
+			shots: 4
+			shotDelay: 192
+			spread: 67
+		}
+		dest: [{
+			type: ShootSpread
+			shots: 6
+			spread: 60
+		}]
+	}
+	bullet: {
+		type: BulletType
+		collidesTiles: false
+		pierce: true
+		speed: 1
+		drag: -0.015
+		lifetime: 120
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		rotateSpeed: 0.5
+		trailInterval: 1
+		trailEffect: {
+			type: ParticleEffect
+			particles: 1
+			lifetime: 8
+			layer: 115.1
+			length: 0
+			region: circle
+			useRotation: false
+			cone: 0
+			sizeFrom: 2
+			sizeTo: 2
+			colorTo: FFFFFF00
+		}
+		spawnBullets: [{
+			type: BulletType
+			collidesTiles: false
+			pierce: true
+			speed: 1
+			drag: -0.015
+			lifetime: 120
+			shootEffect: none
+			smokeEffect: none
+			despawnEffect: none
+			hitEffect: none
+			rotateSpeed: -0.5
+			trailInterval: 1
+			trailEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 8
+				layer: 115.1
+				length: 0
+				region: circle
+				useRotation: false
+				cone: 0
+				sizeFrom: 2
+				sizeTo: 2
+				colorTo: FFFFFF00
+			}
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: -95.5
+	y: -40
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			type: ShootSpread
+			firstShotDelay: 36
+			spread: 67
+			shots: 4
+			shotDelay: 192
+		}
+		dest: [{
+			type: ShootMulti
+			source: {
+				type: ShootSpread
+				spread: 21
+				shots: 4
+				shotDelay: 3
+			}
+			dest: [{
+				type: ShootSpread
+				spread: 120
+				shots: 3
+			}]
+		}]
+	}
+	bullet: {
+		type: BulletType
+		collidesTiles: false
+		pierce: true
+		speed: 2
+		lifetime: 150
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		parts: [{
+			type: RegionPart
+			name: circle
+			layer: 115.1
+			outline: false
+			xScl: 0.0625
+			yScl: 0.0625
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 192
+	x: -95.5
+	y: -8
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 84
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: BulletType
+			angleOffset: 4.78846655
+			randomAngleOffset: 10
+			collidesTiles: false
+			pierce: true
+			speed: 2
+			lifetime: 120
+			hitSize: 6
+			shootEffect: none
+			smokeEffect: none
+			despawnEffect: none
+			hitEffect: none
+			trailInterval: 1
+			trailEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 12
+				layer: 115.1
+				length: 0
+				region: virtuality-delfruit-pixel
+				useRotation: false
+				cone: 0
+				sizeFrom: 6
+				sizeTo: 6
+				colorTo: FFFFFF00
+			}
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 192
+	x: 0
+	shootY: -80
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	xRand: 28
+	shoot: {
+		firstShotDelay: 132
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: BulletType
+			angleOffset: 90
+			pierce: true
+			collidesTiles: false
+			hitSize: 6
+			speed: 0.5
+			drag: -0.025
+			lifetime: 120
+			despawnEffect: none
+			hitEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-spike-pixel
+				layer: 115.1
+				outline: false
+				color: FFFFFF00
+				colorTo: FFFFFF
+				progress: {
+					type: life
+					op: compress
+					start: 0
+					end: 0.1
+				}
+			}]
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 192
+	x: -95.5
+	y: 40
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	rotate: true
+	rotateSpeed: 9999
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 156
+	}
+	bullet: {
+		type: BulletType
+		collidesTiles: false
+		pierce: true
+		speed: 3
+		lifetime: 120
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		parts: [{
+			type: RegionPart
+			name: virtuality-bullet-pixel
+			layer: 115.1
+			outline: false
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 192
+	x: -95.5
+	y: 56
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 96
+	}
+	bullet: {
+		type: BulletType
+		randomAngleOffset: 180
+		collides: false
+		speed: 0
+		lifetime: 80
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		fragBullets: 12
+		fragRandomSpread: 0
+		fragSpread: 30
+		fragAngle: 15
+		fragOffsetMin: 0
+		fragOffsetMax: 0
+		fragBullet: {
+			type: RailBulletType
+			speed: 0
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			pointEffect: shootSmall
+			spawnBullets: [{
+				type: BulletType
+				collides: false
+				speed: 0
+				lifetime: 6
+				despawnEffect: none
+				hitEffect: none
+				parts: [{
+					type: RegionPart
+					name: virtuality-square
+					blending: additive
+					layer: 115.1
+					outline: false
+					color: FFFFFF
+					colorTo: FFFFFF00
+					progress: life
+					xScl: 0.25
+					yScl: 128
+				}]
+			}]
+		}
+		parts: [{
+			type: RegionPart
+			color: 00000000
+			outline: false
+			rotation: 137.5
+			moves: [{
+				rot: -137.5
+				progress: {
+					type: life
+					op: curve
+					interp: circleOut
+				}
+			}]
+			children: [{
+				type: RegionPart
+				name: virtuality-square
+				blending: additive
+				layer: 115.1
+				outline: false
+				color: FFFFFF3F
+				xScl: 0.25
+				yScl: 128
+			}{
+				type: RegionPart
+				name: virtuality-square
+				blending: additive
+				layer: 115.1
+				outline: false
+				color: FFFFFF3F
+				xScl: 0.25
+				yScl: 128
+				rotation: 30
+			}{
+				type: RegionPart
+				name: virtuality-square
+				blending: additive
+				layer: 115.1
+				outline: false
+				color: FFFFFF3F
+				xScl: 0.25
+				yScl: 128
+				rotation: 60
+			}{
+				type: RegionPart
+				name: virtuality-square
+				blending: additive
+				layer: 115.1
+				outline: false
+				color: FFFFFF3F
+				xScl: 0.25
+				yScl: 128
+				rotation: 90
+			}{
+				type: RegionPart
+				name: virtuality-square
+				blending: additive
+				layer: 115.1
+				outline: false
+				color: FFFFFF3F
+				xScl: 0.25
+				yScl: 128
+				rotation: 120
+			}{
+				type: RegionPart
+				name: virtuality-square
+				blending: additive
+				layer: 115.1
+				outline: false
+				color: FFFFFF3F
+				xScl: 0.25
+				yScl: 128
+				rotation: 150
+			}]
+		}]
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-square
+	layer: 111
+	outline: false
+	color: 000000
+	xScl: 60
+	yScl: 45
+}
+// clock thing
+{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -36.5
+	y: -31.5
+	xScl: 1.75
+	yScl: 0.25
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -36.5
+	y: -25.5
+	xScl: 1.75
+	yScl: 0.25
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -33.5
+	y: -28.5
+	xScl: 0.25
+	yScl: 1.25
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -39.5
+	y: -28.5
+	xScl: 0.25
+	yScl: 1.25
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -37.5
+	y: -27.5
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 0.25
+		gy: 0.25
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: 0
+			}{
+				op: loop
+				time: 96
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -0.25
+		gy: -0.25
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: 0
+			}{
+				op: loop
+				time: 96
+			}{
+				op: compress
+				start: 0.5
+				end: 0.5000001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -35.5
+	y: -27.5
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 0.25
+		gy: 0.25
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -12
+			}{
+				op: loop
+				time: 96
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -0.25
+		gy: -0.25
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -12
+			}{
+				op: loop
+				time: 96
+			}{
+				op: compress
+				start: 0.5
+				end: 0.5000001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -35.5
+	y: -29.5
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 0.25
+		gy: 0.25
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -24
+			}{
+				op: loop
+				time: 96
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -0.25
+		gy: -0.25
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -24
+			}{
+				op: loop
+				time: 96
+			}{
+				op: compress
+				start: 0.5
+				end: 0.5000001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -37.5
+	y: -29.5
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 0.25
+		gy: 0.25
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -36
+			}{
+				op: loop
+				time: 96
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -0.25
+		gy: -0.25
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -36
+			}{
+				op: loop
+				time: 96
+			}{
+				op: compress
+				start: 0.5
+				end: 0.5000001
+			}]
+		}
+	}]
+}
+// THE NUMBERS
+{
+	type: RegionPart
+	name: virtuality-pixel-1
+	layer: 115
+	outline: false
+	x: -42.5
+	y: -29.5
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 1
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: 0
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: 0
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.25
+				end: 0.25000001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-pixel-2
+	layer: 115
+	outline: false
+	x: -42.5
+	y: -29.5
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 1
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -48
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -48
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.25
+				end: 0.25000001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-pixel-3
+	layer: 115
+	outline: false
+	x: -42.5
+	y: -29.5
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 1
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -96
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -96
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.25
+				end: 0.25000001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-pixel-4
+	layer: 115
+	outline: false
+	x: -42.5
+	y: -29.5
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 1
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -144
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: add
+				amount: -144
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.25
+				end: 0.25000001
+			}]
+		}
+	}]
+}
+// PADDING
+{
+	type: RegionPart
+	name: virtuality-square
+	layer: 117
+	outline: false
+	color: 000000
+	x: 180
+	xScl: 30
+	yScl: 45
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 117
+	outline: false
+	color: 000000
+	x: -180
+	xScl: 30
+	yScl: 45
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 117
+	outline: false
+	color: 000000
+	y: -135
+	xScl: 120
+	yScl: 22.5
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 117
+	outline: false
+	color: 000000
+	y: 135
+	xScl: 120
+	yScl: 22.5
+}
+// PLAY AREA
+{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: 31.5
+	xScl: 0.25
+	yScl: 16
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	x: -31.5
+	xScl: 0.25
+	yScl: 16
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115	
+	outline: false
+	y: 31.5
+	xScl: 16
+	yScl: 0.25
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	y: -31.5
+	xScl: 16
+	yScl: 0.25
+}
+// LEFT i acknowledge the discrepancy of the part ops between this and the clock thing
+{
+	type: RegionPart
+	name: virtuality-ch4-icons-bg
+	layer: 113
+	outline: false
+	x: -95.5
+}{
+	type: RegionPart
+	name: virtuality-ch4-icons
+	layer: 114
+	outline: false
+	x: -95.5
+}{
+	type: RegionPart
+	name: virtuality-ch4-icons
+	color: FFFFFF
+	colorTo: FFFFFF00
+	layer: 116.5
+	outline: false
+	xScl: 0
+	x: -95.5
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: loop
+			time: 192
+		}{
+			op: compress
+			start: 0
+			end: 0.05
+		}]
+	}
+	moves: [{
+		x: -16
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0
+				end: 0.05
+			}]
+		}
+	}{
+		gx: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0
+				end: 0.0000001
+			}]
+		}
+	}{
+		gx: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.5
+				end: 0.5000001
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-ch4-icons-faded
+	layer: 116
+	outline: false
+	x: -95.5
+	moves: [{
+		x: -16
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0
+				end: 0.05
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-ch4-icons-faded
+	layer: 116
+	outline: false
+	x: -111.5
+	moves: [{
+		x: -16
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0
+				end: 0.05
+			}]
+		}
+	}]
+}
+// COVERS
+{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 000000
+	x: -95.5
+	y: -56
+	xScl: 2.5
+	yScl: 2.5
+	moves: [{
+		gx: -2.5
+		gy: -2.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.0625
+				end: 0.0625000001
+			}]
+		}
+	}{
+		gx: 3.5
+		gy: 3.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.99999999
+				end: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 000000
+	x: -95.5
+	y: -40
+	xScl: 3.5
+	yScl: 3.5
+	moves: [{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.125
+				end: 0.1250000001
+			}]
+		}
+	}{
+		gx: -2.5
+		gy: -2.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.1875
+				end: 0.1875000001
+			}]
+		}
+	}{
+		gx: 3.5
+		gy: 3.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.99999999
+				end: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 000000
+	x: -95.5
+	y: -24
+	xScl: 3.5
+	yScl: 3.5
+	moves: [{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.25
+				end: 0.2500000001
+			}]
+		}
+	}{
+		gx: -2.5
+		gy: -2.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.3125
+				end: 0.3125000001
+			}]
+		}
+	}{
+		gx: 3.5
+		gy: 3.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.99999999
+				end: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 000000
+	x: -95.5
+	y: -8
+	xScl: 3.5
+	yScl: 3.5
+	moves: [{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.375
+				end: 0.3750000001
+			}]
+		}
+	}{
+		gx: -2.5
+		gy: -2.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.4375
+				end: 0.4375000001
+			}]
+		}
+	}{
+		gx: 3.5
+		gy: 3.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.99999999
+				end: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 000000
+	x: -95.5
+	y: 8
+	xScl: 3.5
+	yScl: 3.5
+	moves: [{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.5
+				end: 0.5000000001
+			}]
+		}
+	}{
+		gx: -2.5
+		gy: -2.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.5625
+				end: 0.5625000001
+			}]
+		}
+	}{
+		gx: 3.5
+		gy: 3.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.99999999
+				end: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 000000
+	x: -95.5
+	y: 24
+	xScl: 3.5
+	yScl: 3.5
+	moves: [{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.625
+				end: 0.6250000001
+			}]
+		}
+	}{
+		gx: -2.5
+		gy: -2.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.6875
+				end: 0.6875000001
+			}]
+		}
+	}{
+		gx: 3.5
+		gy: 3.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.99999999
+				end: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 000000
+	x: -95.5
+	y: 40
+	xScl: 3.5
+	yScl: 3.5
+	moves: [{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.75
+				end: 0.75000001
+			}]
+		}
+	}{
+		gx: -2.5
+		gy: -2.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.8125
+				end: 0.8125000001
+			}]
+		}
+	}{
+		gx: 3.5
+		gy: 3.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.99999999
+				end: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 000000
+	x: -95.5
+	y: 56
+	xScl: 3.5
+	yScl: 3.5
+	moves: [{
+		gx: -1
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.875
+				end: 0.87500001
+			}]
+		}
+	}{
+		gx: -2.5
+		gy: -2.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.9375
+				end: 0.9375000001
+			}]
+		}
+	}{
+		gx: 3.5
+		gy: 3.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 192
+			}{
+				op: compress
+				start: 0.99999999
+				end: 1
+			}]
+		}
+	}]
+}]

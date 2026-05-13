@@ -1,0 +1,660 @@
+hideDatabase: true
+type: missile
+lifetime: 384
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	x: 0
+	shootY: 64
+	reload: 9999
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	xRand: 16
+	shoot: {
+		shots: 12
+		shotDelay: 24
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		speed: 0
+		lifetime: 24
+		pierce: true
+		collidesTiles: false
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		parts: [{
+			type: RegionPart
+			name: virtuality-delfruit-flat
+			outline: false
+			layer: 118
+			rotation: 90
+		}]
+		fragBullets: 1
+		fragRandomSpread: 0
+		fragVelocityMin: 0.5
+		fragOffsetMin: 0
+		fragOffsetMax: 0
+		fragAngle: 270
+		fragBullet: {
+			type: BulletType
+			pierce: true
+			collidesTiles: false
+			lifetime: 90
+			speed: 0.5
+			drag: -0.035
+			hitEffect: none
+			despawnEffect: none
+			hitSize: 2
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 180
+			}]
+			trailInterval: 2
+			trailEffect: {
+				type: ParticleEffect
+				particles: 1
+				lifetime: 10
+				layer: 118
+				region: virtuality-delfruit-flat
+				useRotation: false
+				length: 0
+				colorTo: FFFFFF00
+				sizeFrom: 4
+				sizeTo: 4
+			}
+		}
+		spawnBullets: [{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: 10
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 90
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 270
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: 8
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 90
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 270
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: 6
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 90
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 270
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: 4
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 90
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 270
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: 2
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 90
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 270
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: -2
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 270
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 90
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: -4
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 270
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 90
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: -6
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 270
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 90
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: -8
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 270
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 90
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}{
+			type: BulletType
+			ignoreSpawnAngle: true
+			collides: false
+			speed: -10
+			drag: 0.1
+			lifetime: 24
+			pierce: true
+			collidesTiles: false
+			shootEffect: none
+			smokeEffect: none
+			hitEffect: none
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-delfruit-flat
+				outline: false
+				layer: 118
+				rotation: 270
+			}]
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragVelocityMin: 0.5
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragAngle: 90
+			fragBullet: {
+				type: BulletType
+				pierce: true
+				collidesTiles: false
+				lifetime: 90
+				speed: 0.5
+				drag: -0.035
+				hitEffect: none
+				despawnEffect: none
+				hitSize: 2
+				parts: [{
+					type: RegionPart
+					name: virtuality-delfruit-flat
+					outline: false
+					layer: 118
+					rotation: 180
+				}]
+				trailInterval: 2
+				trailEffect: {
+					type: ParticleEffect
+					particles: 1
+					lifetime: 10
+					layer: 118
+					region: virtuality-delfruit-flat
+					useRotation: false
+					length: 0
+					colorTo: FFFFFF00
+					sizeFrom: 4
+					sizeTo: 4
+				}
+			}
+		}]
+	}
+}]

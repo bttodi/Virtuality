@@ -1,0 +1,215 @@
+hideDatabase: true
+type: missile
+lifetime: 768
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+weapons: [{
+	type: Weapon
+	x: 0
+	shootY: 0
+	recoil: 0
+	reload: 24
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 0
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: none
+		smokeEffect: none
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-argonaut
+	outline: false
+	layer: 89
+	y: -499.5
+	moveY: -2.7
+	growY: -0.2
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: curve
+			interp: reverse
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0.5
+			end: 1
+		}]
+	}
+	growProgress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: curve
+			interp: reverse
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0.5
+			end: 1
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-argonaut
+	outline: false
+	layer: 89
+	y: 499.5
+	rotation: 180
+	xScl: -1
+	moveY: 2.7
+	growY: -0.2
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: curve
+			interp: reverse
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0.5
+			end: 1
+		}]
+	}
+	growProgress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: curve
+			interp: reverse
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0.5
+			end: 1
+		}]
+	}
+}
+// HIT
+{
+	type: RegionPart
+	name: virtuality-argonaut-hit
+	outline: false
+	layer: 89
+	x: -499.5
+	rotation: 270
+	moveX: -2.7
+	growY: -0.2
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: curve
+			interp: reverse
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0.5
+			end: 1
+		}]
+	}
+	growProgress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: curve
+			interp: reverse
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0.5
+			end: 1
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-argonaut-hit
+	outline: false
+	layer: 89
+	x: 499.5
+	rotation: 90
+	xScl: -1
+	moveX: 2.7
+	growY: -0.2
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: curve
+			interp: reverse
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0.5
+			end: 1
+		}]
+	}
+	growProgress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: curve
+			interp: reverse
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0.5
+			end: 1
+		}]
+	}
+}]

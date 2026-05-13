@@ -1,0 +1,26 @@
+hideDatabase: true
+type: hover
+health: 50000
+speed: 2
+rotateSpeed: 24
+faceTarget: true
+drag: 0
+drawBody: false
+drawCell: false
+engineSize: 0
+outlineColor: 383D34
+engineColor: FFA664
+groundLayer: -1
+useEngineElevation: false
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	name: argonaut-ship
+	layerOffset: 116
+	x: 0
+	mirror: false
+	shootSound: none
+	minWarmup: 2
+}]

@@ -1,0 +1,1556 @@
+hideDatabase: true
+type: missile
+lifetime: 768
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 9999
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 154
+		shots: 120
+		shotDelay: 1
+	}
+	bullet: {
+		type: BulletType
+		randomAngleOffset: 180
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		collides: false
+		speed: 0
+		lifetime: 24
+		parts: [{
+			type: RegionPart
+			name: virtuality-glow
+			outline: false
+			layer: 82
+			color: FFE1FF00
+			colorTo: FFE1FF
+			xScl: 0.05
+			yScl: 0.3
+			y: 96
+			progress: {
+				type: life
+				op: compress
+				start: 0
+				end: 0.2
+			}
+			moves: [{
+				y: -96
+				gx: -0.05
+				gy: -0.3
+				progress: life
+			}]
+		}]
+	}
+}{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 9999
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			type: ShootSpread
+			spread: -21
+			shotDelay: 7
+			shots: 26
+			firstShotDelay: 300
+		}
+		dest: [{
+			type: ShootSpread
+			shots: 6
+			spread: 60
+		}]
+	}
+	bullet: {
+		type: BulletType
+		pierce: true
+		collidesTiles: false
+		damage: 1
+		lifetime: 90
+		speed: 1
+		drag: -0.025
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		bulletInterval: 1
+		intervalBullets: 2
+		intervalBullet: {
+			type: BulletType
+			collides: false
+			speed: 0
+			lifetime: 9
+			despawnEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-smoke
+				outline: false
+				blending: additive
+				color: 8000807F
+				colorTo: 00008B00
+				xScl: 0.25
+				yScl: 0.25
+				progress: life
+				y: 2
+			}]
+		}
+		parts: [{
+			type: RegionPart
+			name: circle
+			color: 23204A
+			colorTo: 2D387A
+			xScl: 0.25
+			yScl: 0.25
+			outline: false
+			layer: 85
+			progress: {
+				type: time
+				ops: [{
+					op: loop
+					time: 24
+				}{
+					op: curve
+					interp: slope
+				}]
+			}
+		}{
+			type: RegionPart
+			name: circle
+			color: 000000
+			xScl: 0.2
+			yScl: 0.2
+			y: -0.5
+			outline: false
+			layer: 85
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 482
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		fragBullets: 35
+		fragRandomSpread: 0
+		fragSpread: 10.2857142857
+		fragOffsetMin: 224
+		fragOffsetMax: 224
+		fragBullet: {
+			type: BulletType
+			angleOffset: 190
+			collides: false
+			pierce: true
+			speed: 0
+			lifetime: 120
+			hitEffect: none
+			despawnEffect: none
+			drawSize: 512
+			fragBullets: 1
+			fragRandomSpread: 0
+			fragOffsetMin: 0
+			fragOffsetMax: 0
+			fragBullet: {
+				type: BulletType
+				speed: 0
+				lifetime: 30
+				collides: false
+				despawnEffect: none
+				hitEffect: none
+				drawSize: 512
+				spawnBullets: [{
+					type: BulletType
+					speed: 0
+					lifetime: 0
+					collides: false
+					despawnEffect: none
+					hitEffect: none
+					drawSize: 512
+					fragBullets: 16
+					fragAngle: 90
+					fragRandomSpread: 0
+					fragOffsetMin: -12
+					fragOffsetMax: 12
+					fragBullet: {
+						type: BulletType
+						angleOffset: 270
+						speed: 6
+						drag: 0.15
+						lifetime: 30
+						collides: false
+						despawnEffect: none
+						hitEffect: none
+						parts: [{
+							type: RegionPart
+							name: virtuality-smoke
+							outline: false
+							color: FFBFFF
+							colorTo: 9370DB00
+							xScl: 0.125
+							yScl: 0.125
+							progress: life
+						}]
+						spawnBullets: [{
+							type: BulletType
+							velocityScaleRandMin: 0.2
+							speed: 16
+							drag: 0.15
+							lifetime: 30
+							collides: false
+							despawnEffect: none
+							hitEffect: none
+							parts: [{
+								type: RegionPart
+								name: virtuality-smoke
+								outline: false
+								color: FFBFFF
+								colorTo: BF3FBF00
+								xScl: 0.125
+								yScl: 0.125
+								progress: life
+							}]
+						}]
+					}
+				}]
+				intervalBullets: 1
+				bulletInterval: 1
+				intervalRandomSpread: 0
+				intervalBullet: {
+					type: RailBulletType
+					collidesTiles: false
+					length: 512
+					pierceEffect: none
+				}
+				parts: [{
+					type: RegionPart
+					name: virtuality-diamond
+					outline: false
+					color: FF7FFF
+					colorTo: 9370DB
+					layer: 85
+					xScl: 0.5
+					yScl: 0
+					moves: [{
+						y: 256
+						gy: 32
+						progress: {
+							type: life
+							op: compress
+							start: 0
+							end: 0.5
+						}
+					}{
+						gx: -0.5
+						progress: {
+							type: life
+							op: compress
+							start: 0.5
+							end: 1
+						}
+					}]
+				}{
+					type: RegionPart
+					name: virtuality-diamond
+					outline: false
+					color: 000000
+					xScl: 0.375
+					layer: 85.1
+					yScl: 0
+					moves: [{
+						y: 256
+						gy: 32
+						progress: {
+							type: life
+							op: compress
+							start: 0
+							end: 0.5
+						}
+					}{
+						gx: -0.375
+						progress: {
+							type: life
+							op: compress
+							start: 0.5
+							end: 1
+						}
+					}]
+				}]
+			}
+			parts: [{
+				type: RegionPart
+				name: virtuality-swirl
+				color: FF7FFF7F
+				colorTo: 9370DB7F
+				outline: false
+				layer: 86
+				xScl: 0
+				yScl: 0
+				progress: {
+					type: time
+					ops: [{
+						op: loop
+						time: 60
+					}{
+						op: curve
+						interp: slope
+					}]
+				}
+				moves: [{
+					rot: -360
+					progress: {
+						type: time
+						op: loop
+						time: 360
+					}
+				}{
+					gx: 0.75
+					gy: 0.75
+					progress: {
+						type: life
+						op: curve
+						interp: circleOut
+					}
+				}]
+			}{
+				type: RegionPart
+				name: virtuality-swirl
+				color: FF7FFF7F
+				colorTo: 9370DB3F
+				outline: false
+				layer: 86
+				xScl: 0
+				yScl: 0
+				progress: {
+					type: time
+					ops: [{
+						op: loop
+						time: 60
+					}{
+						op: curve
+						interp: slope
+					}]
+				}
+				moves: [{
+					rot: -360
+					progress: {
+						type: time
+						op: loop
+						time: 270
+					}
+				}{
+					gx: 0.75
+					gy: 0.75
+					progress: {
+						type: life
+						op: curve
+						interp: circleOut
+					}
+				}]
+			}{
+				type: RegionPart
+				name: virtuality-glow
+				color: FF7FFF7F
+				colorTo: 9370DB7F
+				blending: additive
+				outline: false
+				layer: 86
+				xScl: 0
+				yScl: 0
+				progress: {
+					type: time
+					ops: [{
+						op: loop
+						time: 60
+					}{
+						op: curve
+						interp: slope
+					}]
+				}
+				moves: [{
+					gx: 0.5
+					gy: 0.25
+					progress: {
+						type: life
+						op: curve
+						interp: circleOut
+					}
+				}]
+			}{
+				type: RegionPart
+				name: virtuality-square
+				color: 4200807F
+				colorTo: 4200809F
+				blending: additive
+				outline: false
+				layer: 85.9
+				xScl: 0
+				yScl: 256
+				y: 512
+				progress: {
+					type: time
+					ops: [{
+						op: loop
+						time: 30
+					}{
+						op: curve
+						interp: slope
+					}]
+				}
+				moves: [{
+					gx: 0.25
+					progress: {
+						type: life
+						op: curve
+						interp: circleOut
+					}
+				}]
+			}]
+		}
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 600
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 90
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		bulletInterval: 3
+		intervalBullets: 1
+		intervalBullet: {
+			type: BulletType
+			randomAngleOffset: 180
+			shootEffect: none
+			smokeEffect: none
+			despawnEffect: none
+			collides: false
+			speed: 0
+			lifetime: 24
+			parts: [{
+				type: RegionPart
+				name: virtuality-glow
+				outline: false
+				layer: 82
+				color: FFE1FF00
+				colorTo: FFE1FF
+				xScl: 0.15
+				yScl: 0.9
+				y: 96
+				progress: {
+					type: life
+					op: compress
+					start: 0
+					end: 0.2
+				}
+				moves: [{
+					y: -96
+					gx: -0.15
+					gy: -0.9
+					progress: life
+				}]
+			}]
+		}
+		parts: [{
+			type: RegionPart
+			name: virtuality-ringblur
+			color: 9370DB
+			blending: additive
+			outline: false
+			layer: 86.2
+			moves: [{
+				gx: -1
+				gy: -1
+				progress: {
+					type: time
+					op: loop
+					time: 12
+				}
+			}]
+		}{
+			type: RegionPart
+			name: virtuality-glow
+			color: 7FFFFFBF
+			blending: additive
+			outline: false
+			layer: 86.2
+			xScl: 0.5
+			yScl: 0.5
+		}{
+			type: RegionPart
+			name: virtuality-glow
+			color: FFFFFF
+			colorTo: FFFFFF00
+			blending: additive
+			outline: false
+			layer: 86.2
+			xScl: 0.25
+			yScl: 0.25
+			progress: {
+				type: time
+				ops: [{
+					op: loop
+					time: 24
+				}{
+					op: curve
+					interp: slope
+				}]
+			}
+		}]
+		fragBullets: 1
+		fragOffsetMin: 0
+		fragOffsetMax: 0
+		fragBullet: {
+			type: BulletType
+			collides: false
+			lifetime: 45
+			speed: 0
+			shootEffect: none
+			smokeEffect: none
+			despawnEffect: none
+			hitEffect: none
+			parts: [{
+				type: RegionPart
+				name: virtuality-ringblur
+				color: 9370DB7F
+				colorTo: 9370DB00
+				blending: additive
+				outline: false
+				layer: 86.2
+				xScl: 0
+				yScl: 0
+				progress: {
+					type: time
+					op: loop
+					time: 9
+				}
+				moves: [{
+					gx: 4
+					gy: 4
+					progress: {
+						type: time
+						op: loop
+						time: 9
+					}
+				}]
+			}{
+				type: RegionPart
+				name: virtuality-glow
+				color: 9370DBFF
+				blending: additive
+				outline: false
+				layer: 86.2
+				xScl: 0.5
+				yScl: 0.5
+			}]
+			spawnBullets: [{
+				type: BulletType
+				randomAngleOffset: 180
+				collides: false
+				lifetime: 0
+				speed: 0
+				shootEffect: none
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: none
+				fragBullets: 39
+				fragSpread: 9.230769231
+				fragRandomSpread: 0
+				fragVelocityMin: 1
+				fragOffsetMin: 0
+				fragOffsetMax: 0
+				fragBullet: {
+					type: BulletType
+					collidesTiles: false
+					speed: 4
+					lifetime: 120
+					shootEffect: none
+					smokeEffect: none
+					despawnEffect: none
+					hitEffect: none
+					hitSize: 1
+					parts: [{
+						type: RegionPart
+						name: virtuality-glow
+						color: 9370DB7F
+						blending: additive
+						outline: false
+						layer: 86.2
+						xScl: 0.125
+						yScl: 0.125
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.1
+						color: FFFFFF
+						xScl: 0.2
+						yScl: 0.4
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.15
+						color: 5F7FBF
+						y: -0.8
+						xScl: 0.15
+						yScl: 0.3
+					}]
+				}
+			}{
+				type: BulletType
+				randomAngleOffset: 180
+				collides: false
+				lifetime: 9
+				speed: 0
+				shootEffect: none
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: none
+				fragBullets: 33
+				fragSpread: 10.90909091
+				fragRandomSpread: 0
+				fragVelocityMin: 1
+				fragOffsetMin: 0
+				fragOffsetMax: 0
+				fragBullet: {
+					type: BulletType
+					collidesTiles: false
+					speed: 4
+					lifetime: 120
+					shootEffect: none
+					smokeEffect: none
+					despawnEffect: none
+					hitEffect: none
+					hitSize: 1
+					parts: [{
+						type: RegionPart
+						name: virtuality-glow
+						color: 9370DB7F
+						blending: additive
+						outline: false
+						layer: 86.2
+						xScl: 0.125
+						yScl: 0.125
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.1
+						color: FFFFFF
+						xScl: 0.2
+						yScl: 0.4
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.15
+						color: 5F7FBF
+						y: -0.8
+						xScl: 0.15
+						yScl: 0.3
+					}]
+				}
+			}{
+				type: BulletType
+				randomAngleOffset: 180
+				collides: false
+				lifetime: 18
+				speed: 0
+				shootEffect: none
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: none
+				fragBullets: 27
+				fragSpread: 13.3333333333
+				fragRandomSpread: 0
+				fragVelocityMin: 1
+				fragOffsetMin: 0
+				fragOffsetMax: 0
+				fragBullet: {
+					type: BulletType
+					collidesTiles: false
+					speed: 4
+					lifetime: 120
+					shootEffect: none
+					smokeEffect: none
+					despawnEffect: none
+					hitEffect: none
+					hitSize: 1
+					parts: [{
+						type: RegionPart
+						name: virtuality-glow
+						color: 9370DB7F
+						blending: additive
+						outline: false
+						layer: 86.2
+						xScl: 0.125
+						yScl: 0.125
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.1
+						color: FFFFFF
+						xScl: 0.2
+						yScl: 0.4
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.15
+						color: 5F7FBF
+						y: -0.8
+						xScl: 0.15
+						yScl: 0.3
+					}]
+				}
+			}{
+				type: BulletType
+				randomAngleOffset: 180
+				collides: false
+				lifetime: 27
+				speed: 0
+				shootEffect: none
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: none
+				fragBullets: 21
+				fragSpread: 17.14285714
+				fragRandomSpread: 0
+				fragVelocityMin: 1
+				fragOffsetMin: 0
+				fragOffsetMax: 0
+				fragBullet: {
+					type: BulletType
+					collidesTiles: false
+					speed: 4
+					lifetime: 120
+					shootEffect: none
+					smokeEffect: none
+					despawnEffect: none
+					hitEffect: none
+					hitSize: 1
+					parts: [{
+						type: RegionPart
+						name: virtuality-glow
+						color: 9370DB7F
+						blending: additive
+						outline: false
+						layer: 86.2
+						xScl: 0.125
+						yScl: 0.125
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.1
+						color: FFFFFF
+						xScl: 0.2
+						yScl: 0.4
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.15
+						color: 5F7FBF
+						y: -0.8
+						xScl: 0.15
+						yScl: 0.3
+					}]
+				}
+			}{
+				type: BulletType
+				randomAngleOffset: 180
+				collides: false
+				lifetime: 36
+				speed: 0
+				shootEffect: none
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: none
+				fragBullets: 15
+				fragSpread: 24
+				fragRandomSpread: 0
+				fragVelocityMin: 1
+				fragOffsetMin: 0
+				fragOffsetMax: 0
+				fragBullet: {
+					type: BulletType
+					collidesTiles: false
+					speed: 4
+					lifetime: 120
+					shootEffect: none
+					smokeEffect: none
+					despawnEffect: none
+					hitEffect: none
+					hitSize: 1
+					parts: [{
+						type: RegionPart
+						name: virtuality-glow
+						color: 9370DB7F
+						blending: additive
+						outline: false
+						layer: 86.2
+						xScl: 0.125
+						yScl: 0.125
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.1
+						color: FFFFFF
+						xScl: 0.2
+						yScl: 0.4
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.15
+						color: 5F7FBF
+						y: -0.8
+						xScl: 0.15
+						yScl: 0.3
+					}]
+				}
+			}{
+				type: BulletType
+				randomAngleOffset: 180
+				collides: false
+				lifetime: 45
+				speed: 0
+				shootEffect: none
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: none
+				fragBullets: 9
+				fragSpread: 40
+				fragRandomSpread: 0
+				fragVelocityMin: 1
+				fragOffsetMin: 0
+				fragOffsetMax: 0
+				fragBullet: {
+					type: BulletType
+					collidesTiles: false
+					speed: 4
+					lifetime: 120
+					shootEffect: none
+					smokeEffect: none
+					despawnEffect: none
+					hitEffect: none
+					hitSize: 1
+					parts: [{
+						type: RegionPart
+						name: virtuality-glow
+						color: 9370DB7F
+						blending: additive
+						outline: false
+						layer: 86.2
+						xScl: 0.125
+						yScl: 0.125
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.1
+						color: FFFFFF
+						xScl: 0.2
+						yScl: 0.4
+					}{
+						type: RegionPart
+						name: virtuality-diamond
+						outline: false
+						layer: 86.15
+						color: 5F7FBF
+						y: -0.8
+						xScl: 0.15
+						yScl: 0.3
+					}]
+				}
+			}]
+		}
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-square
+	color: 000000
+	outline: false
+	layer: 29
+	xScl: 120
+	yScl: 67.5
+}{
+	type: RegionPart
+	name: virtuality-square
+	color: 9370DB3F
+	outline: false
+	layer: 31.05
+	xScl: 120
+	yScl: 67.5
+}{
+	type: RegionPart
+	name: item-void
+	outline: false
+	layer: 80
+	xScl: 3
+	yScl: 3
+}
+// PINK LINES
+{
+	type: RegionPart
+	name: virtuality-beam
+	outline: false
+	color: FF7FFFBF
+	blending: additive
+	layer: 81
+	y: 272
+	moves: [{
+		gy: 68
+		y: -272
+		progress: {
+			type: life
+			op: compress
+			start: 0
+			end: 0.025
+		}
+	}{
+		gx: -1
+		progress: {
+			type: life
+			op: compress
+			start: 0.045
+			end: 0.05
+		}
+	}]
+}{
+	type: RegionPart
+	rotation: -90
+	children: [{
+		type: RegionPart
+		name: virtuality-beam
+		outline: false
+		color: FF7FFFBF
+		blending: additive
+		layer: 81
+		y: 272
+		moves: [{
+			gy: 68
+			y: -272
+			progress: {
+				type: life
+				op: compress
+				start: 0
+				end: 0.025
+			}
+		}{
+			gx: -1
+			progress: {
+				type: life
+				op: compress
+				start: 0.045
+				end: 0.05
+			}
+		}]
+	}]
+}{
+	type: RegionPart
+	rotation: -60
+	children: [{
+		type: RegionPart
+		name: virtuality-beam
+		outline: false
+		color: FF7FFFBF
+		blending: additive
+		layer: 81
+		y: 272
+		moves: [{
+			gy: 68
+			y: -272
+			progress: {
+				type: life
+				op: compress
+				start: 0
+				end: 0.025
+			}
+		}{
+			gx: -1
+			progress: {
+				type: life
+				op: compress
+				start: 0.045
+				end: 0.05
+			}
+		}]
+	}]
+}{
+	type: RegionPart
+	rotation: -30
+	children: [{
+		type: RegionPart
+		name: virtuality-beam
+		outline: false
+		color: FF7FFFBF
+		blending: additive
+		layer: 81
+		y: 272
+		moves: [{
+			gy: 68
+			y: -272
+			progress: {
+				type: life
+				op: compress
+				start: 0
+				end: 0.025
+			}
+		}{
+			gx: -1
+			progress: {
+				type: life
+				op: compress
+				start: 0.045
+				end: 0.05
+			}
+		}]
+	}]
+}{
+	type: RegionPart
+	rotation: 30
+	children: [{
+		type: RegionPart
+		name: virtuality-beam
+		outline: false
+		color: FF7FFFBF
+		blending: additive
+		layer: 81
+		y: 272
+		moves: [{
+			gy: 68
+			y: -272
+			progress: {
+				type: life
+				op: compress
+				start: 0
+				end: 0.025
+			}
+		}{
+			gx: -1
+			progress: {
+				type: life
+				op: compress
+				start: 0.045
+				end: 0.05
+			}
+		}]
+	}]
+}
+// TRANSITION
+{
+	type: RegionPart
+	name: virtuality-square
+	color: FFFFFF00
+	colorTo: FFFFFF
+	outline: false
+	layer: 105
+	xScl: 120
+	yScl: 67.5
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.05
+			end: 0.175
+		}{
+			op: curve
+			interp: sine
+		}{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 1.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-ch6
+	color: 00000000
+	colorTo: 000000
+	outline: false
+	layer: 106
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.05
+			end: 0.175
+		}{
+			op: curve
+			interp: sine
+		}{
+			op: curve
+			interp: slope
+		}{
+			op: mul
+			amount: 1.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-glow
+	color: FF00FF
+	blending: additive
+	outline: false
+	layer: 81
+	xScl: 0
+	yScl: 0
+	moves: [{
+		gx: 0.75
+		gy: 0.75
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.2
+				end: 0.390625
+			}{
+				op: curve
+				interp: sine
+			}{
+				op: curve
+				interp: slope
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-glow
+	color: FF00FF7F
+	blending: additive
+	outline: false
+	layer: 81
+	xScl: 0
+	yScl: 0
+	y: 256
+	moves: [{
+		gx: 0.5
+		gy: 0.5
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 768
+			}{
+				op: loop
+				time: 8
+			}{
+				op: curve
+				interp: slope
+			}]
+		}
+	}{
+		y: -256
+		progress: {
+			type: life
+			op: compress
+			start: 0.2
+			end: 0.2000001
+		}
+	}{
+		y: 256
+		progress: {
+			type: life
+			op: compress
+			start: 0.390625
+			end: 0.390625000001
+		}
+	}]
+}
+// BACKGROUND
+{
+	type: RegionPart
+	moves: [{
+		y: -128
+		progress: {
+			type: time
+			ops: [{
+				op: loop
+				time: 480
+			}]
+		}
+	}]
+	children: [{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		y: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -128
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -128
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -128
+		y: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -256
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -256
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -256
+		y: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 128
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 128
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 128
+		y: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 256
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 256
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 256
+		y: 256
+	}]
+}
+// 2nd group
+{
+	type: RegionPart
+	xScl: -1
+	yScl: -1
+	moves: [{
+		y: -128
+		progress: {
+			type: time
+			ops: [{
+				op: loop
+				time: 768
+			}]
+		}
+	}]
+	children: [{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		y: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -128
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -128
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -128
+		y: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -256
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -256
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: -256
+		y: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 128
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 128
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 128
+		y: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 256
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 256
+		y: -128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 256
+		y: 128
+	}{
+		type: RegionPart
+		color: 000000
+		name: virtuality-clouds
+		outline: false
+		layer: 31.1
+		x: 256
+		y: 256
+	}]
+}]

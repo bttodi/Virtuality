@@ -1,0 +1,16 @@
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+targetable: false
+hittable: false
+drawCell: false
+drawMinimap: false
+hoverable: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+deathShake: 0
+loopSound: sound_t-error_on_the_dance_floor

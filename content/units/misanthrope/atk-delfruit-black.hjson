@@ -1,0 +1,52 @@
+hideDatabase: true
+type: missile
+lifetime: 150
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+drag: 0
+useUnitCap: false
+weapons: [{
+	type: Weapon
+	reload: 9999
+	mirror: false
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	bullet: {
+		collides: false
+		lifetime: 0
+		speed: 0
+		shootEffect: {
+			type: ParticleEffect
+			particles: 1
+			length: 0
+			useRotation: false
+			cone: 0
+			length: 0
+			randLength: false
+			sizeFrom: 4
+			sizeTo: 4
+			colorFrom: 000000
+			colorTo: 000000
+			layer: 33.5
+			region: virtuality-delfruit-flat
+			lifetime: 150
+		}
+		smokeEffect: none
+		despawnEffect: none
+		recoil: -1
+	}
+}]

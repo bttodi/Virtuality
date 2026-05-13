@@ -1,0 +1,74 @@
+hideDatabase: true
+type: missile
+lifetime: 1536
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+parts: [{
+	type: RegionPart
+	outline: false
+	moves: [{
+		gx: -1
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.25
+				end: 0.250000000001
+			}]
+		}
+	}]
+	children: [{
+		type: RegionPart
+		name: virtuality-backroom-back
+		outline: false
+		layer: 32
+	}{
+		type: RegionPart
+		name: virtuality-backroom-front
+		outline: false
+		layer: 115
+	}]
+}{
+	type: RegionPart
+	outline: false
+	xScl: 0
+	moves: [{
+		gx: 1
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.5
+				end: 0.500000000001
+			}]
+		}
+	}{
+		gx: -1
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.75
+				end: 0.750000000001
+			}]
+		}
+	}]
+	children: [{
+		type: RegionPart
+		name: virtuality-lovetrap-front
+		outline: false
+		layer: 115
+	}]
+}]

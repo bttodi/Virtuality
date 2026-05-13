@@ -1,0 +1,115 @@
+// bro is NOT cyan
+hideDatabase: true
+type: hover
+health: 50000
+speed: 2
+rotateSpeed: 24
+faceTarget: true
+drag: 0
+drawBody: false
+drawCell: false
+engineSize: 0
+outlineColor: 383D34
+engineColor: FFA664
+groundLayer: 116
+useEngineElevation: false
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+engines: [{
+	x: -2
+	y: -5.5
+	rotation: 270
+	radius: 1.25
+}{
+	x: 2
+	y: -5.5
+	rotation: 270
+	radius: 1.25
+}]
+weapons: [{
+	type: Weapon
+	name: argonaut-ship
+	reload: 10
+	x: 0
+	shootY: 0
+	mirror: false
+	shootCone: 180
+	shootSound: noammo
+	recoil: 0
+	layerOffset: 94
+	shootStatus: invincible
+	shootStatusDuration: 18
+	bullet: {
+		type: RailBulletType
+		length: 128
+		speed: 0
+		collides: false
+		despawnEffect: none
+		hitEffect: none
+		smokeEffect: none
+		shootEffect: {
+			type: MultiEffect
+			effects: [{
+				type: ParticleEffect
+				particles: 8
+				lifetime: 15
+				colorFrom: FFA664
+				colorTo: FFA66400
+				sizeFrom: 4
+				length: 32
+				followParent: false
+				layer: 210
+			}{
+				type: WaveEffect
+				lifetime: 8
+				sizeFrom: 8
+				sizeTo: 16
+				lightOpacity: 0
+				strokeFrom: 8
+				colorFrom: FFA664
+				colorTo: FFA66400
+				followParent: false
+			}]
+		}
+	}
+}{
+	type: Weapon
+	alternate: false
+	x: 2
+	y: -5
+	shootY: 0
+	shootCone: 360
+	recoil: 0
+	shootSound: none
+	alwaysShooting: true
+	alwaysContinuous: true
+	bullet: {
+		type: BulletType
+		speed: 0
+		collides: false
+		despawnEffect: none
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		trailLength: 8
+		trailWidth: 1
+		trailColor: FFA6647F
+		layer: 94
+	}
+}]
+abilities: [{
+	type: MoveEffectAbility
+	rangeX: 3
+	rangeY: 3
+	rotateEffect: true
+	effect: {
+		type: ParticleEffect
+		particles: 1
+		lifetime: 15
+		colorFrom: FFA664
+		colorTo: FFA66400
+		cone: 0
+		length: -16
+	}
+}]

@@ -1,0 +1,286 @@
+hideDatabase: true
+type: missile
+lifetime: 312
+health: 750
+speed: 0
+drag: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: RailBulletType
+		collides: false
+		collidesGround: false
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		fragOnHit: false
+		despawnEffect: none
+		fragRandomSpread: 0
+		fragSpread: 180
+		fragBullets: 2
+		fragOffsetMin: 24
+		fragOffsetMax: 24
+		fragBullet: {
+			type: RailBulletType
+			collidesTiles: false
+			length: 128
+			pierceEffect: none
+		}
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-misanthrope-laser1
+	outline: false
+	layer: 87
+	x: -40
+	moves: [{
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.25
+				end: 0.25000000000001
+			}]
+		}
+	}{
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.5
+				end: 0.50000000000001
+			}]
+		}
+	}{
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.75
+				end: 0.75000000000001
+			}]
+		}
+	}{
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.99999999999999
+				end: 1
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-misanthrope-laser2
+	outline: false
+	layer: 87
+	yScl: 0
+	x: -40
+	moves: [{
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.25
+				end: 0.25000000000001
+			}]
+		}
+	}{
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.5
+				end: 0.50000000000001
+			}]
+		}
+	}{
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.75
+				end: 0.75000000000001
+			}]
+		}
+	}{
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.99999999999999
+				end: 1
+			}]
+		}
+	}]
+}
+// FLASH
+{
+	type: RegionPart
+	name: virtuality-misanthrope-laser1
+	outline: false
+	layer: 87.1
+	blending: additive
+	color: FFFFFF00
+	colorTo: FFFFFFBF
+	x: -40
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 312
+		}{
+			op: loop
+			time: 24
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}{
+			op: curve
+			interp: reverse
+		}]
+	}
+	moves: [{
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.25
+				end: 0.25000000000001
+			}]
+		}
+	}{
+		gy: -1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.5
+				end: 0.50000000000001
+			}]
+		}
+	}{
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.75
+				end: 0.75000000000001
+			}]
+		}
+	}{
+		gy: 1
+		progress: {
+			type: life
+			ops: [{
+				op: mul
+				amount: 312
+			}{
+				op: loop
+				time: 48
+			}{
+				op: compress
+				start: 0.99999999999999
+				end: 1
+			}]
+		}
+	}]
+}]

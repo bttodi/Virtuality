@@ -1,0 +1,545 @@
+hideDatabase: true
+type: missile
+lifetime: 768
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 4
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	inaccuracy: 180
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 180
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		parts: [{
+			type: RegionPart
+			name: virtuality-dustcloud
+			layer: 115
+			outline: false
+			color: 04081000
+			colorTo: 000000
+			xScl: 0
+			yScl: 0
+			progress: {
+				type: life
+				ops: [{
+					op: curve
+					interp: pow2In
+				}{
+					op: curve
+					interp: slope
+				}]
+			}
+			moves: [{
+				gx: 3
+				gy: 3
+				y: 256
+				progress: {
+					type: life
+					ops: [{
+						op: curve
+						interp: pow2In
+					}]
+				}
+			}{
+				rot: 360
+				progress: {
+					type: time
+					ops: [{
+						op: loop
+						time: 360
+					}]
+				}
+			}]
+		}]
+	}
+}
+// GRATES ARE FIXED BECAUSE HITREG
+{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 9999
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootSpread
+		shots: 3
+		shotDelay: 192
+		firstShotDelay: 96
+		spread: 137.5
+	}
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 300
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		parts: [{
+			type: RegionPart
+			name: virtuality-grate
+			layer: 115
+			outline: false
+			color: 04081000
+			colorTo: 000000
+			xScl: 2
+			yScl: 2
+			progress: {
+				type: life
+				ops: [{
+					op: curve
+					interp: pow4In
+				}{
+					op: curve
+					interp: slope
+				}]
+			}
+			moves: [{
+				gx: 2
+				gy: 2
+				progress: {
+					type: life
+					ops: [{
+						op: curve
+						interp: pow2In
+					}]
+				}
+			}]
+		}]
+	}
+}{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 9999
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	baseRotation: -137.5
+	shoot: {
+		type: ShootAlternate
+		firstShotDelay: 96
+		shots: 128
+		barrels: 128
+		spread: 4
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 250
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		fragBullets: 1
+		fragRandomSpread: 0
+		fragOffsetMax: 0
+		fragOffsetMin: 0
+		fragBullet: {
+			type: RailBulletType
+			angleOffset: -47.5
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+		}
+	}
+}{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 9999
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootAlternate
+		firstShotDelay: 288
+		shots: 128
+		barrels: 128
+		spread: 4
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 250
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		fragBullets: 1
+		fragRandomSpread: 0
+		fragOffsetMax: 0
+		fragOffsetMin: 0
+		fragBullet: {
+			type: RailBulletType
+			angleOffset: 90
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+		}
+	}
+}{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 9999
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	baseRotation: 137.5
+	shoot: {
+		type: ShootAlternate
+		firstShotDelay: 480
+		shots: 128
+		barrels: 128
+		spread: 4
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 250
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		fragBullets: 1
+		fragRandomSpread: 0
+		fragOffsetMax: 0
+		fragOffsetMin: 0
+		fragBullet: {
+			type: RailBulletType
+			angleOffset: 227.5
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+		}
+	}
+}
+// TRUSSES
+{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 72
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	inaccuracy: 180
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 180
+		speed: 0.25
+		velocityScaleRandMin: 0
+		drag: -0.01
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		parts: [{
+			type: RegionPart
+			name: virtuality-truss
+			layer: 115
+			outline: false
+			color: 04081000
+			colorTo: 000000
+			xScl: 0.5
+			yScl: 0.5
+			progress: {
+				type: life
+				ops: [{
+					op: curve
+					interp: pow4In
+				}{
+					op: curve
+					interp: slope
+				}]
+			}
+			moves: [{
+				gx: 0.5
+				gy: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: curve
+						interp: pow2In
+					}]
+				}
+			}]
+		}]
+		intervalBullets: 2
+		intervalDelay: 150
+		bulletInterval: 150
+		intervalRandomSpread: 0
+		intervalSpread: 180
+		intervalBullet: {
+			type: BulletType
+			collides: false
+			speed: 0
+			lifetime: 0
+			despawnEffect: none
+			hitEffect: none
+			spawnBullets: [{
+				type: RailBulletType
+				collidesTiles: false
+				length: 256
+				pierceEffect: none
+			}{
+				type: BulletType
+				collides: false
+				speed: 0
+				lifetime: 0
+				despawnEffect: none
+				hitEffect: none
+				fragRandomSpread: 0
+				fragAngle: 90
+				fragBullets: 1
+				fragOffsetMin: 4
+				fragOffsetMax: 4
+				fragBullet: {
+					type: RailBulletType
+					angleOffset: -90
+					collidesTiles: false
+					length: 256
+					pierceEffect: none
+				}
+			}{
+				type: BulletType
+				collides: false
+				speed: 0
+				lifetime: 0
+				despawnEffect: none
+				hitEffect: none
+				fragRandomSpread: 0
+				fragAngle: 90
+				fragBullets: 1
+				fragOffsetMin: 8
+				fragOffsetMax: 8
+				fragBullet: {
+					type: RailBulletType
+					angleOffset: -90
+					collidesTiles: false
+					length: 256
+					pierceEffect: none
+				}
+			}{
+				type: BulletType
+				collides: false
+				speed: 0
+				lifetime: 0
+				despawnEffect: none
+				hitEffect: none
+				fragRandomSpread: 0
+				fragAngle: 90
+				fragBullets: 1
+				fragOffsetMin: -4
+				fragOffsetMax: -4
+				fragBullet: {
+					type: RailBulletType
+					angleOffset: -90
+					collidesTiles: false
+					length: 256
+					pierceEffect: none
+				}
+			}{
+				type: BulletType
+				collides: false
+				speed: 0
+				lifetime: 0
+				despawnEffect: none
+				hitEffect: none
+				fragRandomSpread: 0
+				fragAngle: 90
+				fragBullets: 1
+				fragOffsetMin: -8
+				fragOffsetMax: -8
+				fragBullet: {
+					type: RailBulletType
+					angleOffset: -90
+					collidesTiles: false
+					length: 256
+					pierceEffect: none
+				}
+			}]
+		}
+	}
+}
+// ROCKS
+{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 8
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	inaccuracy: 180
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 180
+		speed: 0.2
+		velocityScaleRandMin: 0
+		drag: -0.015
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		intervalBullets: 1
+		intervalDelay: 150
+		bulletInterval: 150
+		intervalBullet: {
+			type: BulletType
+			collides: false
+			speed: 0
+			lifetime: 0
+			shootEffect: none
+			smokeEffect: none
+			despawnEffect: none
+			hitEffect: none
+			splashDamage: 67
+			splashDamageRadius: 8
+		}
+		parts: [{
+			type: RegionPart
+			name: circle
+			layer: 115
+			outline: false
+			color: 04081000
+			colorTo: 000000
+			xScl: 0
+			yScl: 0
+			progress: {
+				type: life
+				ops: [{
+					op: curve
+					interp: pow4In
+				}{
+					op: curve
+					interp: slope
+				}]
+			}
+			moves: [{
+				gx: 0.5
+				gy: 0.5
+				progress: {
+					type: life
+					ops: [{
+						op: curve
+						interp: pow2In
+					}]
+				}
+			}]
+		}]
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-square
+	color: 000000
+	outline: false
+	layer: 31
+	xScl: 120
+	yScl: 67.5
+}{
+	type: RegionPart
+	name: virtuality-ch7
+	color: FFFFFF
+	colorTo: FFFFFF00
+	outline: false
+	layer: 119.5
+	progress: {
+		type: life
+		op: compress
+		start: 0
+		end: 0.035
+	}
+	
+}{
+	type: RegionPart
+	name: virtuality-ch7
+	color: 346A96
+	colorTo: 346A9600
+	outline: false
+	layer: 119.5
+	progress: {
+		type: life
+		op: compress
+		start: 0.1
+		end: 0.135
+	}
+	
+}{
+	type: RegionPart
+	name: virtuality-screenvignette
+	color: 000000
+	outline: false
+	layer: 119
+}{
+	type: RegionPart
+	name: virtuality-glow
+	color: 0B2433
+	xScl: 4
+	yScl: 4
+	outline: false
+	layer: 32
+}{
+	type: RegionPart
+	name: virtuality-glow
+	blending: additive
+	color: 346A962F
+	xScl: 8
+	yScl: 6
+	outline: false
+	layer: 116
+}{
+	type: RegionPart
+	name: virtuality-glow
+	blending: additive
+	color: 346A962F
+	xScl: 4
+	yScl: 3
+	outline: false
+	layer: 116
+}]

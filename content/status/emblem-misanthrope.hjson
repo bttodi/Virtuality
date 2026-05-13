@@ -1,0 +1,10 @@
+hideDatabase: true
+research: {
+	parent: sector-4-misanthrope
+	objectives: [
+		{
+			type: SectorComplete
+			preset: sector-4-misanthrope
+		}
+	]
+}

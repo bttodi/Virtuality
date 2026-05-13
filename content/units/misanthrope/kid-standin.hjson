@@ -1,0 +1,72 @@
+hideDatabase: true
+type: missile
+lifetime: 1536
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 1024
+parts: [{
+	type: RegionPart
+	name: virtuality-kid-idle
+	color: FFFFFF
+	outline: false
+	layer: 86
+	y: -510
+	xScl: -1
+}{
+	type: RegionPart
+	name: virtuality-kid-idle
+	color: FFFFFF
+	outline: false
+	layer: 86
+	y: 510
+	rotation: 180
+}{
+	type: RegionPart
+	name: virtuality-kid-jump
+	color: FFFFFF
+	outline: false
+	layer: 86
+	originY: 510
+	y: -510
+	rotation: 60
+}{
+	type: RegionPart
+	name: virtuality-kid-jump
+	color: FFFFFF
+	outline: false
+	layer: 86
+	originY: 510
+	y: -510
+	xScl: -1
+	rotation: 240
+}{
+	type: RegionPart
+	name: virtuality-kid-fall
+	color: FFFFFF
+	outline: false
+	layer: 86
+	originY: 510
+	y: -510
+	rotation: 120
+}{
+	type: RegionPart
+	name: virtuality-kid-fall
+	color: FFFFFF
+	outline: false
+	layer: 86
+	originY: 510
+	y: -510
+	xScl: -1
+	rotation: 300
+}]

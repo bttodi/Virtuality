@@ -1,0 +1,24 @@
+hideDatabase: true
+type: hover
+health: 50000
+speed: 2
+rotateSpeed: 24
+faceTarget: true
+drag: 0
+drawBody: false
+drawCell: false
+engineSize: 0
+outlineColor: 383D34
+engineColor: FFA664
+groundLayer: 116
+useEngineElevation: false
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+parts: [{
+	type: RegionPart
+	name: virtuality-argonaut-ship-cell
+	color: FFA664
+	outline: false
+	layer: 115
+}]

@@ -1,0 +1,83 @@
+hideDatabase: true
+type: hover
+health: 50000
+speed: 0
+rotateSpeed: 0
+faceTarget: true
+drag: 0
+drawBody: false
+drawCell: false
+engineSize: 0
+outlineColor: 383D34
+engineColor: FFA664
+groundLayer: 116
+useEngineElevation: false
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+engines: [{
+	x: -2
+	y: -5.5
+	rotation: 270
+	radius: 1.25
+}{
+	x: 2
+	y: -5.5
+	rotation: 270
+	radius: 1.25
+}]
+weapons: [{
+	type: Weapon
+	name: argonaut-ship
+	reload: 20
+	x: 0
+	shootY: 0
+	mirror: false
+	shootCone: 180
+	shootSound: noammo
+	recoil: 0
+	bullet: {
+		type: RailBulletType
+		length: 128
+		speed: 0
+		collides: false
+		despawnEffect: none
+		hitEffect: none
+		smokeEffect: none
+		shootEffect: none
+	}
+}]
+parts: [{
+	type: EffectSpawnerPart
+	effectInterval: 0.1
+	effect: {
+		type: MultiEffect
+		effects: [{
+			type: ParticleEffect
+			particles: 1
+			lifetime: 60
+			sizeTo: 2
+			baseLength: 0
+			length: -375
+			randLength: false
+			cone: 0
+			colorFrom: FFA664
+			colorTo: FFA664
+			layer: 94
+			useRotation: false
+		}{
+			type: ParticleEffect
+			particles: 1
+			lifetime: 10
+			sizeTo: 2
+			baseLength: 0
+			length: -62.5
+			randLength: false
+			cone: 0
+			colorFrom: FFFFFF
+			colorTo: FFA664
+			layer: 94.1
+			useRotation: false
+		}]
+	}
+}]

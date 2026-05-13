@@ -1,0 +1,184 @@
+hideDatabase: true
+type: missile
+lifetime: 384
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	reload: 5
+	mirror: false
+	x: 0
+	y: 72
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	inaccuracy: 180
+	shoot: {
+		shots: 2
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		lifetime: 0
+		speed: 0
+		collides: false
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: BulletType
+			angleOffset: 270
+			randomAngleOffset: 90
+			lifetime: 120
+			speed: 2
+			despawnEffect: none
+			hitEffect: none
+			pierce: true
+			collidesTiles: false
+			hitSize: 2
+			parts: [{
+				type: RegionPart
+				name: virtuality-blade
+				layer: 112
+				outline: false
+				color: 3FBFBF
+			}{
+				type: RegionPart
+				name: virtuality-glow
+				layer: 112
+				outline: false
+				color: 3FBFBF1F
+				blending: additive
+				xScl: 0.5
+				yScl: 0.5
+			}]
+		}]
+	}
+}{
+	type: Weapon
+	reload: 5
+	mirror: false
+	x: 0
+	y: 72
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	inaccuracy: 180
+	shoot: {
+		firstShotDelay: 192
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		lifetime: 0
+		speed: 0
+		collides: false
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: BulletType
+			angleOffset: 270
+			randomAngleOffset: 90
+			lifetime: 120
+			speed: 2
+			despawnEffect: none
+			hitEffect: none
+			pierce: true
+			collidesTiles: false
+			hitSize: 2
+			rotateSpeed: 0.5
+			parts: [{
+				type: RegionPart
+				name: virtuality-blade
+				layer: 112
+				outline: false
+				color: BFBF00
+			}{
+				type: RegionPart
+				name: virtuality-glow
+				layer: 112
+				outline: false
+				color: BFBF3F1F
+				blending: additive
+				xScl: 0.5
+				yScl: 0.5
+			}]
+		}{
+			type: BulletType
+			angleOffset: 270
+			randomAngleOffset: 90
+			lifetime: 120
+			speed: 2
+			despawnEffect: none
+			hitEffect: none
+			pierce: true
+			collidesTiles: false
+			hitSize: 2
+			rotateSpeed: -0.5
+			parts: [{
+				type: RegionPart
+				name: virtuality-blade
+				layer: 112
+				outline: false
+				color: BFBF00
+			}{
+				type: RegionPart
+				name: virtuality-glow
+				layer: 112
+				outline: false
+				color: BFBF3F1F
+				blending: additive
+				xScl: 0.5
+				yScl: 0.5
+			}]
+		}]
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-square
+	outline: false
+	xScl: 0
+	yScl: 38
+	layer: 32.15
+	color: FFFFFF7F
+	colorTo: FFFFFF00
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.75
+			end: 0.85
+		}{
+			op: curve
+			interp: pow2Out
+		}]
+	}
+	moves: [{
+		gx: 50
+		progress: {
+			type: life
+			op: compress
+			start: 0.75
+			end: 0.75000000001
+		}
+	}]
+}]

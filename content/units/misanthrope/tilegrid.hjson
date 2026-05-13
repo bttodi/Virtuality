@@ -1,0 +1,5155 @@
+hideDatabase: true
+type: missile
+lifetime: 768
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [
+// 				1111111111111111111111111
+{
+	type: Weapon
+	x: 0
+	shootY: 0
+	recoil: 0
+	reload: 120
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 0
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: none
+		smokeEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}]
+}
+// 				2222222222222222222222222
+{
+	type: Weapon
+	x: 0
+	shootY: 0
+	recoil: 0
+	reload: 120
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 24
+	}
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 0
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: none
+		smokeEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}]
+}
+// 				3333333333333333333333333
+{
+	type: Weapon
+	x: 0
+	shootY: 0
+	recoil: 0
+	reload: 120
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 48
+	}
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 0
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: none
+		smokeEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}]
+}
+// 				4444444444444444444444444
+{
+	type: Weapon
+	x: 0
+	shootY: 0
+	recoil: 0
+	reload: 120
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 72
+	}
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 0
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: none
+		smokeEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}]
+}
+// 				5555555555555555555555555
+{
+	type: Weapon
+	x: 0
+	shootY: 0
+	recoil: 0
+	reload: 120
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 96
+	}
+	bullet: {
+		type: BulletType
+		collides: false
+		lifetime: 0
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: none
+		smokeEffect: none
+	}
+	parts: [{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -32
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -16
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 0
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 16
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: 32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 32
+		y: -32
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: 16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: -16
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: 0
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -96
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -80
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -64
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: -48
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: 96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 48
+		y: -96
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: 80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 64
+		y: -80
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: 64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 80
+		y: -64
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: 48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}{
+		type: RegionPart
+		name: virtuality-tile
+		color: 7295A87F
+		colorTo: D3DADE7F
+		outline: false
+		layer: 84
+		x: 96
+		y: -48
+		growX: -0.2
+		growY: -0.2
+		progress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+		growProgress: {
+			type: recoil
+			ops: [{
+				op: compress
+				start: 0.8
+				end: 1
+			}]
+		}
+	}]
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-square
+	color: 04121A
+	outline: false
+	layer: 40
+	xScl: 120
+	yScl: 67.5
+}
+// TRANSITION
+{
+	type: RegionPart
+	name: virtuality-square
+	color: 9785F2BF
+	colorTo: 00000000
+	outline: false
+	layer: 105
+	xScl: 120
+	yScl: 67.5
+	progress: {
+		type: life
+		ops: [{
+			op: compress
+			start: 0.1
+			end: 0.100001
+		}]
+	}
+}{
+	type: RegionPart
+	moves: [{
+		gx: -1
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.1
+				end: 0.100001
+			}]
+		}
+	}]
+	children: [{
+		type: RegionPart
+		name: virtuality-ch2
+		color: 000000
+		outline: false
+		layer: 105.5
+		moves: [{
+			y: 6767
+			progress: {
+				type: life
+				ops: [{
+					op: mul
+					amount: 768
+				}{
+					op: loop
+					time: 12
+				}{
+					op: compress
+					start: 0
+					end: 0.00001
+				}]
+			}
+		}{
+			y: -6767
+			progress: {
+				type: life
+				ops: [{
+					op: mul
+					amount: 768
+				}{
+					op: loop
+					time: 12
+				}{
+					op: compress
+					start: 0.25
+					end: 0.250001
+				}]
+			}
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-ch2
+		color: 000000
+		outline: false
+		layer: 105.5
+		x: -24
+		y: -48
+		moves: [{
+			y: 6767
+			progress: {
+				type: life
+				ops: [{
+					op: mul
+					amount: 768
+				}{
+					op: add
+					amount: 4
+				}{
+					op: loop
+					time: 12
+				}{
+					op: compress
+					start: 0
+					end: 0.00001
+				}]
+			}
+		}{
+			y: -6767
+			progress: {
+				type: life
+				ops: [{
+					op: mul
+					amount: 768
+				}{
+					op: add
+					amount: 4
+				}{
+					op: loop
+					time: 12
+				}{
+					op: compress
+					start: 0.25
+					end: 0.250001
+				}]
+			}
+		}]
+	}{
+		type: RegionPart
+		name: virtuality-ch2
+		color: 000000
+		outline: false
+		layer: 105.5
+		x: 24
+		y: 48
+		moves: [{
+			y: 6767
+			progress: {
+				type: life
+				ops: [{
+					op: mul
+					amount: 768
+				}{
+					op: add
+					amount: 8
+				}{
+					op: loop
+					time: 12
+				}{
+					op: compress
+					start: 0
+					end: 0.00001
+				}]
+			}
+		}{
+			y: -6767
+			progress: {
+				type: life
+				ops: [{
+					op: mul
+					amount: 768
+				}{
+					op: add
+					amount: 8
+				}{
+					op: loop
+					time: 12
+				}{
+					op: compress
+					start: 0.25
+					end: 0.250001
+				}]
+			}
+		}]
+	}]
+}{
+	type: RegionPart
+	xScl: 0
+	yScl: 100
+	moves: [{
+		gx: 15
+		x: 30
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0.035
+				end: 0.1
+			}{
+				op: curve
+				interp: circleOut
+			}]
+		}
+	}]
+	children: [{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: -360
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: -300
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: -240
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: -180
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: -120
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: -60
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: 60
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: 120
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: 180
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: 240
+	}{
+		type: RegionPart
+		name: virtuality-square
+		color: 000000
+		outline: false
+		layer: 106
+		rotation: 30
+		x: 300
+	}]
+}
+// OUTER
+{
+	type: RegionPart
+	name: virtuality-screen
+	color: 04121A
+	outline: false
+	layer: 42
+	xScl: 7.5
+	yScl: 2
+	y: -128
+	moves: [{
+		y: 16
+		progress: reload
+	}]
+}{
+	type: RegionPart
+	name: virtuality-screen
+	color: 04121A
+	outline: false
+	layer: 42
+	xScl: 7.5
+	yScl: 2
+	moves: [{
+		y: 16
+		progress: reload
+	}]
+}{
+	type: RegionPart
+	name: virtuality-screen
+	color: 04121A
+	outline: false
+	layer: 42
+	xScl: 7.5
+	yScl: 2
+	y: 128
+	moves: [{
+		y: 16
+		progress: reload
+	}]
+}{
+	type: HaloPart
+	haloRadius: 160
+	radius: 32
+	shapes: 16
+	shapeRotation: 45
+	sides: 4
+	haloRotateSpeed: 0.2
+	color: 7295A81F
+	layer: 41
+}{
+	type: RegionPart
+	outline: false
+	moveRot: 120
+	progress: {
+		type: reload
+		ops: [{
+			op: compress
+			start: 0.75
+			end: 1
+		}{
+			op: curve
+			interp: sine
+		}]
+	}
+	children: [{
+		type: HaloPart
+		haloRadius: 128
+		radius: 8
+		haloRotateSpeed: 0.2
+		shapeRotation: 180
+		color: 7295A83F
+		colorTo: 7295A87F
+		layer: 81
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0.75
+				end: 1
+			}{
+				op: curve
+				interp: slope
+			}]
+		}
+	}]
+}{
+	type: RegionPart
+	outline: false
+	moveRot: 40
+	progress: {
+		type: reload
+		ops: [{
+			op: curve
+			interp: sine
+		}]
+	}
+	children: [{
+		type: HaloPart
+		haloRadius: 192
+		radius: 32
+		shapes: 9
+		sides: 4
+		haloRotateSpeed: 0.2
+		color: 7295A83F
+		colorTo: 7295A86F
+		layer: 41
+		progress: {
+			type: reload
+			ops: [{
+				op: compress
+				start: 0.25
+				end: 0.75
+			}{
+				op: curve
+				interp: slope
+			}]
+		}
+	}]
+}
+// INNER
+{
+	type: ShapePart
+	hollow: true
+	radius: 64
+	stroke: 4
+	color: 7295A82F
+	layer: 81
+	rotateSpeed: -0.25
+}{
+	type: ShapePart
+	circle: true
+	hollow: true
+	radius: 36
+	stroke: 72
+	color: 7295A82F
+	layer: 80.5
+}{
+	type: ShapePart
+	circle: true
+	hollow: true
+	radius: 34
+	stroke: 68
+	color: 04121A
+	layer: 80.6
+}{
+	type: HaloPart
+	haloRadius: 64
+	radius: 64
+	haloRotateSpeed: 0.5
+	shapeRotation: 180
+	color: 04121A
+	layer: 80.6
+}]

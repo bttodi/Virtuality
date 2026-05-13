@@ -1,0 +1,107 @@
+hideDatabase: true
+type: missile
+lifetime: 600
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	x: 0
+	shootY: 0
+	reload: 24
+	xRand: 135
+	mirror: false
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 48
+		speed: 0
+		hitEffect: none
+		despawnEffect: none
+		shootEffect: none
+		smokeEffect: none
+		fragBullets: 1
+		fragRandomSpread: 0
+		fragVelocityMin: 1
+		fragOffsetMin: 0
+		fragOffsetMax: 0
+		fragAngle: 180
+		fragBullet: {
+			type: BulletType
+			collides: false
+			lifetime: 20
+			speed: 0
+			hitEffect: none
+			despawnEffect: none
+			bulletInterval: 2
+			intervalRandomSpread: 0
+			intervalBullet: {
+				type: RailBulletType
+				damage: 1
+				collidesTiles: false
+				length: 512
+				pierceEffect: none
+			}
+			drawSize: 64
+			parts: [{
+				type: RegionPart
+				name: virtuality-square
+				color: FFFFFF
+				colorTo: 9785F2
+				outline: false
+				layer: 84
+				y: 320
+				yScl: 160
+				progress: {
+					type: life
+					ops: [{
+						op: compress
+						start: 0
+						end: 0.25
+					}{
+						op: curve
+						interp: circleIn
+					}]
+				}
+				moves: [{
+					gx: -1
+					progress: {
+						type: life
+						ops: [{
+							op: compress
+							start: 0.8
+							end: 1
+						}]
+					}
+				}]
+			}]
+		}
+		drawSize: 64
+		parts: [{
+			type: RegionPart
+			name: virtuality-square
+			color: BEB6EF00
+			colorTo: 9785F27F
+			outline: false
+			layer: 84
+			y: -320
+			yScl: 160
+			progress: life
+		}]
+	}
+}]

@@ -1,0 +1,356 @@
+hideDatabase: true
+type: missile
+lifetime: 1536
+health: 750
+speed: 0
+drag: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+parts: [{
+	type: RegionPart
+	name: virtuality-mask-guy
+	layer: 215
+	outline: false
+}
+///////////////////////////////////////////////// 1 C1024
+{
+	type: RegionPart
+	name: virtuality-square
+	layer: 115
+	outline: false
+	color: 5DECDC
+	colorTo: DFDFDF
+	xScl: 50
+	yScl: 38
+	layer: 31.5
+	progress: {
+		type: life
+		op: compress
+		start: 0
+		end: 0.002
+	}
+	moves: [{
+		gx: -50
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-lovetrap-flat
+	layer: 32
+	outline: false
+	color: 93333F
+	colorTo: 3E3E3E
+	progress: {
+		type: life
+		op: compress
+		start: 0
+		end: 0.002
+	}
+	moves: [{
+		gx: -1
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}]
+}
+///////////////////////////////////////////////// 2 GOTHIC
+{
+	type: RegionPart
+	name: virtuality-square
+	layer: 32.1
+	color: 0A0A33
+	outline: false
+	xScl: 0
+	yScl: 38
+	moves: [{
+		gx: 50
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}{
+		gx: -50
+		progress: {
+			type: life
+			op: compress
+			start: 0.5
+			end: 0.500000000001
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-gothic
+	layer: 33
+	outline: false
+	xScl: 0
+	moves: [{
+		gx: 1
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}{
+		gx: -1
+		progress: {
+			type: life
+			op: compress
+			start: 0.5
+			end: 0.500000000001
+		}
+	}]
+}{
+	type: RegionPart
+	outline: false
+	name: virtuality-square
+	layer: 33.1
+	color: 0000007F
+	xScl: 0
+	yScl: 38
+	moves: [{
+		gx: 50
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}{
+		gx: -50
+		progress: {
+			type: life
+			op: compress
+			start: 0.5
+			end: 0.500000000001
+		}
+	}]
+}{
+	type: RegionPart
+	y: 1024
+	moves: [{
+		y: -1024
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.2500000000001
+		}
+	}{
+		y: 1024
+		progress: {
+			type: life
+			op: compress
+			start: 0.5
+			end: 0.5000000000001
+		}
+	}]
+	children: [{
+		type: EffectSpawnerPart
+		x: -38
+		y: 76
+		effectInterval: 1
+		width: 250
+		effect: {
+			type: ParticleEffect
+			particles: 1
+			colorFrom: BFBFBF
+			colorTo: BFBFBF
+			lifetime: 64
+			cone: 0
+			baseRotation: 300
+			layer: 32.1
+			useRotation: false
+			length: 192
+			randLength: false
+			line: true
+			strokeFrom: 0.5
+			strokeTo: 0.5
+			lenTo: 4
+		}
+	}]
+}
+///////////////////////////////////////////////// CHATTE
+{
+	type: RegionPart
+	name: virtuality-square
+	layer: 33
+	outline: false
+	color: 991446
+	xScl: 0
+	yScl: 38
+	moves: [{
+		gx: 50
+		progress: {
+			type: life
+			op: compress
+			start: 0.5
+			end: 0.500000000001
+		}
+	}{
+		gx: -50
+		progress: {
+			type: life
+			op: compress
+			start: 0.75
+			end: 0.750000000001
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-glow
+	color: FFFFFF1F
+	blending: additive
+	xScl: 0
+	yScl: 4
+	outline: false
+	layer: 33
+	moves: [{
+		gx: 4
+		progress: {
+			type: life
+			op: compress
+			start: 0.5
+			end: 0.500000000001
+		}
+	}{
+		gx: -4
+		progress: {
+			type: life
+			op: compress
+			start: 0.75
+			end: 0.750000000001
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-5block
+	layer: 33.1
+	y: -16
+	outline: false
+	xScl: 0
+	moves: [{
+		gx: 1
+		progress: {
+			type: life
+			op: compress
+			start: 0.5
+			end: 0.500000000001
+		}
+	}{
+		gx: -1
+		progress: {
+			type: life
+			op: compress
+			start: 0.75
+			end: 0.750000000001
+		}
+	}]
+}
+///////////////////////////////////////////////// FANTAZMA
+{
+	type: RegionPart
+	name: virtuality-square
+	layer: 119
+	outline: false
+	color: 0000007F
+	xScl: 0
+	yScl: 38
+	moves: [{
+		gx: 50
+		progress: {
+			type: life
+			op: compress
+			start: 0.75
+			end: 0.7500000000001
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-platform-invert
+	layer: 33
+	outline: false
+	y: -16
+	xScl: 0
+	moves: [{
+		gx: 1
+		progress: {
+			type: life
+			op: compress
+			start: 0.75
+			end: 0.7500000000001
+		}
+	}]
+}{
+	type: RegionPart
+	y: 1024
+	moves: [{
+		y: -1024
+		progress: {
+			type: life
+			op: compress
+			start: 0.75
+			end: 0.7500000000001
+		}
+	}]
+	children: [{
+		type: EffectSpawnerPart
+		y: -78
+		effectInterval: 1
+		width: 200
+		effect: {
+			type: ParticleEffect
+			particles: 1
+			lifetime: 20
+			cone: 0
+			baseRotation: 90
+			offset: -90
+			layer: 117
+			region: virtuality-delfruit-flat
+			useRotation: false
+			length: 32
+			randLength: false
+			colorTo: FFFFFF00
+			sizeFrom: 4
+		}
+	}{
+		type: EffectSpawnerPart
+		y: 78
+		effectInterval: 1
+		width: 200
+		effect: {
+			type: ParticleEffect
+			particles: 1
+			lifetime: 24
+			cone: 0
+			baseRotation: 270
+			offset: -270
+			layer: 117
+			region: virtuality-delfruit-flat
+			useRotation: false
+			length: 32
+			randLength: false
+			colorTo: FFFFFF00
+			sizeFrom: 4
+		}
+	}]
+}]

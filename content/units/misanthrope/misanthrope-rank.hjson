@@ -1,0 +1,417 @@
+hideDatabase: true
+health: 500
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 8192
+weapons: [{
+	type: Weapon
+	mirror: false
+	reload: 9999999
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		firstShotDelay: 1
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 67
+		speed: 0
+		shootEffect: none
+		smokeEffect: none
+		hitEffect: none
+		despawnEffect: none
+		drawSize: 4096
+		spawnBullets: [{
+			type: BulletType
+			angleOffset: 90
+			collides: false
+			lifetime: 192
+			speed: 0
+			hitEffect: none
+			despawnEffect: none
+			drawSize: 4096
+			parts: [{
+				type: RegionPart
+				layer: -1
+				outline: false
+				color: 00000000
+				x: 128
+				y: 72
+				children: [{
+					type: RegionPart
+					name: virtuality-rank-s
+					outline: false
+					color: FFFFFF
+					colorTo: 9785F200
+					layer: 118
+					xScl: 0
+					yScl: 0
+					progress: {
+						type: life
+						ops: [{
+							op: compress
+							start: 0
+							end: 0.2
+						}{
+							op: curve
+							interp: pow2Out
+						}]
+					}
+					moves: [{
+						gx: 1
+						gy: 1
+						progress: {
+							type: life
+							op: compress
+							start: 0.5
+							end: 0.5000001
+						}
+					}{
+						gx: 4
+						gy: 4
+						progress: {
+							type: life
+							ops: [{
+								op: compress
+								start: 0
+								end: 0.2
+							}{
+								op: curve
+								interp: pow5Out
+							}]
+						}
+					}]
+				}{
+					type: RegionPart
+					name: virtuality-rank-a
+					outline: false
+					color: FFFFFF
+					colorTo: 9785F200
+					layer: 118
+					xScl: 0
+					yScl: 0
+					y: 512
+					progress: {
+						type: life
+						ops: [{
+							op: compress
+							start: 0
+							end: 0.2
+						}{
+							op: curve
+							interp: pow2Out
+						}]
+					}
+					moves: [{
+						gx: 1
+						gy: 1
+						progress: {
+							type: life
+							op: compress
+							start: 0.5
+							end: 0.5000001
+						}
+					}{
+						gx: 4
+						gy: 4
+						progress: {
+							type: life
+							ops: [{
+								op: compress
+								start: 0
+								end: 0.2
+							}{
+								op: curve
+								interp: pow5Out
+							}]
+						}
+					}]
+				}{
+					type: RegionPart
+					name: virtuality-rank-b
+					outline: false
+					color: FFFFFF
+					colorTo: 9785F200
+					layer: 118
+					xScl: 0
+					yScl: 0
+					y: 1024
+					progress: {
+						type: life
+						ops: [{
+							op: compress
+							start: 0
+							end: 0.2
+						}{
+							op: curve
+							interp: pow2Out
+						}]
+					}
+					moves: [{
+						gx: 1
+						gy: 1
+						progress: {
+							type: life
+							op: compress
+							start: 0.5
+							end: 0.5000001
+						}
+					}{
+						gx: 4
+						gy: 4
+						progress: {
+							type: life
+							ops: [{
+								op: compress
+								start: 0
+								end: 0.2
+							}{
+								op: curve
+								interp: pow5Out
+							}]
+						}
+					}]
+				}{
+					type: RegionPart
+					name: virtuality-rank-c
+					outline: false
+					color: FFFFFF
+					colorTo: 9785F200
+					layer: 118
+					xScl: 0
+					yScl: 0
+					y: 1536
+					progress: {
+						type: life
+						ops: [{
+							op: compress
+							start: 0
+							end: 0.2
+						}{
+							op: curve
+							interp: pow2Out
+						}]
+					}
+					moves: [{
+						gx: 1
+						gy: 1
+						progress: {
+							type: life
+							op: compress
+							start: 0.5
+							end: 0.5000001
+						}
+					}{
+						gx: 4
+						gy: 4
+						progress: {
+							type: life
+							ops: [{
+								op: compress
+								start: 0
+								end: 0.2
+							}{
+								op: curve
+								interp: pow5Out
+							}]
+						}
+					}]
+				}{
+					type: RegionPart
+					name: virtuality-rank-d
+					outline: false
+					color: FFFFFF
+					colorTo: 9785F200
+					layer: 118
+					xScl: 0
+					yScl: 0
+					y: 2048
+					progress: {
+						type: life
+						ops: [{
+							op: compress
+							start: 0
+							end: 0.2
+						}{
+							op: curve
+							interp: pow2Out
+						}]
+					}
+					moves: [{
+						gx: 1
+						gy: 1
+						progress: {
+							type: life
+							op: compress
+							start: 0.5
+							end: 0.5000001
+						}
+					}{
+						gx: 4
+						gy: 4
+						progress: {
+							type: life
+							ops: [{
+								op: compress
+								start: 0
+								end: 0.2
+							}{
+								op: curve
+								interp: pow5Out
+							}]
+						}
+					}]
+				}{
+					type: RegionPart
+					name: virtuality-rank-e
+					outline: false
+					color: FFFFFF
+					colorTo: 9785F200
+					layer: 118
+					xScl: 0
+					yScl: 0
+					y: 2560
+					progress: {
+						type: life
+						ops: [{
+							op: compress
+							start: 0
+							end: 0.2
+						}{
+							op: curve
+							interp: pow2Out
+						}]
+					}
+					moves: [{
+						gx: 1
+						gy: 1
+						progress: {
+							type: life
+							op: compress
+							start: 0.5
+							end: 0.5000001
+						}
+					}{
+						gx: 4
+						gy: 4
+						progress: {
+							type: life
+							ops: [{
+								op: compress
+								start: 0
+								end: 0.2
+							}{
+								op: curve
+								interp: pow5Out
+							}]
+						}
+					}]
+				}]
+			}]
+		}]
+	}
+}]
+parts: [{
+	type: RegionPart
+	x: 128
+	y: 72
+	children: [{
+		type: RegionPart
+		name: virtuality-rank-s
+		outline: false
+		color: 9785F2
+		layer: 114
+	}{
+		type: RegionPart
+		name: virtuality-rank-s-mask
+		outline: false
+		color: FFFFFF
+		layer: 117
+	}{
+		type: RegionPart
+		name: virtuality-rank-a
+		outline: false
+		color: 9785F2
+		layer: 114
+		y: 512
+	}{
+		type: RegionPart
+		name: virtuality-rank-a-mask
+		outline: false
+		color: FFFFFF
+		layer: 117
+		y: 512
+	}{
+		type: RegionPart
+		name: virtuality-rank-b
+		outline: false
+		color: 9785F2
+		layer: 114
+		y: 1024
+	}{
+		type: RegionPart
+		name: virtuality-rank-b-mask
+		outline: false
+		color: FFFFFF
+		layer: 117
+		y: 1024
+	}{
+		type: RegionPart
+		name: virtuality-rank-c
+		outline: false
+		color: 9785F2
+		layer: 114
+		y: 1536
+	}{
+		type: RegionPart
+		name: virtuality-rank-c-mask
+		outline: false
+		color: FFFFFF
+		layer: 117
+		y: 1536
+	}{
+		type: RegionPart
+		name: virtuality-rank-d
+		outline: false
+		color: 9785F2
+		layer: 114
+		y: 2048
+	}{
+		type: RegionPart
+		name: virtuality-rank-d-mask
+		outline: false
+		color: FFFFFF
+		layer: 117
+		y: 2048
+	}{
+		type: RegionPart
+		name: virtuality-rank-e
+		outline: false
+		color: 9785F2
+		layer: 114
+		y: 2560
+	}{
+		type: RegionPart
+		name: virtuality-rank-e-mask
+		outline: false
+		color: FFFFFF
+		layer: 117
+		y: 2560
+	}]
+}]

@@ -1,0 +1,43 @@
+hideDatabase: true
+parentizeEffect: true
+parentizeApplyEffect: true
+applyExtend: true
+applyEffect: {
+	type: SeqEffect
+	layer: 205
+	effects: [{
+		type: ParticleEffect
+		particles: 1
+		region: virtuality-splash-misanthrope-music
+		cone: 0
+		lifetime: 15
+		randLength: false
+		colorFrom: FFFFFF
+		colorTo: FFFFFF00
+		sizeFrom: 240
+		sizeTo: 240
+		length: 8
+		interp: reverse
+	}{
+		type: ParticleEffect
+		particles: 1
+		region: virtuality-splash-misanthrope-music
+		cone: 0
+		lifetime: 180
+		randLength: false
+		sizeFrom: 240
+		sizeTo: 240
+		length: 0
+	}{
+		type: ParticleEffect
+		particles: 1
+		region: virtuality-splash-misanthrope-music
+		cone: 0
+		lifetime: 15
+		randLength: false
+		colorTo: FFFFFF00
+		sizeFrom: 240
+		sizeTo: 240
+		length: 8
+	}]
+}

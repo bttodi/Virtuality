@@ -1,0 +1,11 @@
+hideDatabase: true
+type: hover
+health: 500
+speed: 2
+rotateSpeed: 0
+faceTarget: false
+drag: 0
+outlineColor: 383D34
+groundLayer: -1
+deathSound: none
+deathExplosionEffect: none

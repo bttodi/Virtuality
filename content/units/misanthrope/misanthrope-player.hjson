@@ -1,0 +1,21 @@
+hideDatabase: true
+type: hover
+health: 100
+speed: 0.0001
+rotateSpeed: 0
+faceTarget: false
+targetable: false
+hittable: false
+accel: 1
+drag: 1
+outlineColor: 383D34
+hitSize: 16
+groundLayer: -1
+physics: false
+parts: [{
+	type: ShapePart
+	layer: 31
+	circle: true
+	radius: 480
+	color: 000000
+}]

@@ -1,0 +1,1208 @@
+// yes i know there are four color pulses and wave is 10 blocks high but consider that i am lazy
+hideDatabase: true
+type: missile
+lifetime: 768
+health: 750
+speed: 0
+drag: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+clipSize: 16384
+weapons: [{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	baseRotation: 90
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		recoil: -6.25
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 620
+	y: -24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 668
+	y: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 135
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 764
+	y: 24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 84.8528
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 704
+	y: -36
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 315
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1052
+	y: -24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1172
+	y: 120
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 118.7939392
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1088
+	y: 36
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 118.7939392
+			pierceEffect: none
+			angleOffset: 315
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1340
+	y: 0
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 135
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1412
+	y: -48
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1676
+	y: 24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1676
+	y: 24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 315
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1580
+	y: 48
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 135
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1892
+	y: -24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 116.565051177078
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 1988
+	y: 72
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 243.434948822922
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 2084
+	y: -24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 116.565051177078
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 2144
+	y: -132
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 134.16407686
+			pierceEffect: none
+			angleOffset: 26.565051177078
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 2264
+	y: -72
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 134.16407686
+			pierceEffect: none
+			angleOffset: -26.565051177078
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 2468
+	y: -132
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 576
+			pierceEffect: none
+			angleOffset: 0
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 2336
+	y: 132
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 576
+			pierceEffect: none
+			angleOffset: 0
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 3056
+	y: -84
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 84.85281374
+			pierceEffect: none
+			angleOffset: 45
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 3056
+	y: -84
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 84.85281374
+			pierceEffect: none
+			angleOffset: -45
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 3188
+	y: 24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 135
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 3380
+	y: 24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 3464
+	y: 36
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 128
+			pierceEffect: none
+			angleOffset: 45
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 3464
+	y: 36
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 118.7939392
+			pierceEffect: none
+			angleOffset: -45
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 3788
+	y: -24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 3908
+	y: -24
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 256
+			pierceEffect: none
+			angleOffset: 135
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 4172
+	y: 48
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 128
+			pierceEffect: none
+			angleOffset: 135
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 1
+	x: 4172
+	y: -48
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 1
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 128
+			pierceEffect: none
+			angleOffset: 225
+		}]
+	}
+}]
+parts: [
+// "PORTALS"
+{
+	type: RegionPart
+	name: virtuality-gradient
+	outline: false
+	layer: 87
+	color: FF7FFFBF
+	blending: additive
+	rotation: 270
+	yScl: 0.5
+	xScl: 5
+	x: 1725
+}{
+	type: EffectSpawnerPart
+	effectInterval: 1
+	width: 2
+	height: 270
+	x: 1710
+	effect: {
+		type: ParticleEffect
+		particles: 1
+		colorFrom: FFFFFF
+		colorTo: FF3FFF00
+		layer: 105
+		lifetime: 60
+		cone: 5
+		region: virtuality-square
+		baseRotation: 90
+		length: 325
+		randLength: false
+	}
+}{
+	type: RegionPart
+	name: virtuality-gradient
+	outline: false
+	layer: 87
+	color: 7FFF7FBF
+	blending: additive
+	rotation: 270
+	yScl: 0.5
+	xScl: 5
+	x: 3056
+}{
+	type: EffectSpawnerPart
+	effectInterval: 1
+	width: 2
+	height: 270
+	x: 3041
+	effect: {
+		type: ParticleEffect
+		particles: 1
+		colorFrom: FFFFFF
+		colorTo: 3FFF3F00
+		layer: 105
+		lifetime: 60
+		cone: 5
+		region: virtuality-square
+		baseRotation: 90
+		length: 325
+		randLength: false
+	}
+}
+// BLACK
+{
+	type: RegionPart
+	name: virtuality-wave01
+	outline: false
+	layer: 86
+	x: 1000
+}{
+	type: RegionPart
+	name: virtuality-wave02
+	outline: false
+	layer: 86
+	x: 2000
+	progress: life
+}{
+	type: RegionPart
+	name: virtuality-wave03
+	outline: false
+	layer: 86
+	x: 3000
+}{
+	type: RegionPart
+	name: virtuality-wave04
+	outline: false
+	layer: 86
+	x: 4000
+}
+// BLUE 1
+{
+	type: RegionPart
+	name: virtuality-wave11
+	outline: false
+	layer: 86
+	x: 1000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave12
+	outline: false
+	layer: 86
+	x: 2000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave13
+	outline: false
+	layer: 86
+	x: 3000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave14
+	outline: false
+	layer: 86
+	x: 4000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}
+// BLUE 2
+{
+	type: RegionPart
+	name: virtuality-wave21
+	outline: false
+	layer: 86
+	x: 1000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: add
+			amount: -4
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave22
+	outline: false
+	layer: 86
+	x: 2000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: add
+			amount: -4
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave23
+	outline: false
+	layer: 86
+	x: 3000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: add
+			amount: -4
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave24
+	outline: false
+	layer: 86
+	x: 4000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: add
+			amount: -4
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}
+// BLUE 3
+{
+	type: RegionPart
+	name: virtuality-wave31
+	outline: false
+	layer: 86
+	x: 1000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: add
+			amount: -8
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave32
+	outline: false
+	layer: 86
+	x: 2000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: add
+			amount: -8
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave33
+	outline: false
+	layer: 86
+	x: 3000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: add
+			amount: -8
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}{
+	type: RegionPart
+	name: virtuality-wave34
+	outline: false
+	layer: 86
+	x: 4000
+	color: FFFFFF
+	colorTo: 000000
+	progress: {
+		type: life
+		ops: [{
+			op: mul
+			amount: 768
+		}{
+			op: add
+			amount: -8
+		}{
+			op: loop
+			time: 16
+		}{
+			op: compress
+			start: 0
+			end: 0.5
+		}]
+	}
+}]

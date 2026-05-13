@@ -1,0 +1,521 @@
+hideDatabase: true
+type: missile
+lifetime: 384
+health: 750
+speed: 0
+rotateSpeed: 0
+physics: false
+bounded: false
+faceTarget: false
+targetable: false
+hittable: false
+drawCell: false
+groundLayer: -1
+createScorch: false
+deathSound: none
+deathExplosionEffect: none
+weapons: [{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: 0
+	y: -96
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			firstShotDelay: 96
+			shots: 12
+			shotDelay: 1
+		}
+		dest: [{
+			// damn i cant get shootbarrel to work, go my shootalternate
+			type: ShootMulti
+			source: {
+				type: ShootAlternate
+				shots: 3
+				barrels: 3
+				spread: 80
+			}
+			dest: [{
+				type: ShootAlternate
+				shots: 2
+				barrels: 2
+				spread: 32
+			}]
+		}]
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 90
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: 0
+	y: -96
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			firstShotDelay: 108
+			shots: 12
+			shotDelay: 1
+		}
+		dest: [{
+			type: ShootMulti
+			source: {
+				type: ShootAlternate
+				shots: 3
+				barrels: 3
+				spread: 80
+			}
+			dest: [{
+				type: ShootAlternate
+				shots: 2
+				barrels: 2
+				spread: 16
+			}]
+		}]
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 90
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 2
+	x: 0
+	y: -96
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootAlternate
+		shots: 3
+		barrels: 3
+		spread: 80
+		firstShotDelay: 108
+	}
+	bullet: {
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		lifetime: 0
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		spawnBullets: [{
+			type: RailBulletType
+			collidesTiles: false
+			length: 192
+			pierceEffect: none
+			angleOffset: 90
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: 0
+	y: 8
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			type: ShootSpread
+			spread: 22
+			shots: 6
+			shotDelay: 24
+		}
+		dest: [{
+			type: ShootSpread
+			shots: 6
+			spread: 60
+		}]
+	}
+	bullet: {
+		type: BulletType
+		collidesTiles: false
+		pierce: true
+		speed: 1
+		lifetime: 150
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		spawnBullets: [{
+			type: BulletType
+			spawnUnit: virtuality-atk-delfruit-black
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: 0
+	y: 8
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	inaccuracy: 180
+	shoot: {
+		shots: 32
+		shotDelay: 3
+	}
+	bullet: {
+		type: BulletType
+		collidesTiles: false
+		pierce: true
+		speed: 1.5
+		lifetime: 90
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		spawnBullets: [{
+			type: BulletType
+			spawnUnit: virtuality-atk-delfruit-gray
+		}]
+	}
+}{
+	type: Weapon
+	mirror: false
+	reload: 9999
+	x: 0
+	y: 76
+	shootY: 0
+	shootCone: 180
+	shootSound: none
+	alwaysShooting: true
+	predictTarget: false
+	shoot: {
+		type: ShootMulti
+		source: {
+			firstShotDelay: 120
+			shots: 56
+			shotDelay: 4
+		}
+		dest: [{
+			type: ShootAlternate
+			shots: 2
+			barrels: 2
+			spread: 96
+		}]
+	}
+	bullet: {	
+		type: BulletType
+		ignoreSpawnAngle: true
+		collides: false
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		spawnBullets: [{
+			type: BulletType
+			angleOffset: 270
+			randomAngleOffset: 90
+			collidesTiles: false
+			pierce: true
+			speed: 1.5
+			lifetime: 90
+			shootEffect: none
+			smokeEffect: none
+			despawnEffect: none
+			hitEffect: none
+			spawnBullets: [{
+				type: BulletType
+				spawnUnit: virtuality-atk-delfruit-gray
+			}]
+		}]
+	}
+}]
+parts: [{
+	type: RegionPart
+	name: virtuality-ch5
+	layer: 34
+	outline: false
+	color: FFFFFF
+	colorTo: FFFFFF00
+	progress: {
+		type: life
+		op: compress
+		start: 0
+		end: 0.25
+	}
+}{
+	type: RegionPart
+	name: virtuality-delfruit-wall
+	layer: 34
+	outline: false
+	color: 000000
+	x: -16
+	y: 512
+	moves: [{
+		y: -512
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}{
+		x: 8
+		progress: {
+			type: life
+			op: compress
+			start: 0.28125
+			end: 0.281250000001
+		}
+	}{
+		x: 8
+		progress: {
+			type: life
+			op: compress
+			start: 0.3125
+			end: 0.312500000001
+		}
+	}]
+	children: [{
+		type: RegionPart
+		name: virtuality-delfruit-wall
+		layer: 34
+		outline: false
+		color: 000000
+		x: -80
+	}{
+		type: RegionPart
+		name: virtuality-delfruit-wall
+		layer: 34
+		outline: false
+		color: 000000
+		x: 80
+	}]
+}{
+	type: RegionPart
+	name: virtuality-delfruit-wall
+	layer: 34
+	outline: false
+	color: 000000
+	x: 16
+	y: 512
+	moves: [{
+		y: -512
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}{
+		x: -8
+		progress: {
+			type: life
+			op: compress
+			start: 0.28125
+			end: 0.281250000001
+		}
+	}{
+		x: -8
+		progress: {
+			type: life
+			op: compress
+			start: 0.3125
+			end: 0.312500000001
+		}
+	}]
+	children: [{
+		type: RegionPart
+		name: virtuality-delfruit-wall
+		layer: 34
+		outline: false
+		color: 000000
+		x: -80
+	}{
+		type: RegionPart
+		name: virtuality-delfruit-wall
+		layer: 34
+		outline: false
+		color: 000000
+		x: 80
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 33
+	outline: false
+	color: 0000002F
+	yScl: 38
+	moves: [{
+		gx: 9
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.125
+			}{
+				op: curve
+				interp: pow5Out
+			}]
+		}
+	}{
+		gx: -4
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}{
+		gx: -4
+		progress: {
+			type: life
+			op: compress
+			start: 0.28125
+			end: 0.281250000001
+		}
+	}{
+		gx: -2
+		progress: {
+			type: life
+			op: compress
+			start: 0.3125
+			end: 0.312500000001
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 33
+	outline: false
+	color: 0000002F
+	x: -80
+	yScl: 38
+	moves: [{
+		gx: 9
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.125
+			}{
+				op: curve
+				interp: pow5Out
+			}]
+		}
+	}{
+		gx: -4
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}{
+		gx: -4
+		progress: {
+			type: life
+			op: compress
+			start: 0.28125
+			end: 0.281250000001
+		}
+	}{
+		gx: -2
+		progress: {
+			type: life
+			op: compress
+			start: 0.3125
+			end: 0.312500000001
+		}
+	}]
+}{
+	type: RegionPart
+	name: virtuality-square
+	layer: 33
+	outline: false
+	color: 0000002F
+	x: 80
+	yScl: 38
+	moves: [{
+		gx: 9
+		progress: {
+			type: life
+			ops: [{
+				op: compress
+				start: 0
+				end: 0.125
+			}{
+				op: curve
+				interp: pow5Out
+			}]
+		}
+	}{
+		gx: -4
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}{
+		gx: -4
+		progress: {
+			type: life
+			op: compress
+			start: 0.28125
+			end: 0.281250000001
+		}
+	}{
+		gx: -2
+		progress: {
+			type: life
+			op: compress
+			start: 0.3125
+			end: 0.312500000001
+		}
+	}]
+}]

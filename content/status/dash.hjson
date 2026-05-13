@@ -1,0 +1,12 @@
+hideDatabase: true
+show: false
+applyEffect: {
+	type: WaveEffect
+	lifetime: 8
+	sizeFrom: 8
+	sizeTo: 16
+	lightOpacity: 0
+	strokeFrom: 8
+	colorFrom: FFA6647F
+	colorTo: FFA66400
+}
