@@ -69,6 +69,24 @@ parts: [{
 			end: 0.250000000001
 		}
 	}]
+}{
+	type: RegionPart
+	name: virtuality-vb
+	layer: 31.6
+	outline: false
+	x: 60
+	y: -11
+	xScl: 0.35
+	yScl: 0.35
+	moves: [{
+		gx: -0.35
+		progress: {
+			type: life
+			op: compress
+			start: 0.25
+			end: 0.250000000001
+		}
+	}]
 }
 ///////////////////////////////////////////////// 2 GOTHIC
 {

@@ -4,10 +4,12 @@ author: bttodi
 description: '''
 A mod centered around fighting bosses, with a focus on pattern-based attacks. Entirely detached from Mindustry's traditional gameplay loop - The Virtuality Archives restrains the player in a measly vessel and pits them against encoded entities. Does not utilize scripts or Java, seeking to explore the technical scope of (H)JSON and MLOG. Best experienced with a mouse and keyboard.
 
-Currently features [red]6/7[] planned bosses in the campaign - Candor, Ardent & Argent, Pandemonium, Misanthrope, Nyx, and Alluvion.
+Currently features [red[]]6/7[[]] planned bosses in the campaign - Candor, Ardent & Argent, Pandemonium, Misanthrope, Nyx, and Alluvion.
+
+[accent[]][i] In the campaign, Misanthrope's sector currently does not behave as intended for the latest stable build. Play the sector in Custom Game or build 157.4.
 '''
 subtitle: v8-misanthrope
-minGameVersion: 152.2
+minGameVersion: 157.4
 version: v8-misanthrope
 dependencies: [ ]
 hidden: false
