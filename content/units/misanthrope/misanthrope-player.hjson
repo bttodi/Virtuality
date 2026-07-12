@@ -1,13 +1,14 @@
 hideDatabase: true
 type: hover
 health: 100
-speed: 0.0001
+speed: 0.01
 rotateSpeed: 0
 faceTarget: false
 targetable: false
 hittable: false
-accel: 1
-drag: 1
+// stupid but it worked so
+accel: 2
+drag: 2
 outlineColor: 383D34
 hitSize: 16
 groundLayer: -1

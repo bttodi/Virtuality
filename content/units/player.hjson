@@ -5,8 +5,8 @@ speed: 2
 rotateSpeed: 0
 faceTarget: false
 drag: 0.5
-outlineColor: 383D34
 groundLayer: -1
+outlineColor: 383D34
 weapons: [{
 	type: Weapon
 	name: argonaut-ship
@@ -22,7 +22,7 @@ weapons: [{
 	bullet: {
 		type: BasicBulletType
 		collidesTiles: false
-		damage: 10
+		damage: 100
 		keepVelocity: false
 		speed: 8
 		lifetime: 40
